@@ -1,0 +1,75 @@
+# https://github.com/vercel/next.js/blob/canary/examples/with-docker/Dockerfile
+
+# Kleines Image mittels "standalone"-Konfiguration von "Next.js"
+# Befehl: docker buildx build --no-cache --tag swews23gr2/spa:2023.12.0-bookworm --file Dockerfile.bookworm .
+
+# ---------------------------------------------------------------------------------------
+# S t a g e   b u i l d e r
+# ---------------------------------------------------------------------------------------
+ARG NODE_VERSION=21.5.0
+FROM node:${NODE_VERSION}-bookworm-slim AS builder
+
+RUN <<EOF
+set -ex
+apt-get update
+apt-get upgrade
+npm i -g --no-audit --no-fund npm
+EOF
+
+WORKDIR /home/node
+
+COPY package.json package-lock.json next.config.js tsconfig*.json ./
+COPY api ./api
+COPY app ./app
+COPY components ./components
+COPY context ./context
+COPY helper ./helper
+COPY hooks ./hooks
+COPY theme ./theme
+COPY public ./public
+
+USER node
+
+# TODO: Wie kann man diese Umgebungsvariable bei 'Next.js' mit 'Docker Compose' zur Laufzeit festlegen?
+# Nach 'npm run build' nicht mehr änderbar
+ENV NEXT_PUBLIC_BACKEND_SERVER_URL=https://localhost:3000/graphql
+
+RUN <<EOF
+npm ci --no-audit --no-fund
+npm run build
+EOF
+
+# ------------------------------------------------------------------------------
+# S t a g e   F i n a l
+# ------------------------------------------------------------------------------
+FROM node:${NODE_VERSION}-bookworm-slim
+
+LABEL org.opencontainers.image.title="swews23gr2-buch-spa" \
+    org.opencontainers.image.description="SPA für 'buch' mit bookworm-Image" \
+    org.opencontainers.image.version="2023.10.0-distroless" \
+    org.opencontainers.image.licenses="GPL-3.0-or-later" \
+    org.opencontainers.image.authors="swews23gr2"
+
+RUN <<EOF
+set -ex
+apt-get update
+apt-get install --no-install-recommends --yes dumb-init=1.2.5-2 curl=7.88.1-10+deb12u5
+
+apt-get autoremove --yes
+apt-get clean --yes
+rm -rf /var/lib/apt/lists/*
+rm -rf /tmp/*
+EOF
+
+WORKDIR /opt/app
+
+COPY --chown=node:node package.json ./
+COPY --from=builder --chown=node:node /home/node/.next/standalone ./
+COPY --from=builder --chown=node:node /home/node/public ./public
+COPY --from=builder --chown=node:node /home/node/.next/static ./.next/static
+
+USER node
+
+EXPOSE 3000
+
+ENTRYPOINT ["dumb-init", "/usr/local/bin/node", "server.js"]
