@@ -156,4 +156,3 @@ const styles: ExtendedStyleProps = {
 };
 
 export default LoginComponent;
-// 
