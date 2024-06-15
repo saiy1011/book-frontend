@@ -8,7 +8,7 @@ export type LoginDaten = {
 export type GraphQlLoginResponse = {
     data: {
         login: {
-            token: string;
+            access_token: string;
         };
     };
 };
@@ -20,10 +20,11 @@ export const loginApi = async (
     const body = JSON.stringify({
         query: `mutation {
                         login(username: "${loginDaten.username}", password: "${loginDaten.password}") {
-                             token
+                             access_token
                         }
                     }`,
     });
     const requestConfig = { ...baseRequestConfig, data: body };
+    console.log(requestConfig);
     return await axios.request(requestConfig);
 };
