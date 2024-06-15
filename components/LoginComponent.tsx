@@ -25,20 +25,28 @@ export const LoginComponent: React.FC = () => {
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [error, setError] = useState<string | undefined>(undefined);
 
+    const [termsAndConditionsAccepted, setTermsAndConditionsAccepted] =
+        useState<boolean>(false);
+
     useEffect(() => {
         const validateInput = () => {
-            if (loginDaten.username === '' || loginDaten.password === '') {
+            if (
+                loginDaten.username === '' ||
+                loginDaten.password === '' ||
+                !termsAndConditionsAccepted
+            ) {
                 setIsInputValid(false);
                 return;
             }
             setIsInputValid(true);
         };
         validateInput();
-    }, [loginDaten]);
+    }, [loginDaten, termsAndConditionsAccepted]);
 
     const handleChange = (e: any) => {
         setLoginDaten((prevState) => ({
             ...prevState,
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access,@typescript-eslint/no-unsafe-assignment
             [e.target.name]: e.target.value,
         }));
     };
@@ -77,6 +85,27 @@ export const LoginComponent: React.FC = () => {
                             value={loginDaten?.password}
                             onChange={handleChange}
                         />
+
+                        <div {...styles.checkboxContainer()}>
+                            <input
+                                type="checkbox"
+                                id="termsAndConditions"
+                                defaultChecked={termsAndConditionsAccepted}
+                                {...styles.checkboxInput()}
+                                onClick={() =>
+                                    setTermsAndConditionsAccepted(
+                                        !termsAndConditionsAccepted,
+                                    )
+                                }
+                            />
+                            <label
+                                htmlFor="termsAndConditions"
+                                {...styles.checkboxLabel()}
+                            >
+                                Ich habe die AGBs gelesen, verstanden und stimme
+                                zu
+                            </label>
+                        </div>
 
                         {isLoading ? (
                             <LoadingComponent
@@ -152,6 +181,23 @@ const styles: ExtendedStyleProps = {
             gap: 'var(--gap-2)',
         },
     }),
-};
 
-export default LoginComponent;
+    checkboxContainer: () => ({
+        className: 'form-check',
+        style: {},
+    }),
+
+    checkboxInput: () => ({
+        className: 'form-check-input',
+        style: {
+            color: 'var(--color-main)',
+        },
+    }),
+
+    checkboxLabel: () => ({
+        className: 'form-check-label',
+        style: {
+            color: 'var(--color-main)',
+        },
+    }),
+};
