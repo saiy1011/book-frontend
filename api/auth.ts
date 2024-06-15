@@ -25,6 +25,5 @@ export const loginApi = async (
                     }`,
     });
     const requestConfig = { ...baseRequestConfig, data: body };
-    console.log(requestConfig);
     return await axios.request(requestConfig);
 };

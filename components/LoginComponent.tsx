@@ -46,7 +46,6 @@ export const LoginComponent: React.FC = () => {
     const handleLogin = async () => {
         setIsLoading(true);
         setError(undefined);
-
         try {
             await appContext.login(loginDaten);
         } catch (err) {
