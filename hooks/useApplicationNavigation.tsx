@@ -37,6 +37,17 @@ export const useApplicationNavigation = (): ApplicationNavigation => {
                 />
             ),
             isActive: pathname === '/',
+            onClick: () => router.push('/'),
+        },
+        {
+            label: 'Bücher',
+            icon: (
+                <FontAwesomeIcon
+                    icon={faBook}
+                    style={{ color: 'black', fontSize: 20 }}
+                />
+            ),
+            isActive: pathname.includes('/buecher'),
             onClick: () => router.push('/buecher'),
         },
         {
