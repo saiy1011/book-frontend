@@ -1,0 +1,20 @@
+# Alle Properties:
+# https://github.com/editorconfig/editorconfig/wiki/EditorConfig-Properties
+#
+# In 'EditorConfig for Visual Studio Code' momentan unterstützte Properties:
+# https://github.com/editorconfig/editorconfig-vscode
+
+root = true
+
+[*]
+end_of_line = lf
+indent_size = 2
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.{ts,mts,tsx,js,mjs,cjs,jsx,plantuml}]
+indent_size = 4
+
+[Dockerfile*]
+indent_size = 4
