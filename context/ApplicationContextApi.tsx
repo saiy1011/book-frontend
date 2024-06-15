@@ -64,7 +64,7 @@ export const ApplicationContextProvider: React.FC<Props> = (props: Props) => {
             ? localStorage.getItem('auth_token')
             : undefined;
 
-    console.log(authenticationToken);
+    console.log('authenticationToken:', authenticationToken);
     const baseAxiosRequestConfig: AxiosRequestConfig<string> = {
         method: 'post',
         url: process.env.NEXT_PUBLIC_BACKEND_SERVER_URL as string,
@@ -77,7 +77,7 @@ export const ApplicationContextProvider: React.FC<Props> = (props: Props) => {
     const login = async (loginDaten: LoginDaten) => {
         const loginResponse: AxiosResponse<GraphQlLoginResponse> =
             await loginApi(loginDaten, baseAxiosRequestConfig);
-        console.log(loginResponse);
+        console.log('loginResponse: ', loginResponse);
         handleGraphQLRequestError(loginResponse.data as GraphqlErrorResponse);
         saveToken(loginResponse.data.data.login.access_token);
         location.reload();
@@ -88,8 +88,8 @@ export const ApplicationContextProvider: React.FC<Props> = (props: Props) => {
         location.reload();
     };
 
-    const saveToken = (token: string) => {
-        localStorage.setItem('auth_token', token);
+    const saveToken = (access_token: string) => {
+        localStorage.setItem('auth_token', access_token);
     };
 
     const deleteToken = () => {
