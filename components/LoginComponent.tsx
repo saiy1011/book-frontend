@@ -1,10 +1,11 @@
+/* eslint-disable eslint-comments/disable-enable-pair */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 'use client';
-// eslint-disable-next-line eslint-comments/disable-enable-pair
 /* eslint-disable @typescript-eslint/no-misused-promises */
 import React, { useEffect, useState } from 'react';
 import { CenteredSectionComponent } from '@/components/shared/CenteredSectionComponent';
 import InputFieldComponent from '@/components/shared/InputFieldComponent';
-import { ExtendedStyleProps } from '@/theme/ExtendedStyleProps';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { LoginDaten } from '@/api/auth';
 import { useApplicationContextApi } from '@/context/ApplicationContextApi';
@@ -25,28 +26,20 @@ export const LoginComponent: React.FC = () => {
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [error, setError] = useState<string | undefined>(undefined);
 
-    const [termsAndConditionsAccepted, setTermsAndConditionsAccepted] =
-        useState<boolean>(false);
-
     useEffect(() => {
         const validateInput = () => {
-            if (
-                loginDaten.username === '' ||
-                loginDaten.password === '' ||
-                !termsAndConditionsAccepted
-            ) {
+            if (loginDaten.username === '' || loginDaten.password === '') {
                 setIsInputValid(false);
                 return;
             }
             setIsInputValid(true);
         };
         validateInput();
-    }, [loginDaten, termsAndConditionsAccepted]);
+    }, [loginDaten]);
 
     const handleChange = (e: any) => {
         setLoginDaten((prevState) => ({
             ...prevState,
-            // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access,@typescript-eslint/no-unsafe-assignment
             [e.target.name]: e.target.value,
         }));
     };
@@ -66,63 +59,42 @@ export const LoginComponent: React.FC = () => {
 
     return (
         <CenteredSectionComponent>
-            <div {...styles.loginContainer()}>
-                <div {...styles.content(isSmall)}>
-                    <div {...styles.cardTitle()}>Anmeldung</div>
-                    <div {...styles.inputFieldListContainer()}>
+            <div className="container d-flex flex-column align-items-center p-4">
+                <div
+                    className={`card p-4 shadow-sm ${
+                        isSmall ? 'w-100' : 'w-50'
+                    }`}
+                >
+                    <h2 className="card-title text-center mb-4">Anmeldung</h2>
+                    <div className="mb-3">
                         <InputFieldComponent
                             label={'Benutzername'}
                             name={'username'}
                             type={'text'}
-                            placeholder={'zB: admin'}
+                            placeholder={''}
                             value={loginDaten?.username}
                             onChange={handleChange}
                         />
+                    </div>
+                    <div className="mb-3">
                         <InputFieldComponent
                             label={'Passwort'}
                             name={'password'}
                             type={'password'}
-                            placeholder={'zB: p'}
+                            placeholder={''}
                             value={loginDaten?.password}
                             onChange={handleChange}
                         />
-
-                        <div {...styles.checkboxContainer()}>
-                            <input
-                                type="checkbox"
-                                id="termsAndConditions"
-                                defaultChecked={termsAndConditionsAccepted}
-                                {...styles.checkboxInput()}
-                                onClick={() =>
-                                    setTermsAndConditionsAccepted(
-                                        !termsAndConditionsAccepted,
-                                    )
-                                }
-                            />
-                            <label
-                                htmlFor="termsAndConditions"
-                                {...styles.checkboxLabel()}
-                            >
-                                Ich habe die AGBs gelesen, verstanden und stimme
-                                zu
-                            </label>
-                        </div>
-
-                        {isLoading ? (
-                            <LoadingComponent
-                                message={
-                                    'Sie werden angemeldet. Haben Sie Geduld.'
-                                }
-                            />
-                        ) : null}
-                        {error ? (
-                            <ErrorBannerComponent message={error} />
-                        ) : null}
                     </div>
-
+                    {isLoading && (
+                        <LoadingComponent
+                            message={'Sie werden angemeldet. Haben Sie Geduld.'}
+                        />
+                    )}
+                    {error && <ErrorBannerComponent message={error} />}
                     <button
                         type="button"
-                        {...styles.submitButton()}
+                        className="btn btn-primary w-100 mt-3"
                         onClick={handleLogin}
                         disabled={!isInputValid || isLoading}
                     >
@@ -134,71 +106,4 @@ export const LoginComponent: React.FC = () => {
     );
 };
 
-const styles: ExtendedStyleProps = {
-    loginContainer: () => ({
-        style: {
-            display: 'grid',
-            alignItems: 'start',
-            alignContent: 'start',
-            justifyItems: 'center',
-            padding: 'var(--padding-10) var(--padding-2) 0 var(--padding-2)',
-        },
-    }),
-
-    content: (isScreenSmall: boolean) => ({
-        style: {
-            display: 'grid',
-            alignItems: 'start',
-            alignContent: 'start',
-            boxShadow: '0 0 10px grey',
-            padding: 'var(--padding-3) var(--padding-2)',
-            minWidth: `${isScreenSmall ? '100%' : '30%'}`,
-            borderRadius: 'var(--gap-1)',
-        },
-    }),
-
-    cardTitle: () => ({
-        style: {
-            fontSize: 'var(--font-extra-large-size)',
-            fontWeight: '600',
-            justifySelf: 'center',
-            marginBottom: 'var(--gap-5)',
-        },
-    }),
-
-    submitButton: () => ({
-        className: 'btn',
-        style: {
-            backgroundColor: 'var(--color-main)',
-            width: '100%',
-            color: 'var(--color-white)',
-            marginTop: 'var(--gap-2)',
-        },
-    }),
-
-    inputFieldListContainer: () => ({
-        style: {
-            display: 'grid',
-            gap: 'var(--gap-2)',
-        },
-    }),
-
-    checkboxContainer: () => ({
-        className: 'form-check',
-        style: {},
-    }),
-
-    checkboxInput: () => ({
-        className: 'form-check-input',
-        style: {
-            color: 'var(--color-main)',
-        },
-    }),
-
-    checkboxLabel: () => ({
-        className: 'form-check-label',
-        style: {
-            color: 'var(--color-main)',
-        },
-    }),
-};
+export default LoginComponent;
