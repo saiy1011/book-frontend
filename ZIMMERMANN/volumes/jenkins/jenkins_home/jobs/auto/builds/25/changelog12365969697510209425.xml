@@ -1,0 +1,12 @@
+commit 80ffc44ec132eade47c5788ee4b5178e2ccb3c44
+tree fe5723e8d049a18bb84cf4e16d1814c5ceb15ba0
+parent 1ce7e08a218b1dbf44e5bb6a5f02db9447f8876e
+author Dodekagamer <147612354+Dodekagamer@users.noreply.github.com> 2024-05-01 12:36:23 +0200
+committer Dodekagamer <147612354+Dodekagamer@users.noreply.github.com> 2024-05-01 12:36:23 +0200
+
+    LF statt CRLF
+
+
+:100644 100644 b0fd711c8865d52dfe1a8bcab692a2eb38f7531a 630108db856b40db4d51973db310b864c09a9ef3 M	dist/config/db.d.ts
+:100644 100644 9cf598af3824f3f6ce2e6e4b8e9ca6928754d6bf 23791f51e30ee0c621a454c7d06bbfd87ee9ac0b M	dist/tsconfig.build.tsbuildinfo
+:100644 100644 0776ac122d74621175d3a91da446caf05a4470c4 4cd0fb73ad949d0e6f190c237b8fbe0917f6883c M	log/server.log

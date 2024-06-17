@@ -1,0 +1,30 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<hudson.model.UserIdMapper>
+  <version>1</version>
+  <idToDirectoryNameMap class="concurrent-hash-map">
+    <entry>
+      <string>165797367+alah1016</string>
+      <string>165797367alah1_559590173699200487</string>
+    </entry>
+    <entry>
+      <string>147612354+dodekagamer</string>
+      <string>147612354Dodek_11396246553617757013</string>
+    </entry>
+    <entry>
+      <string>admin</string>
+      <string>admin_873172769381819570</string>
+    </entry>
+    <entry>
+      <string>caleb-script</string>
+      <string>calebscript_4732278923420103719</string>
+    </entry>
+    <entry>
+      <string>160278287+saiy1011</string>
+      <string>160278287saiy1_1517666426693108271</string>
+    </entry>
+    <entry>
+      <string>caleb</string>
+      <string>Caleb_5016864222541195484</string>
+    </entry>
+  </idToDirectoryNameMap>
+</hudson.model.UserIdMapper>

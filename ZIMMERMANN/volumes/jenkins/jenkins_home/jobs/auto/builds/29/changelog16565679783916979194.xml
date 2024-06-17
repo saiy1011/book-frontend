@@ -1,0 +1,20 @@
+commit 115c8b708a4248149f7bf4a17ebe0444ce5a4586
+tree e1aafd270fa65096ba0bfbf165cf0b544482532e
+parent 6ce762c94841f26f1f6d9e947a9658d4347a1de2
+author alah1016 <165797367+alah1016@users.noreply.github.com> 2024-05-01 13:54:27 +0200
+committer alah1016 <165797367+alah1016@users.noreply.github.com> 2024-05-01 13:54:27 +0200
+
+    Update server.log
+
+
+:100644 100644 4fcf03a7dd930cdaf304e1b99cf40ad73f708c82 bdd0d082fb32edb3a21c270648509fd83aecab4c M	log/server.log
+commit 6ce762c94841f26f1f6d9e947a9658d4347a1de2
+tree a56791ae9a8da57342d31c2ce943e19334acc207
+parent 9c6cdf12ba30d2c7d07eae493353a93dd266f718
+author alah1016 <165797367+alah1016@users.noreply.github.com> 2024-05-01 13:54:23 +0200
+committer alah1016 <165797367+alah1016@users.noreply.github.com> 2024-05-01 13:54:23 +0200
+
+    Update Jenkinsfile
+
+
+:100644 100644 390c6c87fa0701cfce3d24537ae5ef5442142f32 bd83ac30f6cc5bcaff2345ecc895d2ffb11275a8 M	Jenkinsfile

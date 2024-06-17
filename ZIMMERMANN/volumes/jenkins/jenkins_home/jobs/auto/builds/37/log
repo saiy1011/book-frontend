@@ -1,0 +1,828 @@
+Started by an SCM change
+Obtained Jenkinsfile from git https://github.com/Caleb-Script/auto-service.git
+[8mha:////4GQdqbjh4oTWIf8FN99G9WLbcwK+tNPB9uehpA9ORveDAAAAoh+LCAAAAAAAAP9tjTEOwjAQBM8BClpKHuFItIiK1krDC0x8GCfWnbEdkooX8TX+gCESFVvtrLSa5wtWKcKBo5UdUu8otU4GP9jS5Mixv3geZcdn2TIl9igbHBs2eJyx4YwwR1SwULBGaj0nRzbDRnX6rmuvydanHMu2V1A5c4MHCFXMWcf8hSnC9jqYxPTz/BXAFEIGsfuclm8zQVqFvQAAAA==[0m[Pipeline] Start of Pipeline
+[8mha:////4MLwPD74BuKYQfycP5FB2gkyqPjnlonGosznqJyfRohAAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycohUghExsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jduZBmjwAAAAA==[0m[Pipeline] node
+Running on [8mha:////4DdKzECfePgoymMVxFyHJSxK4ip389Oi+oslGddYeYP0AAAAoR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZR/eT83ILSktQifY2k0sycEt3MPE19AHHxbH3KAAAA[0mJenkins in /var/jenkins_home/workspace/auto
+[8mha:////4FZlfJq7vNfyokSjVIL4x075Q6TNT+KAyHH7nKSdUuUdAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gA0xsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jfoP95RwAAAAA==[0m[Pipeline] {
+[8mha:////4OkGvYItgZ+sBWsors6zVu/9cgIsxstzm6Eu1Sgp7DaDAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gQkxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jc09154wAAAAA==[0m[Pipeline] stage
+[8mha:////4H1Rfat1u7Jh7D9c/UMhvkPoV3IHzFI6Z/cTp9o7pWaOAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0ggUxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jek7ggRwAAAAA==[0m[Pipeline] { (Declarative: Checkout SCM)
+[8mha:////4HNP4uFH6aXagJZWGQqr5fSpJm2J51IKaMp2BwwxfvWUAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbaWGsbAmNJ0AWEZb8zwLrbuWJvJp3kLiJlZNMMm+a93rDOic4UbLcG+wdZu14DKOti0+U+lugiXu6ck2YKRguzSSpM+cFJRUDS1gDKwEbgzpQdmgLbIVXD9UGhba9lFS/o4DGdQM8gYlqLiqVL8wJdvexy4Q/z18BzLEA29ce4gfg7KmOvAAAAA==[0m[Pipeline] checkout
+The recommended git tool is: git
+using credential 096d7925-c70f-4710-b439-3a293b390f86
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/auto/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Caleb-Script/auto-service.git # timeout=10
+Fetching upstream changes from https://github.com/Caleb-Script/auto-service.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.2'
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --force --progress -- https://github.com/Caleb-Script/auto-service.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 9d22e210c3585343248c8093a4c6497d69b54b4f (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 9d22e210c3585343248c8093a4c6497d69b54b4f # timeout=10
+Commit message: "Update app.yml"
+ > git rev-list --no-walk d7a65eac642920b8c8bfb033c8275f2f22c5db72 # timeout=10
+[8mha:////4DUDvQMhrMA8eIPqf8Ru0TsAPeOH9kPmKTpdzLdp2YZqAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbGRNjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI6xADvU7j9Dg2gqvAAAAA==[0m[Pipeline] }
+[8mha:////4Cyz7hI176Eo7/HpkaEz4RErBXk8UwdpKGC6IQQIpwaRAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQRbWRhjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI6xADvU7j9J+wGOvAAAAA==[0m[Pipeline] // stage
+[8mha:////4O0Forft/v0z2AXiCGRAwTeB01ng+iF2cPCA2X9AVzULAAAAph+LCAAAAAAAAP9tjTEOwjAQBM9BKWgpeYQDEh2iorXc8AITG+PEugv2haTiRXyNPxCIRMVWOyut5vmCMic4UPKycdgGzHWQXez91ORAqb1EGmRDZ1kTZopOajdosu44oyZ2MEcUsFCwdFhHygE9w0o15m6qaNBXJ07TtldQBHuDBwg1mdkk/sKYYH3tbSb8ef4KYOwYxI6h2G4+x/INtuQqUcEAAAA=[0m[Pipeline] withEnv
+[8mha:////4LVCiPQEJ54IYLlHToq0G3Pe3Py2FKWSLYnhEAACIrKGAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+DOrAycoiUzoiJNerCCUITQtLo/zZJSSdOxNW4Ay2VmPBg2Zas93pDGQOcKBjuNHYWY2t570czJ54pdDdPmTu68pYwkte80bkhpc9rbShpWFUw2AjYamw9RYsmwU44+ZCVl2iqSwrzdhTArBrgCYWYyUmG9C1TgP19VJHwx/kLgKlPwOrDYvXyLD8BobDcwgAAAA==[0m[Pipeline] {
+[8mha:////4KtEkCZImlIBTn1D9JOBkJ6MiXysP5H2qIffruK0rRgwAAAAox+LCAAAAAAAAP9tjTESwiAURH/iWNhaeggysXWsbBkaT4AJIoT5nwCRVJ7Iq3kH0cxYucXOvm3e8wXrGOBIQTOrcDAYO8O8m3RZLFMYro4ys3RhHWEkp5hQWVCvTgsKSgqWVDWsOGwUdo6iQZ1gy628y8ZJ1M05hfIdONSmH+EBFS/mJEP6whxgd5v6SPjz/BXA7BPUbfupvX8DpQJrNb4AAAA=[0m[Pipeline] isUnix
+[8mha:////4MNtLzBMQxUd5uVeROjGQVasqyJGMuf8Se8mMvLHlAp2AAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUFSNiYo2ycILQhJA0+r9NUtKJE3E17kBLJSY8WLYl673eUMUAJwqGOY2dxdha1vvRzIllCt3NU2aOrqwljOQ1EzoLUvq8VkFJw6qihA2HrcbWU7RoEuy4kw9Ze4mmvqQwb0cOpVUDPKHgMznJkL5lCrC/jyoS/jh/ATD1CcqmWeywPKsPyt/2UMIAAAA=[0m[Pipeline] withEnv
+[8mha:////4J0d2FSvUS0gnk4gUBSqWY/426llkfFKk+j3QvQm+I/WAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUCDbE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5Dv9rMd5mfxAbNWnxXCAAAA[0m[Pipeline] {
+[8mha:////4IXlHSQeWeckCP8XpzbZOCURcRu6h2kZB8pWq1ctvmavAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiJKgQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGPIUG53n9qHN8W7Eii+AAAA[0m[Pipeline] sh
++ docker inspect -f . node:20.11.0-bookworm
+
+Error: No such object: node:20.11.0-bookworm
+[8mha:////4Fz54h3xPg0Jqzq9uvlFJUpzlcl8ZzHD+th6r7Rw/9VKAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiJESDqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDhnK7+9Q+vAEG6D8DvgAAAA==[0m[Pipeline] isUnix
+[8mha:////4LCCMA35DFjIKWNBfckyvid6IYG6rAJWF2pBRKodwFI4AAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUSEgMiKlrlIUThCaEtNH/5SelnTgRV+MOtFRiwoNlW7Le6w1FZDgRO9FYbD3G2osu9G5KYiBur4EG0dBF1ISRghXKDoqMrZaqKFlYlOWwkrC2WAeKHl2CjWz0Q5dBoyvPiaftKCH35g5PyORETprTt4wM21tvIuGP8xcAY5cg3+1nO8zP4gOeMTC6wgAAAA==[0m[Pipeline] withEnv
+[8mha:////4BmlI4n0B1Wku5C74t5D/n+nHnYelevOsuz7y8Ad0XznAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUTCAhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD0rlhNLCAAAA[0m[Pipeline] {
+[8mha:////4Fp2lU8C428A8d2B3QS8QGy6xjR4G5MmuCC+lTRWFYAWAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiOhCiSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwZyu3uU/vwBr2eB0O+AAAA[0m[Pipeline] sh
++ docker pull node:20.11.0-bookworm
+20.11.0-bookworm: Pulling from library/node
+c2964e85ea54: Pulling fs layer
+d3436c315a5d: Pulling fs layer
+603ae72c83b1: Pulling fs layer
+bcabfc6c415b: Pulling fs layer
+d4787ee6f8d4: Pulling fs layer
+cd29805c36eb: Pulling fs layer
+e725bfda3b07: Pulling fs layer
+8294dad7e02b: Pulling fs layer
+d4787ee6f8d4: Waiting
+cd29805c36eb: Waiting
+e725bfda3b07: Waiting
+8294dad7e02b: Waiting
+bcabfc6c415b: Waiting
+d3436c315a5d: Download complete
+c2964e85ea54: Download complete
+c2964e85ea54: Pull complete
+d3436c315a5d: Pull complete
+d4787ee6f8d4: Verifying Checksum
+d4787ee6f8d4: Download complete
+cd29805c36eb: Verifying Checksum
+cd29805c36eb: Download complete
+e725bfda3b07: Verifying Checksum
+e725bfda3b07: Download complete
+8294dad7e02b: Verifying Checksum
+8294dad7e02b: Download complete
+bcabfc6c415b: Verifying Checksum
+bcabfc6c415b: Download complete
+603ae72c83b1: Verifying Checksum
+603ae72c83b1: Download complete
+603ae72c83b1: Pull complete
+bcabfc6c415b: Pull complete
+d4787ee6f8d4: Pull complete
+cd29805c36eb: Pull complete
+e725bfda3b07: Pull complete
+8294dad7e02b: Pull complete
+Digest: sha256:7bf4a586b423aac858176b3f683e35f08575c84500fbcfd1d433ad8568972ec6
+Status: Downloaded newer image for node:20.11.0-bookworm
+docker.io/library/node:20.11.0-bookworm
+[8mha:////4PsUve1Hq1k2EkNhaIKk3ulKPbQ47/TG3jOUOfqsvp+1AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICVEgoFa3lhheYxBgn1l2wHZyKF/E1/oBFJCq2WO1sM683LIOHmr3BTlNvKTQWBzeavDCx76+OE3Z8wYYpsNModZLc6tOMkqOGOUUJCwErTY3jYMlEWItOPVTlFJnqHH3+jgJK297hCYXI5qh8/MLkYXMb28D08/wVwDQMEcr9Ntfu8AEWNdkpvgAAAA==[0m[Pipeline] }
+[8mha:////4L+htqiK6CISi3JgXHzzh+cg5gVo2c8NaR6DUX46wgxSAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKi0FAgqrRWGl5gYmOcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThwM9poGS7Gz6N1o8sKJw3B1PGHPF+yYIjuNrZ5aVrpZsOWkYUlRwkrARlPnOFoyCbailw9ZOUmmOqeQv6OA0qo7PKEQ2ZxkSF+YA+xuo4pMP89fAczeJyj3da768AEi+zpyvgAAAA==[0m[Pipeline] // withEnv
+[8mha:////4ITQxweKQoYw0GRENjl3WaJXwTYEih3dNZmxkpgZSd1mAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMIRER2iSmul4QUmPowT687YDknFi/gaf8AiEhVbrHa2mdcb1jHAiYMRPdJgKXZWeDeavMTEYbg6nkTPF9ExRXYoWpxa1tgs2HJCWFKUsJKwQeocR0smwVb26qEqp8hU5xTyd5RQWn2HJxQym5MK6QtzgN1t1JHp5/krgNn7BGVd59ofPjbYp22+AAAA[0m[Pipeline] }
+[8mha:////4M4DFZpCP9bFcdIj1piyDPt0OLyLbvvOVMPP0NIHzoZqAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiSImo0lppeIGJjXFi3RnbIal4EV/jD1hEomKL1c4283rDOgY4cTDYaxosxc6id6PJCycOw9XxhD1fsGOK7DS2empZ6WbBlpOGJUUJKwEbTZ3jaMkk2IpePmTlJJnqnEL+jgJKq+7whEJkc5IhfWEOsLuNKjL9PH8FMHufoDzUufb1BzCenzi+AAAA[0m[Pipeline] // withEnv
+[8mha:////4BVCI8xR+kzgQLxcxIOPvcijENwVUsaCD3eCziW4wnQMAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohURWyIqWvUhROEJoSk0f8lSUknTsTVuAOBSkx4sGxL1nu+oAoejuQ1swoHg6E3bHSTzokl8sPFUWKWzqwnDOQU61TqSKp2qR1FBYuKElYc1gp7R8GgjrDhVtxF7QTq+hR93g4cSiNv8ICCZ3IUPn7L7GF7nWQg/HH+AmAeI5RNk223/zyrN+/1G3zCAAAA[0m[Pipeline] withDockerContainer
+Jenkins seems to be running inside container bb05a24998874f7ac3e9d57d149df2358963c0c00289cba06f661c1d3afd3caa
+but /var/jenkins_home/workspace/auto could not be found among []
+but /var/jenkins_home/workspace/auto@tmp could not be found among []
+$ docker run -t -d -u 1000:1000 --user root:root -w /var/jenkins_home/workspace/auto -v /var/jenkins_home/workspace/auto:/var/jenkins_home/workspace/auto:rw,z -v /var/jenkins_home/workspace/auto@tmp:/var/jenkins_home/workspace/auto@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** node:20.11.0-bookworm cat
+$ docker top d6821354a2e37d64f5eb0a57e6bda7cd538770f5f38de40db1ee3f9013e5107d -eo pid,comm
+[8mha:////4K6hMYRatoHW1TuUNy4zRXxnphh0ER4v1i1AQoB1g4HQAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUQjAhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD/hYjrHCAAAA[0m[Pipeline] {
+[8mha:////4JJpH60qUdsLuVelhHPqlQfp5I322zaHJbje3kWHe1oYAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUQoIFMXWNsnCC0ISQNvq//KS0EyfiatyBlkpMeLBsS9Z7vaGIDCdiJxqLrcdYe9GF3k1JDMTtNdAgGrqImjBSsELZQZGx1VIVJQuLshxWEtYW60DRo0uwkY1+6DJodOU58bQdJeTe3OEJmZzISXP6lpFhe+tNJPxx/gJg7BLku/1sh/lZfACW9ZT2wgAAAA==[0m[Pipeline] timeout
+Timeout set to expire in 1 hr 0 min
+[8mha:////4JPM+NbUikobVo89dHSCwzQqbXxI23ufJ7rfkwElUvHgAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUYoABMXWNsnCC0ISQNvq//KS0EyfiatyBlkpMeLBsS9Z7vaGIDCdiJxqLrcdYe9GF3k1JDMTtNdAgGrqImjBSsELZQZGx1VIVJQuLshxWEtYW60DRo0uwkY1+6DJodOU58bQdJeTe3OEJmZzISXP6lpFhe+tNJPxx/gJg7BLku/1sh/lZfAAyQCqkwgAAAA==[0m[Pipeline] {
+[8mha:////4LREEZaJw8zouHoaXfIBVRKoTa+BOeD+Uz7x+zHatcyrAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUYgEJMXWNsnCC0ISQNvq//KS0EyfiatyBlkpMeLBsS9Z7vaGIDCdiJxqLrcdYe9GF3k1JDMTtNdAgGrqImjBSsELZQZGx1VIVJQuLshxWEtYW60DRo0uwkY1+6DJodOU58bQdJeTe3OEJmZzISXP6lpFhe+tNJPxx/gJg7BLku/1sh/lZfAAnLfKUwgAAAA==[0m[Pipeline] stage
+[8mha:////4PrbkE+iLiksWrsfcnyf1GVyXj3lUckC0QRSnfdeODudAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUYgIhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD0QKVszCAAAA[0m[Pipeline] { (Init)
+[8mha:////4NhCHEOxCMQdbNdLlbREFqV4FcC6Ugr8ZV7OripJwQk6AAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycogUwYRQJ9aoCycITQhJo/9LkpJOnIircQcClZjwYNmWrPd8QRU8NOQ1swp7g6EzbHCjzokl8v3FUWKWzqwjDOQUa1VqSarjXFuKCmYVJSw4LBV2joJBHWHFrbiL2gnU9Sn6vB04lEbe4AEFz+QofPyWycP6OspA+OP8BcA0RCi3+2y7zedZvQH4j6CMwgAAAA==[0m[Pipeline] script
+[8mha:////4AxiJ1P6EnzdlAXeYsr9qdtcToKgYo+nYCZnDHUnBAtrAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycogUxIiYukZZOEFoQkgb/V9+UtqJE3E17kBLJSY8WLYl673eUESGE7ETjcXWY6y96ELvpiQG4vYaaBANXURNGClYoeygyNhqqYqShUVZDisJa4t1oOjRJdjIRj90GTS68px42o4Scm/u8IRMTuSkOX3LyLC99SYS/jh/ATB2CfLDbrb9/Cw+ty4Up8IAAAA=[0m[Pipeline] {
+[8mha:////4Ke2wULQmSI3NNr6riNrxdGFnZ6rszhZAvGssN4KbMobAAAAox+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIioERUaS03vMDExjix7oztkFS8iK/xBwKRqNhitbPNPF+wTBGOHC22hjpHqXEYfG+nhQPH7uJ5wJbP2DAl9galGSRrU88oORuYU5SwELAy1HhOjmyGtWjVXVVeka1OOU7fQUDp9A0eUIjJnFXMXxgjbK69Tkw/z18BjCFDud9+ahfettHKdL4AAAA=[0m[Pipeline] isUnix
+[8mha:////4KJw68hzdhXZ/OEJEcARmeJL8gSe2GwJjGsd/EYl862bAAAAox+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIilBJR0VppeIFJjLFj3Tm2g1PxIr7GHwhEomKL1c4283zBOgY4ctBoFfWGYmvQu1HPCzOH/uo4o+ULtkyRncJG5YY7dVqw4aRgSVHCSsBGUes4GtIJtsLKu6ycJF2dU5i/g4DSdAM8oBCzOcmQvjAF2N3GLjL9PH8FMHmfoKzrT+3fKpbQQr4AAAA=[0m[Pipeline] }
+[8mha:////4DCX0my2y5GuRMAC+gv6yl+flF6Ju1pKdTKl9YpsrgaAAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKCBB2iSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwhQ7nbf2r7BgSW0ii+AAAA[0m[Pipeline] // script
+[8mha:////4BDaBafhzf6PjOOb+9Ru2qEmSCMnRHDUngZuUrf0SjUXAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIigSgQSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANEcrtIdduP3wAiAnOxL4AAAA=[0m[Pipeline] echo
+Jenkins-Job auto #37 mit Workspace /var/jenkins_home/workspace/auto
+[8mha:////4KksDVswe7/vWh2vnGUB7kl58wrhYYxsOiCBzu4vkeWjAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIigYSEUCpayw0vMIkxTqy7YDs4FS/ia/wBi0hUbLHa2WZeb1gGDzV7g52m3lJoLA5uNHlhYt9fHSfs+IINU2CnUeokudWnGSVHDXOKEhYCVpoax8GSibAWnXqoyiky1Tn6/B0FlLa9wxMKkc1R+fiFycPmNraB6ef5K4BpiFBuD7l2++EDS1rj774AAAA=[0m[Pipeline] sh
++ rm -rf src
+[8mha:////4FHOvOIEbGYZa7SphpEP7GW2FpCOKZtIevrMc0mnpu0xAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiQYEQSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANEcrtIdduP3wACmv49r4AAAA=[0m[Pipeline] sh
++ rm -rf __tests__
+[8mha:////4KjjEWOjcu/TcQrALIhQijJid5c6bDETgmFLouP1RztZAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiQQNCqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKYhQrk95Nrthw/Fd2BxvgAAAA==[0m[Pipeline] sh
++ rm -rf node_modules
+[8mha:////4MwNDfFM3UcV6pO9eJA8QXzuu9rRqCb2UcsFVmto6fZJAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiQRUhqrRWGl5gYmOcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThwM9poGS7Gz6N1o8sKJw3B1PGHPF+yYIjuNrZ5aVrpZsOWkYUlRwkrARlPnOFoyCbailw9ZOUmmOqeQv6OA0qo7PKEQ2ZxkSF+YA+xuo4pMP89fAcw+Qbmvcx1q/wGERntovgAAAA==[0m[Pipeline] sh
++ rm -rf dist
+[8mha:////4BkollQNhi3jKgR4FhidAMGMEQhRtjr4VIX2Fp+pqAPKAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKCEA1CqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKYhQrk75Npvhw9I6/a8vgAAAA==[0m[Pipeline] sh
++ rm -rf .extras/doc/api
+[8mha:////4CKPH0Oo9qLxm4MyrVoLLCE/L4OEoD1K3qAXTtF9teY7AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiEA1CqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKYhQrk75Npvhw8J2u2lvgAAAA==[0m[Pipeline] sh
++ rm -rf .extras/doc/folien/folien.html
+[8mha:////4K/+s2KB/dDdfXMruUZzm8qfgeW0xJtdsrYa64sj4Dy/AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiRTQIUaW10vACExvjxLoztkNS8SK+xh+wiETFFqudbeb1hnUMcOJgsNc0WIqdRe9GkxdOHIar4wl7vmDHFNlpbPXUstLNgi0nDUuKElYCNpo6x9GSSbAVvXzIykky1TmF/B0FlFbd4QmFyOYkQ/rCHGB3G1Vk+nn+CmD2Ccr6kGtf+w/KicCOvgAAAA==[0m[Pipeline] sh
++ rm -rf .extras/doc/projekthandbuch/html
+[8mha:////4ORxHArq1KI5GShu083K5+wv9I4dS3DVWiDIBPlKa29ZAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiAQ1CqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKYhQrk95Nrvhg+LuNuXvgAAAA==[0m[Pipeline] git
+The recommended git tool is: git
+No credentials specified
+Warning: JENKINS-30600: special launcher org.jenkinsci.plugins.docker.workflow.WithContainerStep$Decorator$1@24185a65; decorates hudson.Launcher$LocalLauncher@2adfb096 will be ignored (a typical symptom is the Git executable not being run inside a designated container)
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/auto/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Caleb-Script/auto-service.git # timeout=10
+Fetching upstream changes from https://github.com/Caleb-Script/auto-service.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.2'
+ > git fetch --tags --force --progress -- https://github.com/Caleb-Script/auto-service.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 9d22e210c3585343248c8093a4c6497d69b54b4f (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 9d22e210c3585343248c8093a4c6497d69b54b4f # timeout=10
+ > git branch -a -v --no-abbrev # timeout=10
+ > git branch -D main # timeout=10
+ > git checkout -b main 9d22e210c3585343248c8093a4c6497d69b54b4f # timeout=10
+Commit message: "Update app.yml"
+[8mha:////4N8r6TWilVG96oyb2kNzw7wJdI3uZL7za1dBKRUZhThNAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMKRUBqEqNJaaXiBiQ/jxLoztkNS8SK+xh+wiETFFqudbeb1hnUMcOJgRI80WIqdFd6NJi8xcRiujifR80V0TJEdihanljU2C7acEJYUJawkbJA6x9GSSbCVvXqoyiky1TmF/B0llFbf4QmFzOakQvrCHGB3G3Vk+nn+CmD2PkFZ17n2hw9vIbKNvgAAAA==[0m[Pipeline] }
+[8mha:////4PhyF8VcNzNXByYNZl5pWqLETcVAfKip22h0+dTP8uyAAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiIZCQUCpayw0vMIkxTqy7YDs4FS/ia/wBi0hUbLHa2WZeb1gGDzV7g52m3lJoLA5uNHlhYt9fHSfs+IINU2CnUeokudWnGSVHDXOKEhYCVpoax8GSibAWnXqoyiky1Tn6/B0FlLa9wxMKkc1R+fiFycPmNraB6ef5K4BpGCKUu32u7eEDXMLpMb4AAAA=[0m[Pipeline] // stage
+[8mha:////4B/R68wvGzlmFuQA1YohIsyKL508ttpEkWVYp1bOJ93cAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUQggG1Ik16sIJQhNC0uj/kqSkEyfiatyBQCUmPFi2Jes9X1AFDw15zazC3mDoDBvcqHNiiXx/cZSYpTPrCAM5xVqVWpLqONeWooJZRQkLDkuFnaNgUEdYcSvuonYCdX2KPm8HDqWRN3hAwTM5Ch+/ZfKwvo4yEP44fwEwDRHKzT7bdvd5Vm9teSjNwgAAAA==[0m[Pipeline] stage
+[8mha:////4CaJP6kdUT+ue3gPt2Pw1b/NDnjGwMzcuq8C8IAF6c4AAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0QTAgpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD+jQxyjCAAAA[0m[Pipeline] { (Install)
+[8mha:////4EWSBYL4l0eDY3oqb0uxrAVz8hg/5+CNENwn26BEWeiKAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOLSIIGEqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDhnK7+9Q+vAGaE3/ivgAAAA==[0m[Pipeline] sh
++ id
+uid=0(root) gid=0(root) groups=0(root)
+[8mha:////4LnsxgAmgSHwHbdXRbbXbYL/r8JaIGjhYIVyb70CcqXGAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOLSICGEqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDhnK7+9Q+vAHbImT7vgAAAA==[0m[Pipeline] sh
++ cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+_apt:x:42:65534::/nonexistent:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+node:x:1000:1000::/home/node:/bin/bash
+[8mha:////4GKVUElTVoKrKjIJrchCMB/ZhnNnHyLciC1q0wH/chcNAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJCAaJAqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKYhQrk75Npvhw+l82QrvgAAAA==[0m[Pipeline] sh
++ echo /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+[8mha:////4P8+Se++j6zjluPRp+F+ryTbZu3iy7gFPiUwu5h7Q84rAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiJBAFSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANEcrdIdd+O3wA5MJ/Mr4AAAA=[0m[Pipeline] sh
++ pwd
+/var/jenkins_home/workspace/auto
+[8mha:////4N85Jl5SOQat2qQOmO3DVnlGrD2AiS9SEht6bv8JEZufAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiIRAFSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANEcrdIdd+O3wAJ5FSGb4AAAA=[0m[Pipeline] sh
++ uname -a
+Linux d6821354a2e3 6.6.22-linuxkit #1 SMP Fri Mar 29 12:21:27 UTC 2024 aarch64 GNU/Linux
+[8mha:////4IE8Z3g1WVIC4InNctxF06zebJPZOhjDYVL9XwqgmbqrAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSAKJAqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKYhQrk75Npvhw9moEkAvgAAAA==[0m[Pipeline] sh
++ cat /etc/os-release
+PRETTY_NAME="Debian GNU/Linux 12 (bookworm)"
+NAME="Debian GNU/Linux"
+VERSION_ID="12"
+VERSION="12 (bookworm)"
+VERSION_CODENAME=bookworm
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+[8mha:////4ImuTUDaN2dZ930s1/zBEYl4LsBcR6e91qHoFRqBSoiRAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOLSBFEgqrRWGl5gYmOcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThwM9poGS7Gz6N1o8sKJw3B1PGHPF+yYIjuNrZ5aVrpZsOWkYUlRwkrARlPnOFoyCbailw9ZOUmmOqeQv6OA0qo7PKEQ2ZxkSF+YA+xuo4pMP89fAcw+QVkfcu1r/wGhNghPvgAAAA==[0m[Pipeline] sh
++ cat /etc/debian_version
+12.5
+[8mha:////4JEcUsOIW+RqC3i5vMaJdPtrEi7j/qct3NS42vTdaTyuAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMJpiCgQVVorDS8w8WGcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThyM6JEGS7GzwrvR5CUmDsPV8SR6voiOKbJD0eLUssZmwZYTwpKihJWEDVLnOFoyCbayVw9VOUWmOqeQv6OE0uo7PKGQ2ZxUSF+YA+xuo45MP89fAcw+Qbk/5Kpr/wHgBxNWvgAAAA==[0m[Pipeline] sh
++ apt-cache policy nodejs
+[8mha:////4J04glyu7P7iAgqhSO5hrxTTHI/t09P3u2R0J5R0Wb7tAAAApR+LCAAAAAAAAP9tjTsOwjAQRDdBFLSUHGLT8ClQKlrLDScwiTFOrN1gOzgVJ+Jq3AGLSFRMMZo3zXu9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKYhQrk95Nrthw8jVD59vgAAAA==[0m[Pipeline] sh
++ apt-get install --no-install-recommends --yes --show-progress gcc=4:12.2.0-3 g++=4:12.2.0-3 make=4.3-4.1 python3.11-minimal=3.11.2-6
+Reading package lists...
+Building dependency tree...
+Reading state information...
+gcc is already the newest version (4:12.2.0-3).
+g++ is already the newest version (4:12.2.0-3).
+make is already the newest version (4.3-4.1).
+python3.11-minimal is already the newest version (3.11.2-6).
+python3.11-minimal set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+[8mha:////4BnJGu7lGn9jKnnTsqvxpXIspfDlg/IqZoQ1QxYW1WzpAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOLSgFIgqrRWGl5gYmOcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThwM9poGS7Gz6N1o8sKJw3B1PGHPF+yYIjuNrZ5aVrpZsOWkYUlRwkrARlPnOFoyCbailw9ZOUmmOqeQv6OA0qo7PKEQ2ZxkSF+YA+xuo4pMP89fAcw+Qbmvcx1q/wFiZSVkvgAAAA==[0m[Pipeline] sh
++ apt-get install --no-install-recommends --yes --show-progress ca-certificates=20230311 curl=7.88.1-10+deb12u5 gnupg=2.2.40-1.1
+Reading package lists...
+Building dependency tree...
+Reading state information...
+ca-certificates is already the newest version (20230311).
+curl is already the newest version (7.88.1-10+deb12u5).
+gnupg is already the newest version (2.2.40-1.1).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+[8mha:////4DH27+UuRwc/+ytPo1FUCdtXo3Aij4ZdC968nCPkVItPAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOLSgEBCqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKYhQrnd59odhg+teb3jvgAAAA==[0m[Pipeline] sh
++ apt-get update --yes
+Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+Get:4 http://deb.debian.org/debian bookworm/main arm64 Packages [8685 kB]
+Get:5 http://deb.debian.org/debian bookworm-updates/main arm64 Packages [13.7 kB]
+Get:6 http://deb.debian.org/debian-security bookworm-security/main arm64 Packages [152 kB]
+Fetched 9105 kB in 3s (2876 kB/s)
+Reading package lists...
+[8mha:////4J+XIYdlbYTubm0s7bqEjNIbxzowCAQ3LYTKeEoW/YIHAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOLSgBBCqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKYhQrnd59odhg/sSKb6vgAAAA==[0m[Pipeline] sh
++ apt-get upgrade --yes
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following packages will be upgraded:
+  bsdutils imagemagick imagemagick-6-common imagemagick-6.q16 libblkid-dev
+  libblkid1 libc-bin libc-dev-bin libc6 libc6-dev libmagickcore-6-arch-config
+  libmagickcore-6-headers libmagickcore-6.q16-6 libmagickcore-6.q16-6-extra
+  libmagickcore-6.q16-dev libmagickcore-dev libmagickwand-6-headers
+  libmagickwand-6.q16-6 libmagickwand-6.q16-dev libmagickwand-dev libmount-dev
+  libmount1 libpq-dev libpq5 libsmartcols1 libuuid1 linux-libc-dev mount
+  util-linux util-linux-extra uuid-dev
+31 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 13.1 MB of archives.
+After this operation, 37.9 kB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian-security bookworm-security/main arm64 bsdutils arm64 1:2.38.1-5+deb12u1 [94.0 kB]
+Get:2 http://deb.debian.org/debian-security bookworm-security/main arm64 libc6-dev arm64 2.36-9+deb12u6 [1430 kB]
+Get:3 http://deb.debian.org/debian-security bookworm-security/main arm64 libc-dev-bin arm64 2.36-9+deb12u6 [44.7 kB]
+Get:4 http://deb.debian.org/debian-security bookworm-security/main arm64 linux-libc-dev arm64 6.1.85-1 [1944 kB]
+Get:5 http://deb.debian.org/debian-security bookworm-security/main arm64 libc6 arm64 2.36-9+deb12u6 [2321 kB]
+Get:6 http://deb.debian.org/debian-security bookworm-security/main arm64 libsmartcols1 arm64 2.38.1-5+deb12u1 [104 kB]
+Get:7 http://deb.debian.org/debian-security bookworm-security/main arm64 util-linux-extra arm64 2.38.1-5+deb12u1 [112 kB]
+Get:8 http://deb.debian.org/debian-security bookworm-security/main arm64 util-linux arm64 2.38.1-5+deb12u1 [1144 kB]
+Get:9 http://deb.debian.org/debian-security bookworm-security/main arm64 libc-bin arm64 2.36-9+deb12u6 [531 kB]
+Get:10 http://deb.debian.org/debian-security bookworm-security/main arm64 mount arm64 2.38.1-5+deb12u1 [134 kB]
+Get:11 http://deb.debian.org/debian-security bookworm-security/main arm64 libmagickwand-6.q16-dev arm64 8:6.9.11.60+dfsg-1.6+deb12u1 [397 kB]
+Get:12 http://deb.debian.org/debian-security bookworm-security/main arm64 libmagickwand-dev all 8:6.9.11.60+dfsg-1.6+deb12u1 [1324 B]
+Get:13 http://deb.debian.org/debian-security bookworm-security/main arm64 imagemagick-6.q16 arm64 8:6.9.11.60+dfsg-1.6+deb12u1 [340 kB]
+Get:14 http://deb.debian.org/debian-security bookworm-security/main arm64 libmagickcore-6.q16-dev arm64 8:6.9.11.60+dfsg-1.6+deb12u1 [1018 kB]
+Get:15 http://deb.debian.org/debian-security bookworm-security/main arm64 libmagickcore-6.q16-6 arm64 8:6.9.11.60+dfsg-1.6+deb12u1 [1586 kB]
+Get:16 http://deb.debian.org/debian-security bookworm-security/main arm64 libmagickwand-6.q16-6 arm64 8:6.9.11.60+dfsg-1.6+deb12u1 [349 kB]
+Get:17 http://deb.debian.org/debian-security bookworm-security/main arm64 libmagickcore-dev all 8:6.9.11.60+dfsg-1.6+deb12u1 [1336 B]
+Get:18 http://deb.debian.org/debian-security bookworm-security/main arm64 libmagickwand-6-headers all 8:6.9.11.60+dfsg-1.6+deb12u1 [10.5 kB]
+Get:19 http://deb.debian.org/debian-security bookworm-security/main arm64 libmagickcore-6-arch-config arm64 8:6.9.11.60+dfsg-1.6+deb12u1 [130 kB]
+Get:20 http://deb.debian.org/debian-security bookworm-security/main arm64 libmagickcore-6-headers all 8:6.9.11.60+dfsg-1.6+deb12u1 [50.9 kB]
+Get:21 http://deb.debian.org/debian-security bookworm-security/main arm64 imagemagick-6-common all 8:6.9.11.60+dfsg-1.6+deb12u1 [166 kB]
+Get:22 http://deb.debian.org/debian-security bookworm-security/main arm64 libmagickcore-6.q16-6-extra arm64 8:6.9.11.60+dfsg-1.6+deb12u1 [168 kB]
+Get:23 http://deb.debian.org/debian-security bookworm-security/main arm64 uuid-dev arm64 2.38.1-5+deb12u1 [40.3 kB]
+Get:24 http://deb.debian.org/debian-security bookworm-security/main arm64 libuuid1 arm64 2.38.1-5+deb12u1 [28.3 kB]
+Get:25 http://deb.debian.org/debian-security bookworm-security/main arm64 libblkid-dev arm64 2.38.1-5+deb12u1 [183 kB]
+Get:26 http://deb.debian.org/debian-security bookworm-security/main arm64 libblkid1 arm64 2.38.1-5+deb12u1 [143 kB]
+Get:27 http://deb.debian.org/debian-security bookworm-security/main arm64 libmount-dev arm64 2.38.1-5+deb12u1 [22.3 kB]
+Get:28 http://deb.debian.org/debian-security bookworm-security/main arm64 libmount1 arm64 2.38.1-5+deb12u1 [159 kB]
+Get:29 http://deb.debian.org/debian-security bookworm-security/main arm64 imagemagick arm64 8:6.9.11.60+dfsg-1.6+deb12u1 [122 kB]
+Get:30 http://deb.debian.org/debian-security bookworm-security/main arm64 libpq-dev arm64 15.6-0+deb12u1 [139 kB]
+Get:31 http://deb.debian.org/debian-security bookworm-security/main arm64 libpq5 arm64 15.6-0+deb12u1 [178 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 13.1 MB in 11s (1219 kB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 23282 files and directories currently installed.)
+Preparing to unpack .../bsdutils_1%3a2.38.1-5+deb12u1_arm64.deb ...
+Unpacking bsdutils (1:2.38.1-5+deb12u1) over (1:2.38.1-5+b1) ...
+Setting up bsdutils (1:2.38.1-5+deb12u1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 23281 files and directories currently installed.)
+Preparing to unpack .../libc6-dev_2.36-9+deb12u6_arm64.deb ...
+Unpacking libc6-dev:arm64 (2.36-9+deb12u6) over (2.36-9+deb12u4) ...
+Preparing to unpack .../libc-dev-bin_2.36-9+deb12u6_arm64.deb ...
+Unpacking libc-dev-bin (2.36-9+deb12u6) over (2.36-9+deb12u4) ...
+Preparing to unpack .../linux-libc-dev_6.1.85-1_arm64.deb ...
+Unpacking linux-libc-dev:arm64 (6.1.85-1) over (6.1.76-1) ...
+Preparing to unpack .../libc6_2.36-9+deb12u6_arm64.deb ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+Unpacking libc6:arm64 (2.36-9+deb12u6) over (2.36-9+deb12u4) ...
+Setting up libc6:arm64 (2.36-9+deb12u6) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 23281 files and directories currently installed.)
+Preparing to unpack .../libsmartcols1_2.38.1-5+deb12u1_arm64.deb ...
+Unpacking libsmartcols1:arm64 (2.38.1-5+deb12u1) over (2.38.1-5+b1) ...
+Setting up libsmartcols1:arm64 (2.38.1-5+deb12u1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 23280 files and directories currently installed.)
+Preparing to unpack .../util-linux-extra_2.38.1-5+deb12u1_arm64.deb ...
+Unpacking util-linux-extra (2.38.1-5+deb12u1) over (2.38.1-5+b1) ...
+Setting up util-linux-extra (2.38.1-5+deb12u1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 23279 files and directories currently installed.)
+Preparing to unpack .../util-linux_2.38.1-5+deb12u1_arm64.deb ...
+Unpacking util-linux (2.38.1-5+deb12u1) over (2.38.1-5+b1) ...
+Setting up util-linux (2.38.1-5+deb12u1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 23278 files and directories currently installed.)
+Preparing to unpack .../libc-bin_2.36-9+deb12u6_arm64.deb ...
+Unpacking libc-bin (2.36-9+deb12u6) over (2.36-9+deb12u4) ...
+Setting up libc-bin (2.36-9+deb12u6) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 23278 files and directories currently installed.)
+Preparing to unpack .../00-mount_2.38.1-5+deb12u1_arm64.deb ...
+Unpacking mount (2.38.1-5+deb12u1) over (2.38.1-5+b1) ...
+Preparing to unpack .../01-libmagickwand-6.q16-dev_8%3a6.9.11.60+dfsg-1.6+deb12u1_arm64.deb ...
+Unpacking libmagickwand-6.q16-dev:arm64 (8:6.9.11.60+dfsg-1.6+deb12u1) over (8:6.9.11.60+dfsg-1.6) ...
+Preparing to unpack .../02-libmagickwand-dev_8%3a6.9.11.60+dfsg-1.6+deb12u1_all.deb ...
+Unpacking libmagickwand-dev (8:6.9.11.60+dfsg-1.6+deb12u1) over (8:6.9.11.60+dfsg-1.6) ...
+Preparing to unpack .../03-imagemagick-6.q16_8%3a6.9.11.60+dfsg-1.6+deb12u1_arm64.deb ...
+Unpacking imagemagick-6.q16 (8:6.9.11.60+dfsg-1.6+deb12u1) over (8:6.9.11.60+dfsg-1.6) ...
+Preparing to unpack .../04-libmagickcore-6.q16-dev_8%3a6.9.11.60+dfsg-1.6+deb12u1_arm64.deb ...
+Unpacking libmagickcore-6.q16-dev:arm64 (8:6.9.11.60+dfsg-1.6+deb12u1) over (8:6.9.11.60+dfsg-1.6) ...
+Preparing to unpack .../05-libmagickcore-6.q16-6_8%3a6.9.11.60+dfsg-1.6+deb12u1_arm64.deb ...
+Unpacking libmagickcore-6.q16-6:arm64 (8:6.9.11.60+dfsg-1.6+deb12u1) over (8:6.9.11.60+dfsg-1.6) ...
+Preparing to unpack .../06-libmagickwand-6.q16-6_8%3a6.9.11.60+dfsg-1.6+deb12u1_arm64.deb ...
+Unpacking libmagickwand-6.q16-6:arm64 (8:6.9.11.60+dfsg-1.6+deb12u1) over (8:6.9.11.60+dfsg-1.6) ...
+Preparing to unpack .../07-libmagickcore-dev_8%3a6.9.11.60+dfsg-1.6+deb12u1_all.deb ...
+Unpacking libmagickcore-dev (8:6.9.11.60+dfsg-1.6+deb12u1) over (8:6.9.11.60+dfsg-1.6) ...
+Preparing to unpack .../08-libmagickwand-6-headers_8%3a6.9.11.60+dfsg-1.6+deb12u1_all.deb ...
+Unpacking libmagickwand-6-headers (8:6.9.11.60+dfsg-1.6+deb12u1) over (8:6.9.11.60+dfsg-1.6) ...
+Preparing to unpack .../09-libmagickcore-6-arch-config_8%3a6.9.11.60+dfsg-1.6+deb12u1_arm64.deb ...
+Unpacking libmagickcore-6-arch-config:arm64 (8:6.9.11.60+dfsg-1.6+deb12u1) over (8:6.9.11.60+dfsg-1.6) ...
+Preparing to unpack .../10-libmagickcore-6-headers_8%3a6.9.11.60+dfsg-1.6+deb12u1_all.deb ...
+Unpacking libmagickcore-6-headers (8:6.9.11.60+dfsg-1.6+deb12u1) over (8:6.9.11.60+dfsg-1.6) ...
+Preparing to unpack .../11-imagemagick-6-common_8%3a6.9.11.60+dfsg-1.6+deb12u1_all.deb ...
+Unpacking imagemagick-6-common (8:6.9.11.60+dfsg-1.6+deb12u1) over (8:6.9.11.60+dfsg-1.6) ...
+Preparing to unpack .../12-libmagickcore-6.q16-6-extra_8%3a6.9.11.60+dfsg-1.6+deb12u1_arm64.deb ...
+Unpacking libmagickcore-6.q16-6-extra:arm64 (8:6.9.11.60+dfsg-1.6+deb12u1) over (8:6.9.11.60+dfsg-1.6) ...
+Preparing to unpack .../13-uuid-dev_2.38.1-5+deb12u1_arm64.deb ...
+Unpacking uuid-dev:arm64 (2.38.1-5+deb12u1) over (2.38.1-5+b1) ...
+Preparing to unpack .../14-libuuid1_2.38.1-5+deb12u1_arm64.deb ...
+Unpacking libuuid1:arm64 (2.38.1-5+deb12u1) over (2.38.1-5+b1) ...
+Setting up libuuid1:arm64 (2.38.1-5+deb12u1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 23275 files and directories currently installed.)
+Preparing to unpack .../libblkid-dev_2.38.1-5+deb12u1_arm64.deb ...
+Unpacking libblkid-dev:arm64 (2.38.1-5+deb12u1) over (2.38.1-5+b1) ...
+Preparing to unpack .../libblkid1_2.38.1-5+deb12u1_arm64.deb ...
+Unpacking libblkid1:arm64 (2.38.1-5+deb12u1) over (2.38.1-5+b1) ...
+Setting up libblkid1:arm64 (2.38.1-5+deb12u1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 23273 files and directories currently installed.)
+Preparing to unpack .../libmount-dev_2.38.1-5+deb12u1_arm64.deb ...
+Unpacking libmount-dev:arm64 (2.38.1-5+deb12u1) over (2.38.1-5+b1) ...
+Preparing to unpack .../libmount1_2.38.1-5+deb12u1_arm64.deb ...
+Unpacking libmount1:arm64 (2.38.1-5+deb12u1) over (2.38.1-5+b1) ...
+Setting up libmount1:arm64 (2.38.1-5+deb12u1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 23271 files and directories currently installed.)
+Preparing to unpack .../imagemagick_8%3a6.9.11.60+dfsg-1.6+deb12u1_arm64.deb ...
+Unpacking imagemagick (8:6.9.11.60+dfsg-1.6+deb12u1) over (8:6.9.11.60+dfsg-1.6) ...
+Preparing to unpack .../libpq-dev_15.6-0+deb12u1_arm64.deb ...
+Unpacking libpq-dev (15.6-0+deb12u1) over (15.5-0+deb12u1) ...
+Preparing to unpack .../libpq5_15.6-0+deb12u1_arm64.deb ...
+Unpacking libpq5:arm64 (15.6-0+deb12u1) over (15.5-0+deb12u1) ...
+Setting up imagemagick-6-common (8:6.9.11.60+dfsg-1.6+deb12u1) ...
+Setting up libpq5:arm64 (15.6-0+deb12u1) ...
+Setting up linux-libc-dev:arm64 (6.1.85-1) ...
+Setting up libpq-dev (15.6-0+deb12u1) ...
+Setting up libmagickcore-6.q16-6:arm64 (8:6.9.11.60+dfsg-1.6+deb12u1) ...
+Setting up mount (2.38.1-5+deb12u1) ...
+Setting up libmagickwand-6.q16-6:arm64 (8:6.9.11.60+dfsg-1.6+deb12u1) ...
+Setting up libmagickcore-6-headers (8:6.9.11.60+dfsg-1.6+deb12u1) ...
+Setting up libc-dev-bin (2.36-9+deb12u6) ...
+Setting up libmagickcore-6-arch-config:arm64 (8:6.9.11.60+dfsg-1.6+deb12u1) ...
+Setting up libmagickcore-6.q16-6-extra:arm64 (8:6.9.11.60+dfsg-1.6+deb12u1) ...
+Setting up libmagickwand-6-headers (8:6.9.11.60+dfsg-1.6+deb12u1) ...
+Setting up libmagickcore-6.q16-dev:arm64 (8:6.9.11.60+dfsg-1.6+deb12u1) ...
+Setting up imagemagick-6.q16 (8:6.9.11.60+dfsg-1.6+deb12u1) ...
+Setting up libc6-dev:arm64 (2.36-9+deb12u6) ...
+Setting up libmagickwand-6.q16-dev:arm64 (8:6.9.11.60+dfsg-1.6+deb12u1) ...
+Setting up libmagickcore-dev (8:6.9.11.60+dfsg-1.6+deb12u1) ...
+Setting up uuid-dev:arm64 (2.38.1-5+deb12u1) ...
+Setting up imagemagick (8:6.9.11.60+dfsg-1.6+deb12u1) ...
+Setting up libmagickwand-dev (8:6.9.11.60+dfsg-1.6+deb12u1) ...
+Setting up libblkid-dev:arm64 (2.38.1-5+deb12u1) ...
+Setting up libmount-dev:arm64 (2.38.1-5+deb12u1) ...
+Processing triggers for libc-bin (2.36-9+deb12u6) ...
+Processing triggers for hicolor-icon-theme (0.17-2) ...
+[8mha:////4IHJ57l1mibRFigywSK+ZahFEhPpvfpAPC91zvlgs6I7AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJCgaBAqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKYhQrk75Npvhw/8TSIpvgAAAA==[0m[Pipeline] sh
++ python3 --version
+Python 3.11.2
+[8mha:////4DfQdYyEx7v05WvAHwg0JoPIOgMtghcJdDtM1LN/J8moAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiJAQFSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANEcrdIdd+O3wAvXw5ML4AAAA=[0m[Pipeline] sh
++ mkdir -p /etc/apt/keyrings
+[8mha:////4Oh4uJPEEsL7GM1FB6/ZD6jejqMaNrSiVYRF6buy4oi/AAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiIQQFSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANEcrdIdd+O3wAfi8UG74AAAA=[0m[Pipeline] sh
++ + curl -fsSLgpg --dearmor https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key
+ -o /etc/apt/keyrings/nodesource.gpg
+[8mha:////4I8UXZvhW5gVcNt2j6pC1/JPA39bwAQfUeR01emP6NcKAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSgKBAqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKYhQrk75Npvhw8/Hg8CvgAAAA==[0m[Pipeline] sh
++ + echotee /etc/apt/sources.list.d/nodesource.list deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main
+
+deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main
+[8mha:////4KKwtwlFlOiFh5dpyTLGh2/DGcjoUiphoDX/GaeCsVHwAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOLSRFAgqrRWGl5gYmOcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThwM9poGS7Gz6N1o8sKJw3B1PGHPF+yYIjuNrZ5aVrpZsOWkYUlRwkrARlPnOFoyCbailw9ZOUmmOqeQv6OA0qo7PKEQ2ZxkSF+YA+xuo4pMP89fAcw+QVkfcu1r/wH4iE5NvgAAAA==[0m[Pipeline] sh
++ apt-get update
+Get:1 https://deb.nodesource.com/node_20.x nodistro InRelease [12.1 kB]
+Get:2 https://deb.nodesource.com/node_20.x nodistro/main arm64 Packages [6788 B]
+Hit:3 http://deb.debian.org/debian bookworm InRelease
+Hit:4 http://deb.debian.org/debian bookworm-updates InRelease
+Hit:5 http://deb.debian.org/debian-security bookworm-security InRelease
+Fetched 18.9 kB in 5s (3606 B/s)
+Reading package lists...
+[8mha:////4NiZosqF9d/d9HgQLn0fQ77b4+gS8VuP6b3Ly1PSQysfAAAApR+LCAAAAAAAAP9tjTsOwjAQRDdBFLSUHGLT8ClQKlrLDScwiTFOrN1gOzgVJ+Jq3AGLSFRMMZo3zXu9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKYhQrk95Nrvhg+5uVVUvgAAAA==[0m[Pipeline] sh
++ apt-get install nodejs --no-install-recommends --yes --show-progress
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  nodejs
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 30.7 MB of archives.
+After this operation, 194 MB of additional disk space will be used.
+Get:1 https://deb.nodesource.com/node_20.x nodistro/main arm64 nodejs arm64 20.12.2-1nodesource1 [30.7 MB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 30.7 MB in 19s (1579 kB/s)
+Selecting previously unselected package nodejs.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 23271 files and directories currently installed.)
+Preparing to unpack .../nodejs_20.12.2-1nodesource1_arm64.deb ...
+Progress: [  0%]
+Progress: [ 20%]
+Unpacking nodejs (20.12.2-1nodesource1) ...
+Progress: [ 40%]
+Setting up nodejs (20.12.2-1nodesource1) ...
+Progress: [ 60%]
+Progress: [ 80%]
+[8mha:////4Of+fXf/+gOZ3o2OYsvb42wMAi+zX9oFyHZgbxRK2JxXAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMJpUCgQVVorDS8w8WGcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThyM6JEGS7GzwrvR5CUmDsPV8SR6voiOKbJD0eLUssZmwZYTwpKihJWEDVLnOFoyCbayVw9VOUWmOqeQv6OE0uo7PKGQ2ZxUSF+YA+xuo45MP89fAcw+Qbk/5Kpr/wF66nh/vgAAAA==[0m[Pipeline] sh
++ apt-cache policy nodejs
+nodejs:
+  Installed: 20.12.2-1nodesource1
+  Candidate: 20.12.2-1nodesource1
+  Version table:
+ *** 20.12.2-1nodesource1 500
+        500 https://deb.nodesource.com/node_20.x nodistro/main arm64 Packages
+        100 /var/lib/dpkg/status
+     20.12.1-1nodesource1 500
+        500 https://deb.nodesource.com/node_20.x nodistro/main arm64 Packages
+     20.12.0-1nodesource1 500
+        500 https://deb.nodesource.com/node_20.x nodistro/main arm64 Packages
+     20.11.1-1nodesource1 500
+        500 https://deb.nodesource.com/node_20.x nodistro/main arm64 Packages
+     20.11.0-1nodesource1 500
+        500 https://deb.nodesource.com/node_20.x nodistro/main arm64 Packages
+     20.10.0-1nodesource1 500
+        500 https://deb.nodesource.com/node_20.x nodistro/main arm64 Packages
+     20.9.0-1nodesource1 500
+        500 https://deb.nodesource.com/node_20.x nodistro/main arm64 Packages
+     20.8.1-1nodesource1 500
+        500 https://deb.nodesource.com/node_20.x nodistro/main arm64 Packages
+     20.8.0-1nodesource1 500
+        500 https://deb.nodesource.com/node_20.x nodistro/main arm64 Packages
+     20.7.0-1nodesource1 500
+        500 https://deb.nodesource.com/node_20.x nodistro/main arm64 Packages
+     20.6.1-1nodesource1 500
+        500 https://deb.nodesource.com/node_20.x nodistro/main arm64 Packages
+     20.6.0-1nodesource1 500
+        500 https://deb.nodesource.com/node_20.x nodistro/main arm64 Packages
+     20.5.1-1nodesource1 500
+        500 https://deb.nodesource.com/node_20.x nodistro/main arm64 Packages
+     20.5.0-1nodesource1 500
+        500 https://deb.nodesource.com/node_20.x nodistro/main arm64 Packages
+     20.4.0-1nodesource1 500
+        500 https://deb.nodesource.com/node_20.x nodistro/main arm64 Packages
+     20.3.1-1nodesource1 500
+        500 https://deb.nodesource.com/node_20.x nodistro/main arm64 Packages
+     20.3.0-1nodesource1 500
+        500 https://deb.nodesource.com/node_20.x nodistro/main arm64 Packages
+     20.2.0-1nodesource1 500
+        500 https://deb.nodesource.com/node_20.x nodistro/main arm64 Packages
+     20.1.0-1nodesource1 500
+        500 https://deb.nodesource.com/node_20.x nodistro/main arm64 Packages
+     20.0.0-1nodesource1 500
+        500 https://deb.nodesource.com/node_20.x nodistro/main arm64 Packages
+     18.19.0+dfsg-6~deb12u1 500
+        500 http://deb.debian.org/debian-security bookworm-security/main arm64 Packages
+     18.13.0+dfsg1-1 500
+        500 http://deb.debian.org/debian bookworm/main arm64 Packages
+[8mha:////4ChifCu2ClBcj8XsaeGxD/Q1/dbwcCH9iVULEErJH17LAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOLSIFIgqrRWGl5gYmOcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThwM9poGS7Gz6N1o8sKJw3B1PGHPF+yYIjuNrZ5aVrpZsOWkYUlRwkrARlPnOFoyCbailw9ZOUmmOqeQv6OA0qo7PKEQ2ZxkSF+YA+xuo4pMP89fAcw+Qbmvcx1q/wE722NmvgAAAA==[0m[Pipeline] sh
++ node --version
+v20.11.0
+[8mha:////4Jo+5GQsfKMN+g+ZaTpWwoGPD7/xp42dL/EJPYBCGNr3AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOLSIEBCqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKYhQrnd59odhg/0x/vhvgAAAA==[0m[Pipeline] sh
++ npm i -g npm
+
+removed 43 packages, and changed 75 packages in 4s
+
+24 packages are looking for funding
+  run `npm fund` for details
+[8mha:////4NL3Px15Ea9roXvUUaWdSr5ibhOKisnFQFm8sab9VfIzAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOLSIBBCqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKYhQrnd59odhg+19uD4vgAAAA==[0m[Pipeline] sh
++ npm --version
+10.7.0
+[8mha:////4DXffmdNuf9w2YP4WhzBU4M6mnveWTZhLfR4dkli9OOGAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoiUAakDYuoaZeEEIQkhbfR/SVLaiRNxNe5AoBITHizbkvWeL6higCMFyzqDvcOoHBv8aHNiE4X+4mliHZ2ZIozkDRNmEqRNu1RBycCiooQVh7VB5Sk6tAk2vJN3WXuJtj6lkLcDh9LpGzyg4JmcZEjfMgfYXkcdCX+cvwCYhwTlvsnW7D7P6g0NJaTFwgAAAA==[0m[Pipeline] script
+[8mha:////4L8v2Ooie6ypDhHqss9zkqbrZ5eyoqodnfj38JAp7BjfAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycogUJgbE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5AfdrPt52fxAdsxXVDCAAAA[0m[Pipeline] {
+[8mha:////4JgiDdI1iKLqeJ0Xs/GsK/ROvECvYLEeu2uvEpfheeOhAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiaCgQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGPIUO63n9qFN5B3ife+AAAA[0m[Pipeline] fileExists
+[8mha:////4KyyNAcOpS6B0bzTAQxzGk9eIEy7Zt9V316PuIkUP7YtAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiREGBqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDyFDud5/avgE9d/PSvgAAAA==[0m[Pipeline] }
+[8mha:////4EZ5W1ADFpX020YRS24mrWXdjb3GIjT8LO9xYmYMnt4jAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJCgUSBqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDyFDud5/avgETd/G4vgAAAA==[0m[Pipeline] // script
+[8mha:////4EU6eNfYoCpqcksN4ekCCBUIDZSmyBeUPnFG55ndj1OHAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOLSgFIgqrRWGl5gYmOcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThwM9poGS7Gz6N1o8sKJw3B1PGHPF+yYIjuNrZ5aVrpZsOWkYUlRwkrARlPnOFoyCbailw9ZOUmmOqeQv6OA0qo7PKEQ2ZxkSF+YA+xuo4pMP89fAcw+Qbmvc9UH/wGO05dVvgAAAA==[0m[Pipeline] sh
++ cat package.json
+{
+  "name": "auto-service",
+  "version": "2024.04.0",
+  "private": true,
+  "description": "Beispiel",
+  "keywords": [
+    "Node",
+    "npm",
+    "Nest",
+    "REST",
+    "GraphQL",
+    "Apollo",
+    "Axios",
+    "TypeScript",
+    "ESLint",
+    "PostgreSQL",
+    "TypeORM",
+    "JWT",
+    "Passport",
+    "argon2",
+    "Ajv",
+    "CSP",
+    "Clickjacking",
+    "CORS",
+    "pino",
+    "nodemailer",
+    "Jest",
+    "ts-jest"
+  ],
+  "license": "GPL-3.0",
+  "author": "Gruppe 2",
+  "type": "module",
+  "exports": "./dist/src/main.js",
+  "scripts": {
+    "asciidoctor": "node scripts/asciidoctor",
+    "prebuild": "npm run clean",
+    "build": "nest build",
+    "clean": "rimraf dist log/server.log",
+    "copy-resources": "node scripts/copy-resources",
+    "debug": "nest start --debug --watch",
+    "depcheck": "depcheck",
+    "dev": "nest start --watch",
+    "eslint": "eslint src __tests__",
+    "eslint:9": "set ESLINT_USE_FLAT_CONFIG=false&& eslint src __tests__",
+    "eslint:debug": "eslint --debug src __tests__",
+    "invoke-webrequest": "pwsh -Command Invoke-WebRequest https://localhost:3000/rest/1 -SslProtocol Tls13 -SkipCertificateCheck",
+    "leasot": "leasot --exit-nicely src/**/*.ts",
+    "madge": "madge --circular src/main.ts",
+    "madge:svg": "madge --image dependencies.svg src/main.ts",
+    "pre:dev": "npm run copy-resources",
+    "prettier": "prettier --cache --write \"src/**/*.ts\" \"__tests__/**/*.ts\"",
+    "prettier:check": "prettier --cache --check \"src/**/*.ts\" \"__tests__/**/*.ts\"",
+    "readme2html": "node scripts/readme2html",
+    "revealjs": "asciidoctor-revealjs .extras/doc/folien/folien.adoc",
+    "snyk": "snyk test",
+    "snyk:auth": "echo https://app.snyk.io/account && snyk auth",
+    "sonar": "node scripts/sonar-scanner",
+    "start": "node dist/src/main.js",
+    "pretest": "npm run copy-resources",
+    "test": "set LOG_LEVEL=info&& jest --runInBand",
+    "test:ORIG": "jest",
+    "test:dbserver": "set LOG_LEVEL=info&& set START_DB_SERVER=true&&jest --runInBand",
+    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
+    "test:istanbul": "npm t -- --coverage",
+    "test:logdebug": "jest --runInBand",
+    "tsc": "tsc --pretty",
+    "typedoc": "typedoc"
+  },
+  "dependencies": {
+    "@apollo/server": "4.10.2",
+    "@apollo/subgraph": "2.7.4",
+    "@js-temporal/polyfill": "0.4.4",
+    "@nestjs/apollo": "12.1.0",
+    "@nestjs/axios": "3.0.2",
+    "@nestjs/common": "10.3.7",
+    "@nestjs/core": "10.3.7",
+    "@nestjs/graphql": "12.1.1",
+    "@nestjs/platform-express": "10.3.7",
+    "@nestjs/swagger": "7.3.1",
+    "@nestjs/terminus": "10.2.3",
+    "@nestjs/typeorm": "10.0.2",
+    "axios": "1.6.8",
+    "better-sqlite3": "9.5.0",
+    "chalk": "5.3.0",
+    "class-transformer": "0.5.1",
+    "class-validator": "0.14.1",
+    "compression": "1.7.4",
+    "dotenv": "16.4.5",
+    "express": "4.19.2",
+    "figlet": "1.7.0",
+    "form-data": "4.0.0",
+    "graphql": "16.8.1",
+    "helmet": "7.1.0",
+    "ip": "2.0.1",
+    "js-yaml": "4.1.0",
+    "keycloak-connect": "24.0.2",
+    "mysql2": "3.9.7",
+    "nest-keycloak-connect": "1.10.0",
+    "nodemailer": "6.9.13",
+    "oracledb": "6.4.0",
+    "pg": "8.11.5",
+    "pino": "8.20.0",
+    "pino-pretty": "11.0.0",
+    "prom-client": "15.1.1",
+    "reflect-metadata": "0.2.2",
+    "rxjs": "7.8.1",
+    "semver": "7.6.0",
+    "sonic-boom": "3.8.1",
+    "typeorm": "0.3.20",
+    "xss": "1.0.15"
+  },
+  "devDependencies": {
+    "@asciidoctor/core": "3.0.4",
+    "@asciidoctor/opal-runtime": "3.0.1",
+    "@asciidoctor/reveal.js": "5.1.0",
+    "@eslint-community/eslint-plugin-eslint-comments": "4.3.0",
+    "@eslint/js": "9.0.0",
+    "@graphql-eslint/eslint-plugin": "3.20.1",
+    "@jest/globals": "29.7.0",
+    "@jest/types": "29.6.3",
+    "@nestjs/cli": "10.3.2",
+    "@nestjs/testing": "10.3.7",
+    "@stylistic/eslint-plugin": "1.7.0",
+    "@tsconfig/node18": "18.2.4",
+    "@tsconfig/node20": "20.1.4",
+    "@tsconfig/node21": "21.0.3",
+    "@types/compression": "1.7.5",
+    "@types/express": "4.17.21",
+    "@types/figlet": "1.5.8",
+    "@types/jest": "29.5.12",
+    "@types/js-yaml": "4.0.9",
+    "@types/node": "20.12.7",
+    "@types/nodemailer": "6.4.14",
+    "@types/nodemailer-direct-transport": "1.0.35",
+    "@types/nodemailer-smtp-transport": "2.7.8",
+    "@types/shelljs": "0.8.15",
+    "@types/uuid": "9.0.8",
+    "@typescript-eslint/eslint-plugin": "7.6.0",
+    "@typescript-eslint/parser": "7.6.0",
+    "asciidoctor-kroki": "0.18.1",
+    "depcheck": "1.4.7",
+    "docker-compose": "0.24.8",
+    "eslint": "8.57.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-jest": "28.2.0",
+    "eslint-plugin-jest-formatting": "3.1.0",
+    "eslint-plugin-n": "17.1.0",
+    "eslint-plugin-prefer-arrow": "1.2.3",
+    "eslint-plugin-prettier": "5.1.3",
+    "eslint-plugin-promise": "6.1.1",
+    "eslint-plugin-regexp": "2.5.0",
+    "eslint-plugin-security": "2.1.1",
+    "eslint-plugin-security-node": "1.1.4",
+    "eslint-plugin-sonarjs": "0.25.1",
+    "eslint-plugin-unicorn": "52.0.0",
+    "is-port-reachable": "3.1.0",
+    "jest": "29.7.0",
+    "jest-config": "29.7.0",
+    "leasot": "13.3.0",
+    "madge": "7.0.0",
+    "node-gyp": "10.1.0",
+    "prettier": "3.2.5",
+    "rehype-slug": "6.0.0",
+    "rehype-stringify": "10.0.0",
+    "remark-parse": "11.0.0",
+    "remark-preset-lint-consistent": "6.0.0",
+    "remark-preset-lint-markdown-style-guide": "6.0.0",
+    "remark-preset-lint-recommended": "7.0.0",
+    "remark-rehype": "11.1.0",
+    "rimraf": "5.0.5",
+    "shelljs": "0.8.5",
+    "sonarqube-scanner": "3.4.0",
+    "ts-jest": "29.1.2",
+    "ts-loader": "9.5.1",
+    "ts-node": "10.9.2",
+    "tsconfig-paths": "4.2.0",
+    "typedoc": "0.25.13",
+    "typescript": "5.4.4",
+    "unified": "11.0.4",
+    "weak-napi": "2.0.2"
+  },
+  "engines": {
+    "node": ">=20.11.1",
+    "npm": ">=10.3.0"
+  }
+}
+[8mha:////4N8CjK+BDksspi3yQ4DgR49tlG1wAFJbVZZRKVjEoeTZAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOLSIFIgqrRWGl5gYmOcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThwM9poGS7Gz6N1o8sKJw3B1PGHPF+yYIjuNrZ5aVrpZsOWkYUlRwkrARlPnOFoyCbailw9ZOUmmOqeQv6OA0qo7PKEQ2ZxkSF+YA+xuo4pMP89fAcw+Qbmvc9UH/wFNgLp+vgAAAA==[0m[Pipeline] sh
++ npm ci --no-fund --no-audit
+npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: 'auto-service@2024.04.0',
+npm warn EBADENGINE   required: { node: '>=20.11.1', npm: '>=10.3.0' },
+npm warn EBADENGINE   current: { node: 'v20.11.0', npm: '10.7.0' }
+npm warn EBADENGINE }
+npm warn deprecated subscriptions-transport-ws@0.11.0: The `subscriptions-transport-ws` package is no longer maintained. We recommend you use `graphql-ws` instead. For help migrating Apollo software to `graphql-ws`, see https://www.apollographql.com/docs/apollo-server/data/subscriptions/#switching-from-subscriptions-transport-ws    For general help using `graphql-ws`, see https://github.com/enisdenjo/graphql-ws/blob/master/README.md
+npm warn deprecated @apollo/server-plugin-landing-page-graphql-playground@4.0.0: The use of GraphQL Playground in Apollo Server was supported in previous versions, but this is no longer the case as of December 31, 2022. This package exists for v4 migration purposes only. We do not intend to resolve security issues or other bugs with this package if they arise, so please migrate away from this to [Apollo Server's default Explorer](https://www.apollographql.com/docs/apollo-server/api/plugin/landing-pages) as soon as possible.
+
+added 1582 packages in 44s
+[8mha:////4EA9IqxozAtX/zG/RuQSS5f7wmnBMFxEVpfB3BUF8FeoAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMJpkFIgKlrLDS8wyWGcWHfGdnAqXsTX+AMWkajYYrWzzbzesI4BjhyMGJBGS7GzwrvJlCUyh/HqOIuBL6JjiuxQKMyKezwtqDghLKlqWEnYIHWOoyWTYCsH/dCN02SacwrlO0iobX+HJ1SymJMO6QtzgN1t6iPTz/NXALP3Ceq2LbVvP93DLIu+AAAA[0m[Pipeline] }
+[8mha:////4HI/VBG7dQrVpYKm0jl2osyN+8NDm2ePB6F2o9sDDKU8AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOLSIEBCqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFDuD7m2uw+eQX0NvgAAAA==[0m[Pipeline] // stage
+[8mha:////4AJznQQLE63kNm5ZZtU9d4GqH5RDVXX1fezaEBARXcjGAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUYqkQYuoaZeEEIQkhbfR/SVLaiRNxNe5AoBITHizbkvWeL6higCMFyzqDvcOoHBv8aHNiE4X+4mliHZ2ZIozkDRNmEqRNu1RBycCiooQVh7VB5Sk6tAk2vJN3WXuJtj6lkLcDh9LpGzyg4JmcZEjfMgfYXkcdCX+cvwCYhwTlrsnW7D/P6g0l0ZYNwgAAAA==[0m[Pipeline] stage
+[8mha:////4Hy2CT0NO7TZFBmerhPHWmCl39Ke7OPnaEQeIQjeojDQAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoiUDRDqxBp14QShCSFp9H9JUtKJE3E17kCgEhMeLNuS9Z4vqIKHhrxmVmFvMHSGDW7UObFEvr84SszSmXWEgZxirUotSXWca0tRwayihAWHpcLOUTCoI6y4FXdRO4G6PkWftwOH0sgbPKDgmRyFj98yeVhfRxkIf5y/AJiGCOV2n223+TyrNxKsBBbCAAAA[0m[Pipeline] { (Compile)
+[8mha:////4EGFIMpPgsMcyaq54tAdwGH1xesFyJQ5Zifk+jiaGbPEAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICHRKiSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwZyv32U7vwBnZ6r6i+AAAA[0m[Pipeline] sh
++ npx tsc --version
+Version 5.4.4
+[8mha:////4EPyDaxOlOmIOtmoYnYtlhBqg2xauySZVT327k0brOg2AAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKCqJAQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGPIUO63n9qFN7UpgoO+AAAA[0m[Pipeline] sh
++ ./node_modules/.bin/tsc
+[8mha:////4LNwD84hwdvwYbR1jfYfZQA3HjQRsa+bnDX6QIS30O/gAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKCRIOEqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDyFDud5/avgGNKyTUvgAAAA==[0m[Pipeline] }
+[8mha:////4GAaYt0IOfb2KhSthcDXa3mLKpbN7KKzWC9omRyEBMZYAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOLSIAFCqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFDut7l2hw9ev2U3vgAAAA==[0m[Pipeline] // stage
+[8mha:////4EXb9/TPItIC9gprbG37Yv9ZzK+qPXbQ6e8reKxbYgjfAAAAqB+LCAAAAAAAAP9tjUEKwjAURH8rXbh16SFSEERBunIbuvEEsYkxafi/JqnpyhN5Ne9gtODKWQwzA8N7vqAKHhrymlmFvcHQGTa4UefEEvn+4igxS2fWEQZyirUqtSTVca4tRQWzihIWHJYKO0fBoI6w4lbcRe0E6voUfd4OHEojb/CAgmdyFD5+y+RhfR1lIPxx/gJgGiKUm122/fbzrN63YRyMwgAAAA==[0m[Pipeline] stage
+[8mha:////4NI8uDelCyHgvtOZXmD8kj72ADdixh9016xoGnBBy6VoAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0AiEhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYL8sJttPz+LD7lC07jCAAAA[0m[Pipeline] { (Test, Codeanalyse, Security, Dok.)
+[8mha:////4EP29O+XuaChFQoyJeqqJ8Co9VQKafqoolz9GGSjZFAZAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0AyTE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5AfdrPt52fxAR33berCAAAA[0m[Pipeline] parallel
+[8mha:////4JWPdanPttBNs/CviSs7BagSL2VtiSnaurrKHxbXtrfaAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUYgGEOrFGXThBaEJIGv1fkpR04kRcjTsQqMSEB8u2ZL3nC6rgoSGvmVXYGwydYYMbdU4ske8vjhKzdGYdYSCnWKtSS1Id59pSVDCrKGHBYamwcxQM6ggrbsVd1E6grk/R5+3AoTTyBg8oeCZH4eO3TB7W11EGwh/nLwCmIUK522bbbz7P6g3aslndwgAAAA==[0m[Pipeline] { (Branch: Test)
+[8mha:////4Fp2Vw8HY6YybjGLtfkPumRtZ2LB/bC7nxgPrGoUnXQ4AAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0YACEOrFGXThBaEJIGv1fkpR04kRcjTsQqMSEB8u2ZL3nC6rgoSGvmVXYGwydYYMbdU4ske8vjhKzdGYdYSCnWKtSS1Id59pSVDCrKGHBYamwcxQM6ggrbsVd1E6grk/R5+3AoTTyBg8oeCZH4eO3TB7W11EGwh/nLwCmIUK522bbbz7P6g1/YQUWwgAAAA==[0m[Pipeline] { (Branch: Security Audit)
+[8mha:////4LjWGCfQPnaTO/qo7DUTNL9wmk/MT7jQrTnhDEuHsOuRAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0QQKEOrFGXThBaEJIGv1fkpR04kRcjTsQqMSEB8u2ZL3nC6rgoSGvmVXYGwydYYMbdU4ske8vjhKzdGYdYSCnWKtSS1Id59pSVDCrKGHBYamwcxQM6ggrbsVd1E6grk/R5+3AoTTyBg8oeCZH4eO3TB7W11EGwh/nLwCmIUK522bbbz7P6g3HUQALwgAAAA==[0m[Pipeline] { (Branch: AsciiDoctor)
+[8mha:////4J3RAHEXEKrJgSDb3c2Qx7lgPPh8uktX2k7NAycatc4GAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0QoBQJ9aoCycITQhJo/9LkpJOnIircQcClZjwYNmWrPd8QRU8NOQ1swp7g6EzbHCjzokl8v3FUWKWzqwjDOQUa1VqSarjXFuKCmYVJSw4LBV2joJBHWHFrbiL2gnU9Sn6vB04lEbe4AEFz+QofPyWycP6OspA+OP8BcA0RCh322z7zedZvQFiglzAwgAAAA==[0m[Pipeline] { (Branch: reveal.js)
+[8mha:////4NC+CDiYF5S7l8aijr0/e9etFVXQlm/SsPp2nJLPkHl1AAAAqB+LCAAAAAAAAP9tjT0OwjAUg1+LOrAycoh040eoE2vUhROEJoSk0XslSUknTsTVuAOBSkx4sGxL1vd8QRU8NOQ1swp7g6EzbHCjzokl8v3FUWKWzqwjDOQUa1VqSarjXFuKCmYVJSw4LBV2joJBHWHFrbiL2gnU9Sn6vB04lEbe4AEFz+QofPyWycP6OspA+OP8BcA0RCh322z7zedZvQHM8MhGwgAAAA==[0m[Pipeline] { (Branch: TypeDoc)
+[8mha:////4M/SKemL/A848bGCi6Vb2s/Boaa5vxMkLbyid3ZhGsBYAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIi0SCEqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDhnK//dQuvAFwpgKkvgAAAA==[0m[Pipeline] echo
+TODO: Rechnername/IP-Adresse des DB-Servers fuer Tests konfigurieren
+[8mha:////4OLwqV7/CYq6Fn2x5viSJX3IPF0I46UTFN5i2DmuoRVsAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiUYEQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGMIGcr97lPbN5eAge++AAAA[0m[Pipeline] }
+[8mha:////4Eh3sM+I8GZQ24/jOBmiwibyOQRBZZDZk0/gaySvNXjrAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSUEWIitZKwwtMYowd686xHZyKF/E1/kAgEhVbrHa2mecL1jHAkYNGq6g3FFuD3o16Xpg59FfHGS1fsGWK7BQ2KjfcqdOCDScFS4oSVgI2ilrH0ZBOsBVW3mXlJOnqnML8HQSUphvgAYWYzUmG9IUpwO42dpHp5/krgMknKOv9p2r/BkqA9py+AAAA[0m[Pipeline] sh
+[8mha:////4Mk9cyFLu5svCgSH1ixvXLYDMS/tb2omvnU9mOASRa1nAAAAph+LCAAAAAAAAP9tjbEOgjAURR8QB1dHP6Jg4mIMk2vD4hfUUmuheQ/bhzD5Rf6a/2AjiZN3uucs5/WGVQxQU7CiM9g7jNqJwY82PTFR6K+eJtHRRWjCSN6IxkwNtea0YENsYFmWQyFhbVB7ig4tw0Z26qFKr9CWZw7JHSXkrr3DEzKZyqwCf2EOsL2NbST8df4GYB4Y8sOeodhV1fABc7wrGb8AAAA=[0m[Pipeline] sh
+[8mha:////4K54rGK+rRdURXmQ2wkYhsn+9rtKkdIMBepAAJR2KRuXAAAAph+LCAAAAAAAAP9tjTESgjAQRRcYC1tLDxGksHAcKtsMjSeIJMZAZheTRag8kVfzDmZkxspf/fea93rDKgaoKVjRGewdxtaJwY82PTFR6K+eJtHRRbSEkbwRjZka0ua0YENsYFmWQyFhbbD1FB1aho3s1EOVXqEtzxySO0rInb7DEzKZyqwCf2EOsL2NOhL+On8DMA8M+WHPUFS7avgArI2azL8AAAA=[0m[Pipeline] sh
+[8mha:////4NPj1eD7ACH6wBH7J8YPS6VyFLyW/dOhkwtjwzX7rLSOAAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYQDFEgooqK10vACExvjxLoL9oWk4kV8jT9gEYmKrXammdcbFjHAkYIVrcHOYWyc6P1g0xMjhe7qaRQtXURDGMkbUZuxJm1OM9bEBuZlORQSlgYbT9GhZVjJVj1U6RXa8swhuUpC7vQdnpDJVGYV+AtTgPVt0JHw1/kbgKlnyA97hmK72fUfjNk4ab8AAAA=[0m[Pipeline] sh
++ npm audit --omit=dev
++ npx asciidoctor --version
++ npx asciidoctor-revealjs --version
++ npx typedoc --version
+Asciidoctor.js 3.0.4 (Asciidoctor 2.0.20) [https://asciidoctor.org]
+Runtime Environment (node v20.11.0 on linux)
+CLI version 4.0.0
+[8mha:////4Lkvk9UCyPySt7v7eBjEUt9CZDpZz0RDieyov5A4vWTqAAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYQDggZFVLRWGl5gYmOcWHfBvpBUvIiv8QcsIlGx1c4083rDIgY4UrCiNdg5jI0TvR9semKk0F09jaKli2gII3kjajPWpM1pxprYwLwsh0LC0mDjKTq0DCvZqocqvUJbnjkkV0nInb7DEzKZyqwCf2EKsL4NOhL+On8DMPUM+WHPUGw3u/4DsO8GMr8AAAA=[0m[Pipeline] sh
+Asciidoctor reveal.js 5.1.0 using Asciidoctor.js 3.0.4 (Asciidoctor 2.0.20) [https://asciidoctor.org]
+Runtime Environment (node v20.11.0 on linux)
+CLI version 4.0.0
+
+TypeDoc 0.25.13
+Using TypeScript 5.4.4 from ./node_modules/typescript/lib
+
++ npm run asciidoctor
+
+> auto-service@2024.04.0 asciidoctor
+> node scripts/asciidoctor
+
+[8mha:////4PvhaZ2+M3LO2f2A4VnArh71ToQriOlhkT3QoY5HVV30AAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYQDEhQooqK10vACExvjxLoL9oWk4kV8jT9gEYmKrXammdcbFjHAkYIVrcHOYWyc6P1g0xMjhe7qaRQtXURDGMkbUZuxJm1OM9bEBuZlORQSlgYbT9GhZVjJVj1U6RXa8swhuUpC7vQdnpDJVGYV+AtTgPVt0JHw1/kbgKlnyA97hmK72fUf6Xntsb8AAAA=[0m[Pipeline] sh
+[8mha:////4NRHsvGpamPYn+7mrRWwWA/t6RMaVaB+k/jQZ+jDXT/9AAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYQDBUgooqK10vACExvjxLoL9oWk4kV8jT9gEYmKrXammdcbFjHAkYIVrcHOYWyc6P1g0xMjhe7qaRQtXURDGMkbUZuxJm1OM9bEBuZlORQSlgYbT9GhZVjJVj1U6RXa8swhuUpC7vQdnpDJVGYV+AtTgPVt0JHw1/kbgKlnyA97hmK72fUfS095Jr8AAAA=[0m[Pipeline] sh
+Asciidoctor.js 3.0.4
+HTML-Datei /var/jenkins_home/workspace/auto/.extras/doc/projekthandbuch/html/projekthandbuch.html
+found 0 vulnerabilities
++ npm run revealjs
+
+> auto-service@2024.04.0 revealjs
+> asciidoctor-revealjs .extras/doc/folien/folien.adoc
+
++ npm run typedoc
+
+> auto-service@2024.04.0 typedoc
+> typedoc
+
+[8mha:////4KbMoKwISBp+vl+lVcAU1rr9+2kppt57y5RlqEqBBsJpAAAApx+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYQDQkJCERWtlYYXmNgYJ9ZdsC8kFS/ia/wBi0hUbLUzzbzesIgBjhSsaA12DmPjRO8Hm54YKXRXT6No6SIawkjeiNqMNWlzmrEmNjAvy6GQsDTYeIoOLcNKtuqhSq/QlmcOyVUScqfv8IRMpjKrwF+YAqxvg46Ev87fAEx9z1BsN3uG/LD7ADS+Jtu/AAAA[0m[Pipeline] }
+[8mha:////4L91LQOGZ0tMIGX0545+EdhmG4TfJ+Vx2xsSmQqj1OmuAAAApx+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYQDEhJCERWtlYYXmNgYJ9ZdsC8kFS/ia/wBi0hUbLUzzbzesIgBjhSsaA12DmPjRO8Hm54YKXRXT6No6SIawkjeiNqMNWlzmrEmNjAvy6GQsDTYeIoOLcNKtuqhSq/QlmcOyVUScqfv8IRMpjKrwF+YAqxvg46Ev87fAEx9z1BsN3uG/LD7ADL4Ho6/AAAA[0m[Pipeline] }
+[8mha:////4BHUSR+Z91AtipabQQeNlabr1+5yjBlIiYWTdbjcrlSiAAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYQDBRIooqK10vACExvjxLoL9oWk4kV8jT9gEYmKrXammdcbFjHAkYIVrcHOYWyc6P1g0xMjhe7qaRQtXURDGMkbUZuxJm1OM9bEBuZlORQSlgYbT9GhZVjJVj1U6RXa8swhuUpC7vQdnpDJVGYV+AtTgPVt0JHw1/kbgKnvGYrtZs+QH3YfcXpPCL8AAAA=[0m[Pipeline] }
+[93m[warning][0m The signature auto/rest/auto-get.controller.AutoGetController.getById has an @param with name "id", which was not used.
+[93m[warning][0m The signature auto/rest/auto-get.controller.AutoGetController.getById has an @param with name "accept", which was not used.
+[93m[warning][0m The signature auto/rest/auto-write.controller.AutoWriteController.post has an @param with name "auto", which was not used.
+[93m[warning][0m The signature auto/rest/auto-write.controller.AutoWriteController.put has an @param with name "auto", which was not used.
+[93m[warning][0m The signature auto/rest/auto-write.controller.AutoWriteController.delete has an @param with name "res", which was not used.
+[93m[warning][0m The signature auto/service/auto-write.service.AutoWriteService.update has an @param with name "auto", which was not used.
+[93m[warning][0m The signature auto/service/auto-write.service.AutoWriteService.update has an @param with name "id", which was not used.
+[93m[warning][0m The signature auto/service/auto-write.service.AutoWriteService.update has an @param with name "version", which was not used.
+[93m[warning][0m LogLevel, defined in ./src/config/logger.ts, is referenced by config/logger.logLevel but not included in the documentation.
+[93m[warning][0m Login, defined in ./src/security/keycloak/keycloak.service.ts, is referenced by security/keycloak/keycloak.service.KeycloakService.login.login.__namedParameters but not included in the documentation.
+[93m[warning][0m Failed to resolve link to "Auto-ReadService" in comment for auto/service/auto-read.service.
+[93m[warning][0m Failed to resolve link to "Auto-WriteService" in comment for auto/service/auto-write.service.
+[96m[info][0m Documentation generated at ./.extras/doc/api
+[8mha:////4EL9CMvx9PASWxmlmIF+brhPAPr+WHUVLkeix4LQFR8LAAAAph+LCAAAAAAAAP9tjbEOgjAURR8lDq6OfkTRxYQYJteGxS+opdZC8x62D2Hyi/w1/0EiiZN3uucs5/WGVYpQUXSytdh5TMbLPgxufnKk2F0DjbKlizSEiYKVtR1rauxpwZrYwrJMQK5gbdEESh4dw0a1+qGLoNEVZ46zOyoQvrnDEzI1l1lH/sIUYXsbmkT46/wNwNT3DPl+VzKI8vABbvgaWr8AAAA=[0m[Pipeline] }
+[8mha:////4EWQLFCDM1TU/bw+i6CR4IbX4jKkAyF3knnOAsHRJWT1AAAApR+LCAAAAAAAAP9tjTESgjAQRRcYC1tLDxGk0hmHyjZD4wkiiTGQ2cVkESpP5NW8gxmZsfJX/73mvd6wigFqClZ0BnuHsXVi8KNNT0wU+qunSXR0ES1hJG9EY6aGtDkt2BAbWJblUEhYG2w9RYeWYSM79VClV2jLM4fkjhJyp+/whEymMqvAX5gDbG+jjoS/zt8AzMPAUFTVjiE/7D/Fo361vwAAAA==[0m[Pipeline] // parallel
+Post stage
+[8mha:////4NQEAy7sSaH0nqro+VJmZwz9WoFuQkHKNzzx8ndWNK0LAAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYSjNAgJUdFaaXiBiY1xYt0Z+4JT8SK+xh+IiETFVjvTzOsNqxThSNGK3uDgMHVOBD/a+YlMcbh6yqKni+gIE3kjWpNb0ua0YEtsYFlRQiVhbbDzlBxaho3s1UPVXqGtzxxnd5BQOn2HJxRyLrOK/IUpwvY26kT46/wNwBQYyv2OoWqaJnwAO/SsVL8AAAA=[0m[Pipeline] echo
+TODO: Links fuer Coverage und TypeDoc
+[8mha:////4JMlSAxeu5LZAl7Z1r+M0dXgFVQ7YLkS4ncW6JmI5IXvAAAAph+LCAAAAAAAAP9tjbEOgjAURR8QB1dHP6IEB2NimFwbFr+glloLzXvYPoTJL/LX/AcbSZy80z1nOa83rGKAmoIVncHeYdRODH606YmJQn/1NImOLkITRvJGNGZqqDWnBRtiA8uyHAoJa4PaU3RoGTayUw9VeoW2PHNI7ighd+0dnpDJVGYV+AtzgO1tbCPhr/M3APPAkB/2DEVV7YYP+KeBf78AAAA=[0m[Pipeline] publishHTML
+[htmlpublisher] Archiving HTML reports...
+[htmlpublisher] Archiving at PROJECT level /var/jenkins_home/workspace/auto/.extras/doc/projekthandbuch/html to /var/jenkins_home/jobs/auto/htmlreports/Projekthandbuch
+[8mha:////4D5JTJqaafeLeD9HEONMM0fDZsSzGJi91i8FmSvSqjjbAAAApx+LCAAAAAAAAP9tjbEOgjAURR8QB1dHP6KEmBgTw+TasPgFtdRaaN7D9iFMfpG/5j/YSOLkne45y3m9YRUD1BSs6Az2DqN2YvCjTU9MFPqrp0l0dBGaMJI3ojFTQ605LdgQG1iW5VBIWBvUnqJDy7CRnXqo0iu05ZlDckcJuWvv8IRMpjKrwF+YA2xvYxsJf52/AZgHhvywZyiqajd8ALmWmma/AAAA[0m[Pipeline] publishHTML
+[htmlpublisher] Archiving HTML reports...
+[htmlpublisher] Archiving at PROJECT level /var/jenkins_home/workspace/auto/.extras/doc/folien to /var/jenkins_home/jobs/auto/htmlreports/Folien_20_28reveal_2ejs_29
+[8mha:////4JVsliKTEcFVGBlLyb7IsCxA0OHmu9YL7B/fOQimNJHzAAAApx+LCAAAAAAAAP9tjbEOgjAURR8QB1dHP6KExBgTw+TasPgFtdRaaN7D9iFMfpG/5j/YSOLkne45y3m9YRUD1BSs6Az2DqN2YvCjTU9MFPqrp0l0dBGaMJI3ojFTQ605LdgQG1iW5VBIWBvUnqJDy7CRnXqo0iu05ZlDckcJuWvv8IRMpjKrwF+YA2xvYxsJf52/AZgHhvywZyiqajd8AH4A2ym/AAAA[0m[Pipeline] publishHTML
+[htmlpublisher] Archiving HTML reports...
+[htmlpublisher] Archiving at PROJECT level /var/jenkins_home/workspace/auto/.extras/doc/api to /var/jenkins_home/jobs/auto/htmlreports/TypeDoc
+[8mha:////4EgDXrFvGqN7RlGx1PeoPTGHjL6ZCqq++mc5ZUVnDCXpAAAAqR+LCAAAAAAAAP9tjbEOgjAURR8QBldHP6KEQWNimFybLn5BhVoLzXvYPoTJL/LX/AdREifvdM9Nbs7zBXkMUFGwojXYOYy1E70f7NzESKG7eBpFS2dRE0byRigzKmrMcUFFbGBJkkImYWWw9hQdWoa1bPVdF16jLU4c5u0gIXXNDR6QyNnMOvAXpgCb69BEwp/nrwCmniHd7xiystx+rvkby8fjUsMAAAA=[0m[Pipeline] script
+[8mha:////4BZXVtmXclGPthEAR+tI6IYklmUeDDtKbLJGBNlhJ9PyAAAAqB+LCAAAAAAAAP9tjbEOgjAYhH8gDK6OPkQJgy7GibVh8QlqqbXQ/D+2xTL5RL6a72CFxMkbLneXXL7XG0rv4EROs17hYNBLw0Y76ZRYJDdcLUXW04VJQk9WsVbFljrVrLWloGBVlkPBYaNQWvIGdYAt78VDVFagrs7Bpe3IITfdHZ6Q8UQOwoWlzA52t6nzhD/OXwDMY4CirveLH77f8gO8+cdAxAAAAA==[0m[Pipeline] {
+[8mha:////4IiMH6QLE3vdeNWMHr9qVM1ZfH3cv8AMEo7VfClFM752AAAApR+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYSjNFAgqrRWGl5gYmPsWHfGdkgqXsTX+ANWIlGxxWpnm3l/YBMDnCloZhUOBmNvmHejzotNFIabo4lZurKeMJJTrFNTR1K1K3aUFKwpSqg4bBX2jqJBnWDHrXiK2gnU9SWF/J04lEY+4AUFz+YkQlpgDrC/jzIS/jx/BTD7BFXTHJY++i+AM3D7wAAAAA==[0m[Pipeline] fileExists
+[8mha:////4I1nV7FaW30E8e87aIM0fAhhAO0rAy4xeKfRpewXbHMfAAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYSjNAgJUaW10vACExtjx7oztkNS8SK+xh+wEomKLVY728z7A5sY4ExBM6twMBh7w7wbdV5sojDcHE3M0pX1hJGcYp2aOpKqXbGjpGBNUULFYauwdxQN6gQ7bsVT1E6gri8p5O/EoTTyAS8oeDYnEdICc4D9fZSR8Of5K4DZJ6ia5rD00X8BTy/ofMAAAAA=[0m[Pipeline] sh
++ rm auto.zip
+[8mha:////4FYPVVS/+uMHl5pwT7tIXFxF0eocKJTLSQPIgjnIuuRMAAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYSjNEgIUaW10vACExtjx7oztkNS8SK+xh+wEomKLVY728z7A5sY4ExBM6twMBh7w7wbdV5sojDcHE3M0pX1hJGcYp2aOpKqXbGjpGBNUULFYauwdxQN6gQ7bsVT1E6gri8p5O/EoTTyAS8oeDYnEdICc4D9fZSR8Of5K4DZ+wRV0xyXPnwBN4ysgsAAAAA=[0m[Pipeline] }
+[8mha:////4HBUk2qKLmcLvk9GaCPlf1BAV93YGFlzJ2RFyszuvY6MAAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYRDkKgQFa2VhheYxBg71p2xLyQVL+Jr/IFAJCq2WO1sM88XLFKEA0UjnMbOYmqsCL430xIDxe7iaRCOzqIhTOS1qPVQU6uPM9bEGuZkORQSlhobT8miYVhJp+6q9ApNeeI4fXsJuW1v8IBMTmZWkb8wRlhf+zYR/jx/BTCGwFBU282nq90bvZ+yAMAAAAA=[0m[Pipeline] // script
+[8mha:////4HgWAr+mUl7z/37//FPFOb/nzxDfAtmAMhXNtIxshA/5AAAAph+LCAAAAAAAAP9tjbEOgjAURR8QB1dHP6IEB2NimFwbFr+glloLzXvYPoTJL/LX/AcbSZy80z1nOa83rGKAmoIVncHeYdRODH606YmJQn/1NImOLkITRvJGNGZqqDWnBRtiA8uyHAoJa4PaU3RoGTayUw9VeoW2PHNI7ighd+0dnpDJVGYV+AtzgO1tbCPhr/M3APPAkB/2DEW1q4YPYkrqVr8AAAA=[0m[Pipeline] zip
+Compress /var/jenkins_home/workspace/auto/dist to /var/jenkins_home/workspace/auto/auto.zip
+Compressed 383 entries.
+[8mha:////4MgHdujD9XY0h/1+lB/0cIimH056btOC/CtjIouniZlWAAAAph+LCAAAAAAAAP9tjbEOgjAURR8QB1dHP6JEBmNimFwbFr+g0loLzXvYPoTJL/LX/AcbSZy80z1nOa83rGKAmoIVncHeYWydGPxo0xMThf7qaRIdXURLGMkb0ZipIW1OCzbEBpZlORQS1gZbT9GhZdjITj1U6RXa8swhuaOE3Ok7PCGTqcwq8BfmANvbqCPhr/M3APPAkB/2DMWuqoYPoRnHfb8AAAA=[0m[Pipeline] archiveArtifacts
+Archiving artifacts
+[8mha:////4MUUr8Cv3bbzM70Gxsj28iR0d3H6blyQ/Y4YKBY5qv/MAAAApx+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYQjQEJIERWtlYYXmNgYJ9ZdsC8kFS/ia/wBi0hUbLUzzbzesIgBjhSsaA12DmPjRO8Hm54YKXRXT6No6SIawkjeiNqMNWlzmrEmNjAvy6GQsDTYeIoOLcNKtuqhSq/QlmcOyVUScqfv8IRMpjKrwF+YAqxvg46Ev87fAEx9z1BstjuG/LD/AGD7BXW/AAAA[0m[Pipeline] }
+[8mha:////4N+RfekYcSwOIkjov1XxteZpfeGMDuKUlzv2Ev90I/OwAAAApx+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYQjEEhIERWtlYYXmNgYJ9ZdsC8kFS/ia/wBi0hUbLUzzbzesIgBjhSsaA12DmPjRO8Hm54YKXRXT6No6SIawkjeiNqMNWlzmrEmNjAvy6GQsDTYeIoOLcNKtuqhSq/QlmcOyVUScqfv8IRMpjKrwF+YAqxvg46Ev87fAEx9z1BstjuG/LD/AGKaCfG/AAAA[0m[Pipeline] // stage
+[8mha:////4NO0iUYeczvgWSVMMd2pFMMzZeQoaE9Tp/UMYTLYwcT+AAAAqR+LCAAAAAAAAP9tjbEOgjAURR8QBldHP6JEEuNgmFwbFr+glloLzXvYPoTJL/LX/AdREifvdM9Nbs7zBXkMUFGwojXYOYzaid4Pdm5ipNBdPI2ipbPQhJG8EbUZa2rMccGa2MCSJIVMwsqg9hQdWoa1bNVdFV6hLU4c5u0gIXXNDR6QyNnMKvAXpgCb69BEwp/nrwCmniEt9wzZttx9rvkbH/fxwsMAAAA=[0m[Pipeline] stage
+[8mha:////4Ozx7vhSVqU4RKyX31ObrMlr13Y5nSStuhWO3n1R1hBAAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ39bdWBl5BCpQIIFdWKNunCCkISQNPq/JCntxIm4GnegtBITHizbkvVebyhjgJqCYU5jazFKyzrfmymxgUJ79TQwRxcmCSN5zRo9NKT0aakNJQ2LshwKDiuN0lO0aBKsuRMPUXmBpjqnMG1HDrlVd3hCxidyEiHNZQywufUqEv44fwEwdgmK7W4/++H7LT/vj+XMxAAAAA==[0m[Pipeline] { (Docker Image bauen)
+[8mha:////4KwvkaUL8aZ+LgqMJMFGbmHcW8/3uO6l01vOr1M8RbeBAAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYQjKKBAqWitNLzA2MbYse6C7eBUvIiv8QeiRKJii9XONvP+wCoGaCgY5jR2FqO0rPeDmRbLFLqbp8wcXZkkjOQ1a3VuSenzgi0lDUuKEioOa43SU7RoEmy4E09Re4GmvqQwfScOpVUPeEHBJ3MSIc0wBtjeBxUJf56/Ahj7BNVuf5j72H8BHLG7wMAAAAA=[0m[Pipeline] echo
+TODO: Docker-Image bauen und veroeffentlichen
+[8mha:////4HEvQ3SPIYWLn71YxSsN1mUB2GRIU3WbrDCQN/Hwd6G0AAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYQjKBASSkVrpeEFxjbGjnUXbAen4kV8jT8QJRIVW6x2tpn3B1YxQEPBMKexsxilZb0fzLRYptDdPGXm6MokYSSvWatzS0qfF2wpaVhSlFBxWGuUnqJFk2DDnXiK2gs09SWF6TtxKK16wAsKPpmTCGmGMcD2PqhI+PP8FcDY9wmq3f449+ELo9N5gcAAAAA=[0m[Pipeline] }
+[8mha:////4NLnUO3p7oqijZh5o/sHd9cJ1zUfbKA9FdTfNuiftSjZAAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYQjkCgQSkVrpeEFxjbGjnUXbAen4kV8jT8QJRIVW6x2tpn3B1YxQEPBMKexsxilZb0fzLRYptDdPGXm6MokYSSvWatzS0qfF2wpaVhSlFBxWGuUnqJFk2DDnXiK2gs09SWF6TtxKK16wAsKPpmTCGmGMcD2PqhI+PP8FcDY9wmq3f449+ELrYkHvsAAAAA=[0m[Pipeline] // stage
+[8mha:////4JSATrh15Cmf5vupPXtqEuGyzP8tqA+WLzACPRenmCL3AAAAqR+LCAAAAAAAAP9tjTsOwjAQRDeJUtBScgiHT0ERUdFaaTiBSYxxYu0Ge4NTcSKuxh0IRKJiqnkjjd7zBXnwcCBvRKuxsxhqK3o3mKmJSL67OIqipbOoCQM5LSodK2r0ccaKWMOcJIVMwkJj7ShYNAxL2aq7KpxCU5zYT1spIbXNDR6QyMnMyvMXRg+r69AEwp/nrwDGniHd7hmyzW79ueZvGG1LNMMAAAA=[0m[Pipeline] stage
+[8mha:////4DReMKfrqBqWyJfuZUSGQv2fgzl3gbfcljJPg0zbs+kmAAAApx+LCAAAAAAAAP9tjbEOgjAYhH8gDK6OPkSROBon1obFJ6il1kLz/9gWy+QT+Wq+gxUSJ2+43F1y+V5vKL2DEznNeoWDQS8NG+2kU2KR3HC1FFlPFyYJPVnFWhVb6lSz1paCglVZDgWHjUJpyRvUAba8Fw9RWYG6OgeXtiOH3HR3eELGEzkIF5YyO9jdps4T/jh/ATCPAYr6sF+8/n7LD3YaojLEAAAA[0m[Pipeline] { (Deployment fuer Kubernetes)
+[8mha:////4Pd1/HZhLw51nKO0B8CFOSWyw1DofbxtKYPSORIK64hTAAAApB+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYSjQImo0lppeIGJjbFj3RnbIal4EV/jD1iJRMUWq51t5v2BTQxwpqCZVTgYjL1h3o06LzZRGG6OJmbpynrCSE6xTk0dSdWu2FFSsKYooeKwVdg7igZ1gh234ilqJ1DXlxTyd+JQGvmAFxQ8m5MIaYE5wP4+ykj48/wVwOwTVM2xWfrgvzQysKHAAAAA[0m[Pipeline] echo
+TODO: Deployment fuer Kubernetes mit z.B. Ansible, Terraform
+[8mha:////4EJ2+E4qtw05SiA1ClohXkbOciGawhxl9ZTEv0wvYu5zAAAApB+LCAAAAAAAAP9tjbEOgjAURR8QB1dHP6KEMBon14bFL6il1kLzXmkfwuQX+Wv+gwQSJ+9wc89dzvsDuxThTNGKzmDvMGkngh/tssREsb97mkRHN6EJE3kjGjM11JrLhg2xgS1ZDoWEvUHtKTm0DAfZqacqvUJbXjku30lC7toBXpDJxcwq8gpzhONjbBPhz/NXAHMIDEVV12tXXyUjq8jAAAAA[0m[Pipeline] }
+[8mha:////4FxysTJgl4lsa8gsDpMEs/xaobSnCYAIolUrnD4g9b9rAAAApR+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYQDgg6lorXS8AJjG2PHugu2g1PxIr7GH4gSiYotVjvbzPsDqxigoWCY09hZjNKy3g9mWixT6G6eMnN0ZZIwktes1bklpc8LtpQ0LClKqDisNUpP0aJJsOFOPEXtBZr6ksL0nTiUVj3gBQWfzEmENMMYYHsfVCT8ef4KYOz7BNX+cJx79wU9LQt6wAAAAA==[0m[Pipeline] // stage
+[8mha:////4FuNohk1BU7nteObt94aktiHw/zYX4fQx5zXqe09NtHhAAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYQjQIgioqK10vACExvjxLoL9oWk4kV8jT9gEYmKrXammdcbFjHAkYIVrcHOYWyc6P1g0xMjhe7qaRQtXURDGMkbUZuxJm1OM9bEBuZlORQSlgYbT9GhZVjJVj1U6RXa8swhuUpC7vQdnpDJVGYV+AtTgPVt0JHw1/kbgKnvGYrNbs+Qbw8f1cvDiL8AAAA=[0m[Pipeline] }
+[8mha:////4PeBjMbxxa8bwj+F53Yt8nN1S3j3cBwpb8YL2vogUn3sAAAAph+LCAAAAAAAAP9tjbEOgjAURR8lDq6OfkSJmrAYJteGxS+opdZC8x62D2Hyi/w1/0EiiZN3uucs5/WGVYpQUXSytdh5TMbLPgxufnKk2F0DjbKlizSEiYKVtR1rauxpwZrYwrJMQK5gbdEESh4dw0a1+qGLoNEVZ46zOyoQvrnDEzI1l1lH/sIUYXsbmkT46/wNwNT3DPnuUDKIffkB7YlQeb8AAAA=[0m[Pipeline] // timeout
+[8mha:////4Ma6c3xGO98Hw/fTbj+hQiJmZ9MQzHPgmEgRZDb3CRLLAAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYQjQIgioqK10vACExvjxLoL9oWk4kV8jT9gEYmKrXammdcbFjHAkYIVrcHOYWyc6P1g0xMjhe7qaRQtXURDGMkbUZuxJm1OM9bEBuZlORQSlgYbT9GhZVjJVj1U6RXa8swhuUpC7vQdnpDJVGYV+AtTgPVt0JHw1/kbgKnvGYrN7sCQb/cf8gsFK78AAAA=[0m[Pipeline] }
+$ docker stop --time=1 d6821354a2e37d64f5eb0a57e6bda7cd538770f5f38de40db1ee3f9013e5107d
+$ docker rm -f --volumes d6821354a2e37d64f5eb0a57e6bda7cd538770f5f38de40db1ee3f9013e5107d
+[8mha:////4HvRGjomMy+kgLZTVWuLD4Zks3cgD76z8Qe/4UADOj3PAAAApx+LCAAAAAAAAP9tjTsOwjAQBTeJKGgpOYQjPgVSREVrpeEEJjbGibUb7A1JxYm4GnfAIhIVr3ozzbzesIgBjhSsaA12DmPjRO8Hm54YKXRXT6No6SIawkjeiNqMNWlzmrEmNjAvy6GQsDTYeIoOLcNKtuqhSq/QlmcOyVUScqfv8IRMpjKrwF+YAqxvg46Ev87fAEx9z1BsdgeGfLv/ALGJVK2/AAAA[0m[Pipeline] // withDockerContainer
+[8mha:////4EzMBJjIAzhgi9d2CNavBEfe4pczDrGNKol6VjOAQpMeAAAApR+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYSjiAohKlorDS8wsTFOrDtjX3AqXsTX+AMRkajYameaeb1hlSIcKVrRGxwcps6J4Ec7P5EpDldPWfR0ER1hIm9Ea3JL2pwWbIkNLCtKqCSsDXaekkPLsJG9eqjaK7T1mePsDhJKp+/whELOZVaRvzBF2N5GnQh/nb8BmEJgqJrdnqFsmg9Y/U89vwAAAA==[0m[Pipeline] }
+[8mha:////4E2H/j0qJIH75PEBJ1xhpptZx+e0VtuDhbxIxosvNuHkAAAApR+LCAAAAAAAAP9tjTESgjAQRRcYC1tLDxFgxs6xos3QeIKYxBjI7GKyCJUn8mreQUZmrPzVf695rzdsUoQTRSc6i73HpL0YwuiWJyaK/TXQJDq6CE2YKFjR2qklY5sVW2IL67IcCglbizpQ8ugYdrJTD1UGha48c1zcUULuzR2ekMmlzCryF+YI+9toEuGv8zcA8zAwFPWhYsjr6gOIouCovwAAAA==[0m[Pipeline] // withEnv
+[8mha:////4HcB/Ix4DvBkOtJCbrDyo/o78nfjoER9Zb5fQfTiwfXvAAAApB+LCAAAAAAAAP9tjTEOwjAQBM+JKGgpeYSjSOkQFa2VhheYxBgn1p2xLyQVL+Jr/AGLSFRstTPNvN6wSRGOFK0cDI4OU+dk8JPNT84Ux6unWQ50kR1hIm9ka+aWenNasSU2sE4UUCrYGuw8JYeWYacG/dCV12irM8fsDgoK19/hCULlMuvIX1gi7G9Tnwh/nb8BWEJgKOumZhDNB0cjMO6+AAAA[0m[Pipeline] }
+[8mha:////4EgvJj57sy81mNIMCh5l0kBvorKGSWzwFa8GlEveMuhDAAAApB+LCAAAAAAAAP9tjTsOwjAQBdeJKGgpOYQjPh2iorXScALjGOPE2g32BqfiRFyNOxARiYpXvZlmXm9YpAhHik62FjuPyXjZh8FNT2aK3TVQli1dpCFMFKysba6psacZa2IL80QBpYKlRRMoeXQMK9Xqh66CRledOU7uoKDwzR2eINRUZh35C2OE9W1oEuGv8zcAY98zlJv9lkHsPjTM9De+AAAA[0m[Pipeline] // node
+[8mha:////4B0G6aj3SiUKRmj5ERt6NorsHLeB7M4Y39adm02nTeHYAAAApB+LCAAAAAAAAP9tjTsOwjAQBdeJKGgpOYQjPh2iorXScALjGOPE2g32BqfiRFyNOxARiYpXvZlmXm9YpAhHik62FjuPyXjZh8FNT2aK3TVQli1dpCFMFKysba6psacZa2IL80QBpYKlRRMoeXQMK9Xqh66CRledOU7uoKDwzR2eINRUZh35C2OE9W1oEuGv8zcAY98zlJv9jkFsPxLVk32+AAAA[0m[Pipeline] End of Pipeline
+Finished: SUCCESS

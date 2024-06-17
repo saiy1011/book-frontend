@@ -1,0 +1,66 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<user>
+  <version>10</version>
+  <id>Caleb</id>
+  <fullName>Caleb</fullName>
+  <description></description>
+  <properties>
+    <jenkins.security.ApiTokenProperty>
+      <tokenStore>
+        <tokenList/>
+      </tokenStore>
+    </jenkins.security.ApiTokenProperty>
+    <jenkins.console.ConsoleUrlProviderUserProperty/>
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1337.v60b_d7b_c7b_c9f">
+      <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>
+    </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@472.vf7c289a_4b_420">
+      <emailAddress>caleb@team2.de</emailAddress>
+    </hudson.tasks.Mailer_-UserProperty>
+    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.208.v91d65b_7792a_c">
+      <data class="concurrent-hash-map"/>
+    </hudson.plugins.favorite.user.FavoriteUserProperty>
+    <hudson.model.MyViewsProperty>
+      <primaryViewName></primaryViewName>
+      <views>
+        <hudson.model.AllView>
+          <owner class="hudson.model.MyViewsProperty" reference="../../.."/>
+          <name>all</name>
+          <filterExecutors>false</filterExecutors>
+          <filterQueue>false</filterQueue>
+          <properties class="hudson.model.View$PropertyList"/>
+        </hudson.model.AllView>
+      </views>
+    </hudson.model.MyViewsProperty>
+    <org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty plugin="display-url-api@2.200.vb_9327d658781">
+      <providerId>default</providerId>
+    </org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty>
+    <hudson.model.PaneStatusProperties>
+      <collapsed/>
+    </hudson.model.PaneStatusProperties>
+    <hudson.security.HudsonPrivateSecurityRealm_-Details>
+      <passwordHash>#jbcrypt:$2a$10$7EZbaG7Rcp679uHbDO2Wre2feHccz1MfhSDyZfcf14JqwVlDIe.PS</passwordHash>
+    </hudson.security.HudsonPrivateSecurityRealm_-Details>
+    <jenkins.security.seed.UserSeedProperty>
+      <seed>0ad61961753c1b14</seed>
+    </jenkins.security.seed.UserSeedProperty>
+    <hudson.search.UserSearchProperty>
+      <insensitiveSearch>true</insensitiveSearch>
+    </hudson.search.UserSearchProperty>
+    <io.jenkins.plugins.thememanager.ThemeUserProperty plugin="theme-manager@215.vc1ff18d67920">
+      <theme class="io.jenkins.plugins.darktheme.DarkThemeManagerFactory" plugin="dark-theme@453.v3f988b_c80202"/>
+    </io.jenkins.plugins.thememanager.ThemeUserProperty>
+    <hudson.model.TimeZoneProperty>
+      <timeZoneName></timeZoneName>
+    </hudson.model.TimeZoneProperty>
+    <jenkins.model.experimentalflags.UserExperimentalFlagsProperty>
+      <flags/>
+    </jenkins.model.experimentalflags.UserExperimentalFlagsProperty>
+    <jenkins.security.LastGrantedAuthoritiesProperty>
+      <roles>
+        <string>authenticated</string>
+      </roles>
+      <timestamp>1714569844717</timestamp>
+    </jenkins.security.LastGrantedAuthoritiesProperty>
+  </properties>
+</user>

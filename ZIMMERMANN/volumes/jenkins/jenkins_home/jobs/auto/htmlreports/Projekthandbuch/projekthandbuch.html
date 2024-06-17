@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.20">
+<meta name="author" content="Gruppe2">
+<title>Projekthandbuch</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/styles/github.min.css">
+</head>
+<body class="book toc2 toc-left">
+<div id="header">
+<h1>Projekthandbuch</h1>
+<div class="details">
+<span id="author" class="author">Gruppe2</span><br>
+<span id="email" class="email"><a href="mailto:gruppe2@h-ka.de">gruppe2@h-ka.de</a></span><br>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_der_applikationsserver">1. Der Applikationsserver</a>
+<ul class="sectlevel2">
+<li><a href="#_der_applikationsserver_im_überblick">1.1. Der Applikationsserver im Überblick</a></li>
+<li><a href="#_die_rest_schnittstelle">1.2. Die REST-Schnittstelle</a></li>
+<li><a href="#_die_graphql_schnittstelle">1.3. Die GraphQL-Schnittstelle</a></li>
+<li><a href="#_die_geschäftslogik">1.4. Die Geschäftslogik</a></li>
+<li><a href="#_klasse_für_entities">1.5. Klasse für Entities</a></li>
+<li><a href="#_er_diagramm">1.6. ER-Diagramm</a></li>
+</ul>
+</li>
+<li><a href="#_programmierrichtlinien_für_typescript_und_javascript">2. Programmierrichtlinien für TypeScript und JavaScript</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_der_applikationsserver"><a class="anchor" href="#_der_applikationsserver"></a><a class="link" href="#_der_applikationsserver">1. Der Applikationsserver</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_der_applikationsserver_im_überblick"><a class="anchor" href="#_der_applikationsserver_im_überblick"></a><a class="link" href="#_der_applikationsserver_im_überblick">1.1. Der Applikationsserver im Überblick</a></h3>
+<div class="paragraph">
+<p>Dieser Abschnitt gibt einen detaillierten Überblick über die Struktur und Funktionen des Applikationsservers, der im Rahmen des Projekts entwickelt wurde.</p>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/plantuml/svg/eNrjSkwuyS9ScE8sLuGCMB1TcjPzoGzv0ryUVC6uotTkksS89JxUhcTSknyFai4FIABpUdDVtVNQ0HAEiRaXJmek5mmC5cBmgCUJyyXm5aSm45I8vATogCIckjmHtxUjzAW7FYed6HIodqJLwu2s5eJKy88vSS1S0EjWVHAvKi0oSFUw4gIA_31cMw==" alt="Use Cases">
+</div>
+<div class="title">Figure 1. Use Cases</div>
+</div>
+<div class="paragraph">
+<p>Die Use Cases visualisieren und beschreiben die verschiedenen Anwendungsfälle, die das System abdeckt, um einen klaren Einblick in die Benutzerinteraktionen zu geben.</p>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/plantuml/svg/eNqNVMFSwjAQvecrMpz0gAfPDjOKjgdBx8KN6SG0S8kQkpqkOIwj3-62CaUpRL2x7-1u3u7bQgSsLLWKal6sLc25hsxyJQlhmVWaJk-z-VhwkNYDz5qV6_eJx4hUOdDBKxg7oF-E0kUCHxVGE1UUoKc8zwV8Mg0pqcn7yqqxklYrIUCnRygBo8SuBo7IDPSOZ74qgVIZjo_v72pu5NAp46JN-yYkE6rKGw1IzvclvCXTc0KituEG9giyzTBTUuK8F9JwrC0-UGtCLmeWLZnBSR8fKEMNg_YhtgScpQHTEAJe4Ioq2LpJg2RjLLO2kkXTvlmib_jitZ0R9bwG5_WSTsbQw2H0y94Dw_7IJVHKFfb9-0d6x9t-Ob25GfXsDktiCcfI8RfO4xxzgtqzaH95PHAxQgZ-Rht0nI0MHDnBCO76n67i0gaCTyGIXHX3mruBY7uH1a9erNFTkOkhrpuslLKg6VV2jX8OVVkCvSU_3CeArw==" alt="Komponentendiagramm">
+</div>
+<div class="title">Figure 2. Komponentendiagramm</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_die_rest_schnittstelle"><a class="anchor" href="#_die_rest_schnittstelle"></a><a class="link" href="#_die_rest_schnittstelle">1.2. Die REST-Schnittstelle</a></h3>
+<div class="paragraph">
+<p>Hier wird die REST-Schnittstelle des Systems detailliert erläutert, einschließlich der Controller, die für Lese- und Schreibzugriffe verantwortlich sind.</p>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/plantuml/svg/eNqVVE2P0zAQvftXjLoHWkGL4BhF0a5ALHtAWhY4IQ7BmbaGxE5tp1Cx_e9MnKR2QhLAF2dm3nxk5o2fwL3Go8AfkFWa7yG-yW2SMSakRb1NOZJdFcJg_DFhrEz593SHcC3R2G_mOVdFoST8YkCH56kxsLh-paTVKs9RLyA14EWH2osMAx1woXmOrBfhFq1zpdv7kDAKfsCDA9PtwSRMgE0LNiHYjILvU50WDu6-vIMTR13eV6hPzsV9eRcnjrp8MnhXN5tjaZVuyhvofJiBoQt49qPBn6VGChzOhLpR0cB6GlMqadpSOgk2nylLhvLLJgnnFoRPK6va2JeM0gp7gqs37rRGn-qm9ojjBpUk7GJ2hjBjy7RpQPgfZ9YrwqA-CmLrWPYHTLMPrT2OgTc_BlTLSCBqnoWr1-4E0eo4zQzXVbl-TJyCjSQjmgbs7qWrpWA7lqtON5hqY_C56_MU6q0gS2pOksMO7V22bBhKSpFFIKviK-pnUC8EqTQeoq5hpHxLPUAX-kiXUDICY7WQO-dgnIOJLkxYRZe971Rx_XfvVIY5PEIlM9wKiVnbxOkyl81OkOpQ35Hv5ESp_1WPmSvo3OdafzJqvU5g8WLxB0Oijktz3pv-gswDQ9rOodqVnIeNLckAVZWbhp-uOf-EbF6rHjTsydQS_g07LNY_NFrs9nb8tWlGR8NzLx4WJT0uBdbkNoxtlaJFgSVfwa2uyhLhJfsNue4Xng==" alt="&quot;AutoGetController&quot; für Lesezugriffe an der REST-Schnittstelle">
+</div>
+<div class="title">Figure 3. "AutoGetController" für Lesezugriffe an der REST-Schnittstelle</div>
+</div>
+<div class="paragraph">
+<p>Der "AutoGetController" ermöglicht Lesezugriffe über die REST-Schnittstelle und stellt sicher, dass Informationen zu Autos abgerufen werden können.</p>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/plantuml/svg/eNpljbEKwkAQRPv9ii2TQgTLFIKKHBYixHRisbnbSCDcHpeNkL83pxYH6QbezBsgqxLR0KgArUzeUZzxMKkY1pN4jTIMHMH-4pfUTO7O8d1bBkdKLY2MtACA5MHNfi3ACs25wS2-WI_zxRUlrDv_YeavsOu9ywYZS_X0WuGjmQPf6usToBPRxVTYEk2cQmDcwQe2KE3m" alt="&quot;Sequenzdiagramm&quot; mit den Methodenaufrufen">
+</div>
+<div class="title">Figure 4. "Sequenzdiagramm" mit den Methodenaufrufen</div>
+</div>
+<div class="paragraph">
+<p>Das Sequenzdiagramm veranschaulicht die Abfolge von Methodenaufrufen innerhalb des Systems, insbesondere im Kontext der REST-Schnittstelle.</p>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/plantuml/svg/eNqdVUtv00AQvvtXjNJDWtEGwdEKVgNJS1WBqkDhgDgYe9oYbK-7j0IE-e_Mrtf2OlknBV-yM_PNzuw8vozhhuNjhj8hVTxZwXSWyygNgqyUyO_iBMnOikzg9GMUBFWc_IjvEc5LFPK7eJ6womAl_A6AviSPhYDR-RtWSs7yHPkIYgGdaFCrLEVHB0nGkxyD3g23Ai9VzFNhLmilzr9VDblf6fQTrCTj7SWurneVa_BeeMOENLfoQ-eqJT9eWbhy0coPnmOOEg2-PnYutez1WuKDcaHfDk_CAFhYsHDBA4-NeVzU6euT8wAtel1es3RtPPShc9CSF_8W4xRtY-y587KKnuN2kyZfCJpi-XUSdT3ZC1KHMbb6Bmda6xqbOnsMwm_oqrdjasu0Y2mqsel2DX9VHKls7pJRNgrtsxuNqFgpbPqNBBOe3a-kE8DZRieGwETxTK4nsZKr_jrLdUWzwnKEVzCezd9dvR_DHxh_WiyvZ4vbi8XSiNe37-eLcT1khHWmTHt6Z5IMonUQfY9-92tN_RRdcR3ASZ5yZjbntmalpNfA0YX5rLGLPtMe02mNiqKgNRtDr4k1-Q0D3E5sgl4SAvljRgTqi_6Zqo0fLGA6haRuC1Ayu-AlDcUwdisqzYqEo7n5hkM7BNy7UUsOgR-fNLqWcXsqd5dqQxdRf8_AcCeZ6n7TIRbrMoFKaw1vaBVlFZrcTkETG6k4PoRNbU9Ba4XRirCd7ZOw_WtqVNFOcOWLrQZCm40lZZaGUKriG3JS2o0k9SP9ZKwMQUielfen_51VTTS7iaW13p_Hv8ba9Kd6u-vs7CyC0YvR7jSGzeA-3d8d0JBybKW9V0wmqoqMJTiA69HWfqyqLEOIJ-IOx3ZXfD_OUvAhYEMqW6yiKpdX_E9oqjxEQQfBLqFtNIsazsWiIrosUM-aCII7xmiv4Tg5gUuuKvoDeBn8BePjIDk=" alt="&quot;AutoWriteController&quot; für Schreibzugriffe an der REST-Schnittstelle">
+</div>
+<div class="title">Figure 5. "AutoWriteController" für Schreibzugriffe an der REST-Schnittstelle</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_die_graphql_schnittstelle"><a class="anchor" href="#_die_graphql_schnittstelle"></a><a class="link" href="#_die_graphql_schnittstelle">1.3. Die GraphQL-Schnittstelle</a></h3>
+<div class="paragraph">
+<p>Dieser Abschnitt behandelt die GraphQL-Schnittstelle des Systems, einschließlich der Resolver für Lese- und Schreibzugriffe.</p>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/plantuml/svg/eNqFVVmT2kYQftev6CIPQIWF2HkKIZSV9R5K1gvhKNfG5YdBaqGJRzPKHFA43v-eHgmBWDaEJ00fX19fN224VsVO83VmoXPdhbc_vPkJrqDQaFBa-M2hXqOEP3meo86ZlD24V3Fm4swJhN-ZFka7DIN20IZFxg15qrVmOdBnqhHBqNRumcYh7JSDmEnQmHBjNV85i8AtMJkMlIZcJTzdEQyJnExQg80QLEU1oNLycfe4hDuUqJmAqVsJHsMDj1EaBEaRvcRkmMDKw3iHW5_BfJ8B3CrCZZYrKgI56TVsUBt6w491iD1eD5QmjA6zPm0NqvBuXcp1B4LZo2f_1cqPBSbAZQmcqYKqyQiQ6ttyIWCF4AymTvQIgWzhY7S4nywXED4-wcdwNgsfF08_k63NFGlxgxUSzwvBCZhq0kzaHaVOAB9uZtf35BH-Gj1EiyfKH26jxePNfA63kxmEMA1ni-h6-RDOYLqcTSfzmz7AHH1SNL5LvU3L6VADE7SMC1PV_ETjNJSZSCBjG6Sxxsg3lBeDmCj1_zMjDCaUXJcVku2xhZRYlIJUtgeGEhxl1hZmOBhst9v-Wrq-0uuBqEDMYNwPCGmqccNxC4nTcQajUNhxEgRc0qhSFiPpVc4NjhbjIChY_IWtEd5JNPYvM6CQRfa3gH8CgFgwY6D1boZGCZpxyzOrfpA-4wke3hBzHQsMGn5Lg5EPGmNhlTal-wtZjfJC_ArYH7R9uxKi_Kody8cr5qFeVwH9R23svxu2h9T7AlP7iUwSlJ_747pBwfOxP8xZVTalFtBF4MQ3L6qjht5mNKo04zFpnoOGh0G9oUGducyQJfO9bjQiwkirlYBzgHo2370vfydALbujnfJw7xcT-AUmObcj_-xBmzljLLPWSTpfbfhGki_WMToQHLUtBai_olvbdtWyCqVEr_q2hz22DuBIpyiJZEFLWaVT6pIhSJevSpbsi2hWXA7t0P2Tmv3rQLhOt5a84EelqAN-DxU7SMrMTsblsDolBUjkk9mn2B0euL8vaXwJwhwwkFPnrEO6-0Pw54w29Vt5mVMuMTnH_fR53Cz9vGh15YqrMbTetM44MKyZ8h-ufWJoc0SvW-xLPlj4-dWeF9wO633Bpl6PU-zG_pzEONHUrrWyWfcluxNl4wRdRmkYPvtlLsmMeUF7m6OnpwmCVCn_F9aJu3CnXUFL9Db4F3Frnn0=" alt="AutoQueryResolver für Lesezugriffe an der GraphQL-Schnittstelle">
+</div>
+<div class="title">Figure 6. AutoQueryResolver für Lesezugriffe an der GraphQL-Schnittstelle</div>
+</div>
+<div class="paragraph">
+<p>Der "AutoQueryResolver" ermöglicht Lesezugriffe über die GraphQL-Schnittstelle und sorgt dafür, dass Clients spezifische Informationen zu Autos abrufen können..</p>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/plantuml/svg/eNqlVVlzGkcQft9f0SU_AGUEsfMUQihjWUgkslBxlEpJ5WGYbdiJZmfWc0DhxP89PXuxSpCUqvA0fX399bFNCy50djBimzhoX3Tg_XfvfoBzyAxaVA5-9mi2qOBXkaZoUqZUF641TyxPvET4hRlpjU8wakUtWCbCUqTeGpYCPTcGEazeuD0zOICD9sCZAoOxsM6ItXcIwgFTcV8bSHUsNgeCIZVXMRpwCYKjrBb0JheubldwhQoNk3Dn11JwuBEclUVglDlobIIxrANMCJgEBouSAUw04TInNBWBguwGdmgsyfB9laLE64I2hNFmLtA2oLMQ1iGuB5DMHSN7Jys_FhiDUDlwojOqJiFAqm8vpIQ1gre48bJLCOQL99Pl9Wy1hPHtA9yP5_Px7fLhR_J1iSYr7rBAEmkmBQFTTYYpdyDqBPD5cn5xTRHjj9Ob6fKB-MNkury9XCxgMpvDGO7G8-X0YnUznsPdan43W1z2ABYYSNH4XurtJp8ONTBGx4S0Rc0PNE5LzGQMCdshjZWj2BEvBpxW6vWZEQaTWm3zCsn32EIiNt2A0q4LlggOE-cyO-j39_t9b6t8T5ttXxYgtj_qRYR0Z3AncA-xNzyB4Vi6URxFQtGoNowj2XUqLA6XoyjKGH9kW4QPCq37w_YpZZZ8kfBnBMAlsxbOPszRakkzPgubVQlkT0SMtQxcGC4xasStLF55ZmKbB9ZSFVkrTodOA1-OmdOmBmjqGjBN9Qmwz97lm56jVEIVXskn4sZmW2QOj8o_vCvfb8f-hfadP-KBS80ez7lWCrlrdHHsXZJX20ww1xKLDPmrbmkQTuRg3ml48yn_5dCVga6ToN1_M8l_uamRV8NwWHiMRmT5FjUiLZodLc-zofdGOFyUTsMhbbNyRks4IpW1uAN90iHi03IGP8EsFW4YxC60mLeWeuy8ouvZgr9I8-g8o_sk0LhcgeYr-q1rFd0uUOqGl6DH-QAcd3kaT1XmXUk8t8UDUD5d5yv6hGRAqsZdr-2TooJUr3u7U2nqTX2iam5dYShIvIV640hdDJkezB4UB26QTmY7362gLIobVFV2BvXXWdQweh3SZ_ERsiXiVqfRg26pLk802crXAMJZVtsuVIGhj62C0iqH_L_EYpTYqDWQKsfVQFtrimGq3qeTQ9Lnsd6r8xGcvTv7914OqjV-Nr7XG-WG1-zF2j3rUrIvXcJS9nz2H6DLWl9yqc_qs05VpvKMvOhWnJMmz9_oW4pR_f6EzUfPk39aayI0jfz7wzSj25JiGDphbrQOf_lt3oEr4zP66t9HfwPCOgrq" alt="AutoMutationResolver für Schreibzugriffe an der GraphQL-Schnittstelle">
+</div>
+<div class="title">Figure 7. AutoMutationResolver für Schreibzugriffe an der GraphQL-Schnittstelle</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_die_geschäftslogik"><a class="anchor" href="#_die_geschäftslogik"></a><a class="link" href="#_die_geschäftslogik">1.4. Die Geschäftslogik</a></h3>
+<div class="paragraph">
+<p>Dieser Abschnitt beleuchtet die Geschäftslogik des Systems, insbesondere die Services, die für das Lesen und Schreiben von Daten verantwortlich sind.</p>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/plantuml/svg/eNp9Uk1PwkAQve-vmOBBiILRY9NUICaGm6I34mHZHWCh3a37gWmU_-5QPtoCoafumzdvvt4tvFlcK_wBGaxYQDxIfSIZU9qjnXGBFDeZchh_JozlXKz4HKGv0fmlexAmy4yGXwYgUu4ctPojvUTh-TTFFnAH1ZM4CyWxhoBQVlBgUwn7Ikdjs5riGHPjlDe22HawOe_hPOXQRJVaa6UCmw1V-IW2ePCmLHAAUHvlixI6VB0Qh56UVdEc2rWiHd68lF-D_x7QFsOgUomWneiMkcuPfW4cgzDaW5NCktCrtuF2h5CdJsAdzVhoATOl5bAYybaSEeiQTdF2ouMVt-rwB0FLJCLK5EJ22wWxWFlFDlConyO6gTBWxs5bpef3wHWRnEhOvnZCm90kpzOYbjeB1mOrMXQE3_UVXM2rrhPB2XXB0u_lwr2Q95KmCa-Tava4wt2PfplB8dILZbQ-MPQmZDiJ-osoDR9e4R1tRast7YpZTs7LcHtYx9jMGLoTtEUHXm3Ic4Qn9g873kMs" alt="&quot;AutoReadService&quot; von der Geschäftslogik">
+</div>
+<div class="title">Figure 8. "AutoReadService" von der Geschäftslogik</div>
+</div>
+<div class="paragraph">
+<p>Der "AutoReadService" implementiert die Logik für das Lesen von Informationen zu Autos und sorgt dafür, dass diese Daten korrekt aus der Datenbank abgerufen werden.</p>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/plantuml/svg/eNqNVU1v2zAMvftXEOklwdoU29EIjA5YV_RQdOiG7jDsoMhsqs6WBEkOFsz575M_EsmSnTQ3kY-Pj5SfkjBuUL0QivBNiZJpXP3IkkQS-odsEG44avOmr6koS8HhXwJAC6I1zG7u-RtSQ9YFzoBocEeLeWU5ehGgTFGb2Dtis5MoVOkxPqEUmhmhdo2CfawhLjmIcKWeFBccCnLxEVklYYXX4MEev6PaMjpAkcqIFnUIIDfM7NrQofSzxdijrXIw3VHBxZf2F-Hv-ZYULPeit2xjuSssUd3-ZdpoL_eV8Sj2jEozwWOiPvFYmZwYzJOg80_FDPaTwmoFVHCjRAFZZk_eVc8XNtLJBvhgl73jFKhCyzlvtpK2bIv0-DFpoxjf1N50dTRTfZwkC5gr2aidszwFXpVrVJfgulzCthsqha6L17ZDv7dtPVxbHSwrVJVjgQNVXuO1EAUS3pXsuzVHCxZXVxnMPs7azHPTkhjbr0-nsA1D76B5QpIfCZQ7nCl1bkghcpPlkeIMgWeRtLXPoe943bKSy2z4WJxBeT4-Be4vYAJiAb0hJwlCA07Axh05AR5adAI04tnTyKGJPd0N7Jd96nLkv8OJg1y4riA9ckGjiMEjC_FyTimKPnxYetCA-XyB_1Y31rPma199LKV9mktsjKqT5EUI-4cHc7qAO1VJifAp-Q-F52BW" alt="&quot;AutoWriteService&quot; von der Geschäftslogik">
+</div>
+<div class="title">Figure 9. "AutoWriteService" von der Geschäftslogik</div>
+</div>
+<div class="paragraph">
+<p>Der "AutoWriteService" implementiert die Logik für das Schreiben von Informationen zu Autos und gewährleistet die korrekte Aktualisierung der Datenbank.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_klasse_für_entities"><a class="anchor" href="#_klasse_für_entities"></a><a class="link" href="#_klasse_für_entities">1.5. Klasse für Entities</a></h3>
+<div class="paragraph">
+<p>In diesem Abschnitt wird die Entity-Klasse "Auto" im Detail erklärt, einschließlich ihrer Attribute und ihrer Rolle im Datenmodell.</p>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/plantuml/svg/eNq9VsuO2jAU3fMVFhtmRhqkdokoNCoRpQPMaArtphuTXBKLxEZ-TMW0_HtvHuA4pDTdTCSQfe1z7sPnOumRJwkvDH6S0MggJkMv0aOw09nTYEcjIPqwByFT8qtD8AkSqhTpfvS5ZvrQJVSRYpivxiyEck4CJoMEHNAnkZiU56BiaEHFvAn0JFlK5aGCdSyWwjE3MT1yWIkF5UXY55llOJua0F8E45Ug7NTira2JICNeCfSR488zCz-bGmsngWqY4K9axZqxUs_aShPleh9eUtaNlrK-cqI8Wq1Qo0UfivN39JKJiHwGqTQkCchVNv1Aet8e5w9fv3tTf9kjv0nPW09m-WDizRZz_zkfP_tLbz1f9fLoXAobW426jOwigiloyWADJ_8Lb7n25_PS-epx4a1mD4Wn6lbrxyG49OJh_mQ4LCowGuGwbBQcF_XInrIPbm6JK2404KmFgicHwsIB4SbdgGyAnXe9YNpM8DZbUxFifTbwCiyIueHRgCjMhUfXQPG5rIOm0v8FtWW8DfmOJSIFndFS3ipdalTCYAsSw0cQppCp8Roiwq3hXgJTbfiZ0t5OmyxJtcjrNSAbIRKg_KqTUhSe1INL3RSgWjtW4SBfwUS6nky93ZxCYJQ0YYqBrOKOVS36LEIdGkhBvqUkwbptI4IINkZqhamadPzv89waiCUqJoiBcQwGvYwdN0e3HRXKRGuUy1uW4D-bLJfnuGW7YwGiDc2SrgqzzDq_fu7u70ek-67rCGBAircf_iHhD145pTryruvU7YTMXk45lNrFite-ZFGs-6Pq14C70HB_FBsS2GbrTuNgQvl9C-keXyUpZJVRnc5WCLwvyE1wS6bS7PEOft_5A_obzT8=" alt="Entity">
+</div>
+<div class="title">Figure 10. Entity</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_er_diagramm"><a class="anchor" href="#_er_diagramm"></a><a class="link" href="#_er_diagramm">1.6. ER-Diagramm</a></h3>
+<div class="paragraph">
+<p>Das ER-Diagramm visualisiert die Beziehungen zwischen den verschiedenen Entities im Datenmodell und gibt Einblicke in die Datenstruktur der Anwendung.</p>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/plantuml/svg/eNqVkk1u3DAMhfc6BZFNWgOZRZeDIMAs2i6CAr1BINtvbGIsyaCoID-Tu5cWio4aZJOl-Ejq4yPdNc08gnQG5TWpq6-BZVjg3DXhUZcd_ZZ-QQAFVroXjxnxWJAzIj1CAqwmunziuHrxgRaO0OcVlETn5Byisj7T1aFouqJXR9QRj3viqJggdHs7IUK8Yry7M_XmpqZY68wp_surwZBGLEuPF_AwxxKnPSmetGqzFaipkCZ45Ni8TrykAN0SfTSEWEJfOxP5smQ-QqynidZ3NKCqTBYbVwHnpsBGyHo4adk-zL8q1p76lBb4WPWuA9tglhEgDzx2XTvyj_s6q3WHCqPHQbQBhbygTFuEA4wnrDXs7UO_cGbIf9rbxeXvl08_YXaD2lBM6ItoNidKaAyx5c9iHg4zOJojteivM2_tvrPRqZqjnyD5aLdE7-2n7TyMY-q9vLfd25197LfBbUdI5_Nudz5TY9Ulnl6pAXfumJLdC30ZvtJPKaud9Tf3B2MWDig=" alt="ER-Diagramm">
+</div>
+<div class="title">Figure 11. ER-Diagramm</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_programmierrichtlinien_für_typescript_und_javascript"><a class="anchor" href="#_programmierrichtlinien_für_typescript_und_javascript"></a><a class="link" href="#_programmierrichtlinien_für_typescript_und_javascript">2. Programmierrichtlinien für TypeScript und JavaScript</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Für die Programmierung mit <strong>TypeScript</strong> und <strong>JavaScript</strong> sind folgende
+Styleguides empfehlenswert:</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+<em>E-Book zu TypeScript</em>
+</td>
+<td class="hdlist2">
+<p><a href="https://github.com/gibbok/typescript-book" class="bare">https://github.com/gibbok/typescript-book</a></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+<em>Google</em>
+</td>
+<td class="hdlist2">
+<p><a href="https://google.github.io/styleguide/tsguide.html" class="bare">https://google.github.io/styleguide/tsguide.html</a></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+<em>React bei AirbnB</em>
+</td>
+<td class="hdlist2">
+<p><a href="https://github.com/airbnb/javascript/tree/master/react" class="bare">https://github.com/airbnb/javascript/tree/master/react</a></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+<em>Angular</em>
+</td>
+<td class="hdlist2">
+<p><a href="https://angular.io/docs/ts/latest/guide/style-guide.html" class="bare">https://angular.io/docs/ts/latest/guide/style-guide.html</a></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+<em>Microsoft</em>
+</td>
+<td class="hdlist2">
+<p><a href="https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines" class="bare">https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines</a></p>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Von IBM und Red Hat gibt es bei GitHub <em>Node.js Reference Architecture</em>
+<a href="https://github.com/nodeshift/nodejs-reference-architecture" class="bare">https://github.com/nodeshift/nodejs-reference-architecture</a>, wo alle möglichen
+Aspekte bei der Softwareentwicklung mit Node berücksichtigt sind und
+entsprechende Empfehlungen bzw. Best Practices beschrieben sind.
+Diese Dokumentation muss man einfach gelesen haben. Ebenfalls empfehlenswert
+ist <a href="https://github.com/goldbergyoni/nodebestpractices" class="bare">https://github.com/goldbergyoni/nodebestpractices</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2024-05-01 11:03:23 UTC
+</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
+<script>
+if (!hljs.initHighlighting.called) {
+  hljs.initHighlighting.called = true
+  ;[].slice.call(document.querySelectorAll('pre.highlight > code[data-lang]')).forEach(function (el) { hljs.highlightBlock(el) })
+}
+</script>
+</body>
+</html>

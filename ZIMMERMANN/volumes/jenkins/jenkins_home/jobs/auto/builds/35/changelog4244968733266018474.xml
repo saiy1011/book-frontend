@@ -1,0 +1,19 @@
+commit b107da3ae3728f90670bba38fdd161026270de2c
+tree bbc3af1c600c00b5a3127183542bb2e33ca19de6
+parent d93de7e10a25abcd75ec116cfc6e6ea19de069b0
+author Dodekagamer <147612354+Dodekagamer@users.noreply.github.com> 2024-05-01 16:59:57 +0200
+committer Dodekagamer <147612354+Dodekagamer@users.noreply.github.com> 2024-05-01 16:59:57 +0200
+
+    Anpassung auf Windows
+
+
+:100644 100644 77e21c0638a1c61cdfc22adc24a43adaef0eb41c 4cfe2ab3f8a1f5fb4b2ab543ba9c7313b69d8a90 M	.extras/compose/fakesmtp/compose.yml
+:100644 100644 6830d441156503c9d337a33ae224bde6bfae2c44 3c1c2b95d326aa30a98e5d05247eb4dec3db9d28 M	.extras/compose/sonarqube/compose.yml
+:100644 100644 8f029fd7f9414fac5ec7ffe5f0789e02b60e3c95 e294bcc927016e944ffa38a6185b390feabbd669 M	.extras/compose/trivy/compose.distroless.yml
+:100644 100644 f170ad9e3ba160da45e4b2d47e1b1c441c597c2e d1c6475a41bf114a7d503cdfa2bca9ac88e6cdb6 M	.extras/compose/trivy/compose.wolfi.yml
+:100644 100644 bd9605cedbdb80fbb78746aa74ad7ff9dc6b1248 76c228425e78811fb1b3c6d4d246a584b4a0144d M	.extras/compose/trivy/compose.yml
+:100644 100644 b7604e232626ef51e802093e03db25915b560b4a d1de12ac87a2b6923bf3c7ba0a74c5a3fb4d6312 M	.extras/dive.ps1
+:100644 100644 eb2b29051391d5be13a5937475d624fc2b629d93 2f82c2210e1ba7ee883d7cc94de31ae46301be64 M	.extras/generate-load.ps1
+:100644 100644 4b8414e0c5be102b578f3f2421eeb8692351dc18 ef8953e5b2acebe02988dcb6c05e12444812ad90 M	Dockerfile
+:100644 100644 4d26d4813579ec96c9162f97cc37bb8914e87aad 59ce55a5e40d7300fa06937dbb239ca33b301b4e M	__tests__/auto/__snapshots__/auto-GET-id.controller.snapshot.test.ts.snap
+:100644 100644 17291f72e651e180f660d83d7e83d1bc69702f80 a7e4643e98bd819a2a6fb983919e819fc666f83b M	log/server.log

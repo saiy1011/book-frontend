@@ -1,0 +1,148 @@
+commit d93de7e10a25abcd75ec116cfc6e6ea19de069b0
+tree b2f893ffb09017765b3d1c73f680989d8c9c8a8d
+parent 9191fcfdf13a40c7662c399c4aee4fdf138634a4
+author Caleb-Script <caleb-script@outlook.de> 2024-05-01 15:13:24 +0200
+committer Caleb-Script <caleb-script@outlook.de> 2024-05-01 15:13:24 +0200
+
+    Update JenkinsFile
+
+
+:100644 100644 7ae3a8bd7a8fba868cffa6da24644b731f70e382 015704913a9bea7ed49a7de5f07b78260a1cb6d3 M	Jenkinsfile
+commit 9191fcfdf13a40c7662c399c4aee4fdf138634a4
+tree 4dc3de0abcd73f166471fcec750053616b8d3706
+parent b18d11fe02a6f0dd08eb9d6f584130d97082df09
+author Caleb-Script <caleb-script@outlook.de> 2024-05-01 15:08:52 +0200
+committer Caleb-Script <caleb-script@outlook.de> 2024-05-01 15:08:52 +0200
+
+    Update Folien.adoc
+
+
+:100644 100644 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 9b3a29f7be5c8ac8311047a5ca3ff63c61ee19bb M	.extras/doc/folien/folien.adoc
+commit b18d11fe02a6f0dd08eb9d6f584130d97082df09
+tree 557bc393ccf0ed82b82dbd8c100737125067e232
+parent c7f2d8357a1520279b6636a444245f7a165c0d5a
+author Caleb-Script <caleb-script@outlook.de> 2024-05-01 15:04:23 +0200
+committer Caleb-Script <caleb-script@outlook.de> 2024-05-01 15:04:23 +0200
+
+    Update coverage
+
+
+:100644 100644 0870ad0c17120c09d493078d95507a616ea2df85 4d26d4813579ec96c9162f97cc37bb8914e87aad M	__tests__/auto/__snapshots__/auto-GET-id.controller.snapshot.test.ts.snap
+:100644 100644 6cd60fd0f4bb064a49ba5798a5bb3f249402f74b 2966e766cc4642b8aedbcbaef42afc130ed41f08 M	coverage/admin/health.controller.ts.html
+:100644 100644 af0b569b494920b3ee9f7af19246960a401d1257 450a89bb4f740c2131af6ff2d9166d466d1ad2d1 M	coverage/admin/index.html
+:100644 100644 f56905d7023b6b26a4d21e31d6f9bab124c376a9 03b13ed5a1de70a5128b7d3d0f63fe8a4a6bb857 M	coverage/admin/prometheus.controller.ts.html
+:100644 100644 0d07b309e83633e53ed12b594cc9d3bce4e695a5 25014f53c779908f1b3ffcbf9b0efb0344f5440a M	coverage/auto/entity/ausstattung.entity.ts.html
+:100644 100644 27937aa30f4c9fb6311d0aca1fcf679ac20943a8 13f956ab1d7142ebd0cb52b7959172b7205cd459 M	coverage/auto/entity/auto.entity.ts.html
+:100644 100644 c09b7cbbbf343112412002a91b525a4eb2f8dcce 141db92b094f3d83de867b6cf667e2c972fad053 M	coverage/auto/entity/decimal-transformer.ts.html
+:100644 100644 91fe769653890866f16dc86b018ea8b66a9dc6b7 90c557b8a992e5c2776b4ed8704e4d3ae74cd148 M	coverage/auto/entity/eigentuemer.entity.ts.html
+:100644 100644 8004ab3d45cb70d0c0e29bf5f6a7ef8ca69a147f c1f1773075a0d3a0d7a6a21fcfba0703616b8768 M	coverage/auto/entity/entities.ts.html
+:100644 100644 a50850fac509b1bc9a70071b3da84521d3aefa83 24b831f54d8ec8cc77814154ab66f486985aef6f M	coverage/auto/entity/index.html
+:100644 100644 58e29a779e3168dfd731a729fd903078b2da79f5 cd5801eb94fa0bb058b729d296f2ce053766d5c9 M	coverage/auto/graphql/auto-mutation.resolver.ts.html
+:100644 100644 db35d2d2692b55481a1d42f52062ec3b001dc2a2 724ab6193994b42db278cb1e25bbb0aa3f5d196d M	coverage/auto/graphql/auto-query.resolver.ts.html
+:100644 100644 83d27fc26d813ba8fb015b14f24ce8b285b83ed5 3a006f7b993bb27719a5aaf24a0f8e9d982790e4 M	coverage/auto/graphql/errors.ts.html
+:100644 100644 46ac2c9e4b45e4206e2a342aff057392a6e3cad1 108fb40850e24291e7286371f6fea2bfd43170ec M	coverage/auto/graphql/http-exception.filter.ts.html
+:100644 100644 179aee5792d1942e04592736b8d1ebf5d00592a1 6a859b9b4f948952db9549caea0b1a1d52739109 M	coverage/auto/graphql/https-exception.filter.ts.html
+:100644 100644 1cac6ed62135886a872816a7e507370e2ec20f09 0423ec30b0d69afad655369ae79a20e15c0ee81b M	coverage/auto/graphql/index.html
+:100644 100644 06e3de6a63b15c2c2244ef4ef595e4030334696a 3cfffe199bceeef628e7366b6f44c97981c5503f M	coverage/auto/rest/ausstattungDTO.entity.ts.html
+:100644 100644 0e01f837080ee5e17f96a4b57686d5533069df74 0ba1cc26cf950f3e9106b7162bfd27c627209602 M	coverage/auto/rest/auto-get.controller.ts.html
+:100644 100644 e728d70a987d1329fe0de839e8dc4b5a4fbe7985 aca212ca109b361bc40a35fa81c87ef3d55ccf34 M	coverage/auto/rest/auto-write.controller.ts.html
+:100644 100644 f58eb4e5d9fa62f548cce924feab9a834cc28c72 5fcc5b6331957a6aaa6e7af8730189659c06aca4 M	coverage/auto/rest/autoDTO.entity.ts.html
+:100644 100644 77ae1a8b914ba511f1c15c5344306398e956c7cf 85a61d2eb060b669d32ef033e52905c1dda91259 M	coverage/auto/rest/eigentuemerDTO.entity.ts.html
+:100644 100644 e4510f1d29a9a1c0d21c9573f9ecb5d464f8f0f5 4aad800d6573bf9b3b01bcc8fc180ef3bbf848c5 M	coverage/auto/rest/getBaseUri.ts.html
+:100644 100644 605afc50a3af1b50c06be8ebd8f8c4444f50eb52 c26dd1e5fd87978f5561da6ee8d1e69a8c3f16b6 M	coverage/auto/rest/index.html
+:100644 100644 df6f47d1cbfa3d21e4c0afcfc63f1f49fb175d0c 25b855c95230460bddfc153895d95f7c48e53658 M	coverage/auto/service/auto-read.service.ts.html
+:100644 100644 6f55ead2102d972a7fae22bf25ac37a2b5fdfa36 089448da216ddb99f1fcc3aa39f096991baf5b55 M	coverage/auto/service/auto-write.service.ts.html
+:100644 100644 f376f6d63567c904e339a64ad6913c22357eaf62 955ca0bd041d545bfca6955f08b7af6c6e25e32e M	coverage/auto/service/exceptions.ts.html
+:100644 100644 4e8ccee70ab1ee63b482c1653df0470f9422bfe7 ba60f66c85204b2534eb12118af8840f2ec2db40 M	coverage/auto/service/index.html
+:100644 100644 f71218001467f614d558534c9bf6471ee66f2d9e e447c125a9ff273a6f4c3c7682d13d92d8675c97 M	coverage/auto/service/query-builder.ts.html
+:100644 100644 9597330624ffaf277558d77193ac4f889add0361 3b8deec81340b45176aa6143f9810ea5a3417bcd M	coverage/config/app.ts.html
+:100644 100644 c686df795ed67abc607790f8482f0cd2f314244f eb122279b19f5691e92436c5cc40d7f09bb4a307 M	coverage/config/cors.ts.html
+:100644 100644 29dee8370a3f96a6562a178f6c2e5c5798ccbcb6 bd3a6432ce480ebb55131271dfb45485bdb949fe M	coverage/config/db.ts.html
+:100644 100644 0ab36981ae276e4cf27c54403287767d4ab85173 df65300f89c1af8d63fc36891ee8dadf072dd51f M	coverage/config/dbType.ts.html
+:100644 100644 bd3b40b251d896bf3f96d44e959737bbb30dbc1e 6123bd0c1b7631b17674594368870c0d5d87e884 M	coverage/config/env.ts.html
+:100644 100644 a4597e2f6ad62f65b6b376c48debb987f80b019e 39d4a5a8aa305d3fe090f2da7ae08fa1a2b1a4ef M	coverage/config/health.ts.html
+:100644 100644 8a683d2f596a538681044846dcdb090fd5212a0e 5424580e70cdaaf852159f81fd8ada454b208c6b M	coverage/config/https.ts.html
+:100644 100644 3e870ed4f8eb9118519f9d3c641013803f8deb8b 5855bceadf4b8964d3c5665b11f3e878fec546b0 M	coverage/config/index.html
+:100644 100644 f46d0025e980018c086fdf6affda906d6863bd10 be0ae9903b5fe7f6c25961ea294659462daeaa81 M	coverage/config/keycloak.ts.html
+:100644 100644 c210d3cbcb47d8c16d243a525bbfea14818a06df 483bdfa20932343b0cdabf5055ee7c1b8365d7dd M	coverage/config/logger.ts.html
+:100644 100644 8fbc61d0bd631728a445828981e9efc1e22e63a2 3def82d4648183659e3d22f2bdd66c9af35e6a4e M	coverage/config/mail.ts.html
+:100644 100644 fff471df257d90a58cea8c989e70e9e16a3c0f8b 56d0bffd8698a041ec159c168b1d1654e7d4592e M	coverage/config/node.ts.html
+:100644 100644 65d01d7edd30f3506861c557082fa91ddd9f3936 abfd80d0a716d0067b43d342dbd95725a6912860 M	coverage/config/paths.ts.html
+:100644 100644 f6089bed367074cba3dbb83ba988f03cc14dfde0 e8697583aa1d727ccbe45334d7f5e670d67c31c6 M	coverage/config/resources/graphql/graphql.ts.html
+:100644 100644 59e45e163e5adc771c677db9e702c497868f4348 225cfe7ab4589b632612ffd92f8bf2143e45d33e M	coverage/config/resources/graphql/index.html
+:100644 100644 dbbd42fa0a646bddf14de8d1eb8db749b91f56fe 3097c5b5cc92fef5b537dc3b325e73576f20e2f4 M	coverage/config/typeormNamingStrategy.ts.html
+:100644 100644 edc32beb4ffd9fffa86dc78fe846f829f81cf515 c6e7c077af02988ce4df807fa378cd928fdcc797 M	coverage/config/typeormOptions.ts.html
+:100644 100644 57e962d0aa3c48090e9cf07af39c33ecff5e8e50 0c99a40c27ed303a733bda8deaca59f0312968af M	coverage/index.html
+:100644 100644 596ff7a4522ae2b7c6a19f7ef69bbd485e259440 d3e1fd28a6c47f356bda5b78dae54c7f7ac59d18 M	coverage/lcov-report/admin/health.controller.ts.html
+:100644 100644 380ba833b8b1c551d5cfd208fa16294b3ceb080b 42645306ff1943b322232257c928f5d86b0ed0c8 M	coverage/lcov-report/admin/index.html
+:100644 100644 6c43d8767d76e8e2ab73e77bb0323f51135c798c 1cda870c3c7155fc5eaa3459592229b44348dafe M	coverage/lcov-report/admin/prometheus.controller.ts.html
+:100644 100644 7c4cc07982da79a536f56e4914c9235598d68c61 a284baea2af1ee9a64cddf2efca91dc072c476ae M	coverage/lcov-report/auto/entity/ausstattung.entity.ts.html
+:100644 100644 4427948c7cf22526df580239f47aba605017b3f0 46084b9276e74b1e06d2fb19cc153b9bcd638373 M	coverage/lcov-report/auto/entity/auto.entity.ts.html
+:100644 100644 f88a353a9bc549b32a0dccc1dda2b717938daa32 b9e782e7424b4ba56cdcaa8ea14c5b51386b8d65 M	coverage/lcov-report/auto/entity/decimal-transformer.ts.html
+:100644 100644 68d13dce30c9456e2cd32dc6bf416e7ae4ddbbef 0e3d3b6225b44e9d56f74ddb4baa53520ac33c38 M	coverage/lcov-report/auto/entity/eigentuemer.entity.ts.html
+:100644 100644 c295b9c1f1184a74b0015cbbb6b1214d0f4d37ab ad9ab0f6466eef0ed7427377698673eb2be3db2d M	coverage/lcov-report/auto/entity/entities.ts.html
+:100644 100644 bbf1b3f826812a57d4ac55c1d21ff09d958d727e f222fdaaa2a8258066c954e390f9fd939e1cf02a M	coverage/lcov-report/auto/entity/index.html
+:100644 100644 5ae0e66fc01d35d8822d1e4ae14af07fb4fb1cb8 fd9eaee94d91fb171dd7a6b38846be65bc1c914e M	coverage/lcov-report/auto/graphql/auto-mutation.resolver.ts.html
+:100644 100644 8eeb3d24280607147041cce0d5b73fcd309f4c0e cd8601a6c852a9a6d5ca9ceafae54818aabfd479 M	coverage/lcov-report/auto/graphql/auto-query.resolver.ts.html
+:100644 100644 5af8d092ff2fdc1ea65453d985c0237f5e125759 ac2ae86048bbf3aafe6ee48d7af7f55bf0b38c1d M	coverage/lcov-report/auto/graphql/errors.ts.html
+:100644 100644 dbdbc8060293da541748ddb6e175258dafdfdba8 ada214ec3f1fe89ddbb2afdf7c28dc16ef67a08b M	coverage/lcov-report/auto/graphql/http-exception.filter.ts.html
+:100644 100644 23e2c7d3fbaac098ac0bebf6bc242638bc7e4165 67aace8193001ada0722e475d6d1a36f5e506a84 M	coverage/lcov-report/auto/graphql/https-exception.filter.ts.html
+:100644 100644 92340aa1d6abc00be4e4793f0ff2faf1372be1ee 3dd08abea7324517ae91caee49718245b5597c52 M	coverage/lcov-report/auto/graphql/index.html
+:100644 100644 48d3257814c0c14e335601fd224d7156e2d89078 d1b2b7458fbde15fc7cac11f4129c81b65ff2672 M	coverage/lcov-report/auto/rest/ausstattungDTO.entity.ts.html
+:100644 100644 616973166d1a1607054d92a905f2cf0ea02f77e7 712bb3e446aa559297c2f79c6078d5fc15dc2cee M	coverage/lcov-report/auto/rest/auto-get.controller.ts.html
+:100644 100644 5c3f95b0c8f213d4d4dce07528bff1e1b35a62ff 3518181c96cd5d9b4b6ecfa407e16b8ed91317f2 M	coverage/lcov-report/auto/rest/auto-write.controller.ts.html
+:100644 100644 4dc50454b5bc9043ee070cdcc183a7cceb9a7c82 26addb1e686604452172fcec20a0562f54a85caa M	coverage/lcov-report/auto/rest/autoDTO.entity.ts.html
+:100644 100644 140bc51668ad265facf2efdc83f6b85d137ff094 80114bb760bd6493eec5518a7f47ca9122a580e2 M	coverage/lcov-report/auto/rest/eigentuemerDTO.entity.ts.html
+:100644 100644 9d57127fb64b32d5bbd70f3d2b38151525b8e434 309054e7080d2e8864d24a19c8c09870153934b3 M	coverage/lcov-report/auto/rest/getBaseUri.ts.html
+:100644 100644 4b72cb35ce6687ecaf3c4928ff2e86a4b3d1a843 d3e243446406d3208b23704755d49ad769ee8045 M	coverage/lcov-report/auto/rest/index.html
+:100644 100644 909c9bb0aa3fd8c176357f1a791664ba7b22bf9c fdbd63a94f02c835bcb4c676765ab6da4767d83f M	coverage/lcov-report/auto/service/auto-read.service.ts.html
+:100644 100644 91008dcf5b61235e6290970015e06c4733f6a35f 92cfd000fc0bff7cf221b450abef6ec1fe26e83e M	coverage/lcov-report/auto/service/auto-write.service.ts.html
+:100644 100644 ebe76e4e5b5693d58ad4c95cf6932824283f4a27 d66dbb424a2bea3022005258fbdd875159b7e86c M	coverage/lcov-report/auto/service/exceptions.ts.html
+:100644 100644 5f6a11765a4fde571af84502dcc4a442e2b9e82a 6556a7d4d7710c1a5298c9787295039763d65f6e M	coverage/lcov-report/auto/service/index.html
+:100644 100644 18b46591000d33d3db805a4fa29a76c65a6a05f7 3c1ab22e5ff9c52a1d9e79528a571b5d93af75f4 M	coverage/lcov-report/auto/service/query-builder.ts.html
+:100644 100644 4c8e9dc4fee6a86418ec994ec37b46c374f68b18 8f1d832947d80743e7d61f770a343907b96d118b M	coverage/lcov-report/config/app.ts.html
+:100644 100644 6b0f7f9bea642872d95c15d700be16e0fb5e8f7c 5809f6dfaa7967a0197a35df7c601cef884c993e M	coverage/lcov-report/config/cors.ts.html
+:100644 100644 19ad91d1ad6f4cea6d733722a50b63b164b78bef 8af1036a17655cb5719320c31eeb16f69888903a M	coverage/lcov-report/config/db.ts.html
+:100644 100644 a2cd4f4ce3a1245885f9de66f65626adac01bf98 2d24b1900cbc3fad0b094ea372950e88e2617b40 M	coverage/lcov-report/config/dbType.ts.html
+:100644 100644 ed94abcbb99ebe07e258299da60c30c46124a265 fd4b25ec196bc533b11ada3e780f920a6338bc81 M	coverage/lcov-report/config/env.ts.html
+:100644 100644 655614f037a5fe06768ff0a3702141f517b7b68a eb25075d6ee121a75b4254f4bd71432ce369e161 M	coverage/lcov-report/config/health.ts.html
+:100644 100644 671a46b090b390849d7906dd95b6588dab01dd47 f5536241dbb1dc6fd9b050bb7a0479d667bb70c9 M	coverage/lcov-report/config/https.ts.html
+:100644 100644 e265c07b1ff848b9dab4fd733f45b45d12a85e64 0c6ae672b659ed0d1d2026520c1945b61c99c937 M	coverage/lcov-report/config/index.html
+:100644 100644 3827260df357cd731976c39743e77bc36b8306ca f8234f059f5886bd6c83d3281a52141e21900fa4 M	coverage/lcov-report/config/keycloak.ts.html
+:100644 100644 612cf3eacb325cd215141c0c843b277bb9b603c5 e79d11efc904c562664df9a42e92329a38484d6f M	coverage/lcov-report/config/logger.ts.html
+:100644 100644 6831a9f6557d1bdeb11a9fe087bd2a61b7093fb0 a9bb4940e5bf811803620ed43bce2cb3108ddf8c M	coverage/lcov-report/config/mail.ts.html
+:100644 100644 c1aadc930407da1d7f0ffd165eff9c5dcf37582e 5306f6ae8af2344f7db13524ca2971a5e1374d4d M	coverage/lcov-report/config/node.ts.html
+:100644 100644 afa06b0b33302e21b2f7fe47d349cd9c3ce0016e 4587f6921cf22fb4bb807e3e31682fcca07a7b6f M	coverage/lcov-report/config/paths.ts.html
+:100644 100644 acf71cafbf993d293a45933d558ae8120ef5a1e6 59d8f1b06bd9fe35a05f7a8a9913c311a74268ff M	coverage/lcov-report/config/resources/graphql/graphql.ts.html
+:100644 100644 cc4d71d19760f4ef155de29c3ca242d8c70215b4 7f87adbd2d89250b7a8144760bef533e44c1c126 M	coverage/lcov-report/config/resources/graphql/index.html
+:100644 100644 e07007e9af03ef36f37bbb5c2e24fb5caec7216b 223a22c6f1df60650055e2d517883fdd2604f587 M	coverage/lcov-report/config/typeormNamingStrategy.ts.html
+:100644 100644 8a8614bee63ae9517cdd98a791670ed8efeb2ae7 d440e65fed3eb418b7c97a2c65bb0da8fe9fe3d7 M	coverage/lcov-report/config/typeormOptions.ts.html
+:100644 100644 00dfbc9326d0cca5811590f8c20197b86da2f5df da996e48a1ac062befc0245d64789e7fc2f3703f M	coverage/lcov-report/index.html
+:100644 100644 529bff8b2d8773c3510a676e7e766e3b8b8cefcb e28f024daad1eb0a5e7a75806eb3c220821dbf56 M	coverage/lcov-report/logger/banner.service.ts.html
+:100644 100644 927009457b3eaa562265f58bd164e97618d01380 7c37cf72b1532f52eb0afac6b7bb8227c8552ed0 M	coverage/lcov-report/logger/index.html
+:100644 100644 f1980d648d86ed54ae3f9913cd1121a8506950e5 2db12e0bd39c241fcd4fbd44d89247a50aa0e36b M	coverage/lcov-report/logger/logger.ts.html
+:100644 100644 bc5c0c73bde238ee5650cc2586cd74c2e032038b 69e7b4a1257c3798ad8df13d43548890c9f27c32 M	coverage/lcov-report/logger/request-logger.middleware.ts.html
+:100644 100644 3fc06dfa2e2eef0322bf325dab6ea12130366e13 4e49bda51c39d0466951a4fb84512dcb25767fc8 M	coverage/lcov-report/logger/response-time.interceptor.ts.html
+:100644 100644 9bc44fc305b037fd189990b120c5cd408038c2be 22cc1325c59646cf15e70fa9b81ab72e1803606c M	coverage/lcov-report/mail/index.html
+:100644 100644 de005762ac930be4d0815e2fa40db88c029f6fff 54c0e800817da6b6a66f2952bf65cfcb5a582e3b M	coverage/lcov-report/mail/mail.service.ts.html
+:100644 100644 783dd178f10d2c54c283bd903beafac04df3f28b 4b03e21df9b3f08314d1abfe4f129aaae07a8bd7 M	coverage/lcov-report/security/http/helmet.handler.ts.html
+:100644 100644 3e45caae6b5aca730b31e72b57508d4d69567168 0104f79b1c39a16f8f6b54258928e5bf29579ed7 M	coverage/lcov-report/security/http/index.html
+:100644 100644 7233e38b3689595718cc72a0eb2dcdb6f9a42ca8 23b71aad2d0c162caabe58bcdad5440efa6c4b81 M	coverage/lcov-report/security/keycloak/index.html
+:100644 100644 90bc7a7c8200653baaae0f4d0dc9adafb0f9eb87 f64da139eca4e857c3a271d1aafa7a419cb467c5 M	coverage/lcov-report/security/keycloak/keycloak.service.ts.html
+:100644 100644 9f7df524ddfa97c0ceb69b3c34ae9699461bd791 d05453bf11c16c19e83ed9b7407a66753900812c M	coverage/lcov-report/security/keycloak/login.controller.ts.html
+:100644 100644 bd413410458307179dbd16e2e1ff10d45be46607 2258e1e0b49a6b6393a68ce2ac89797bba35e429 M	coverage/lcov-report/security/keycloak/login.resolver.ts.html
+:100644 100644 d22d1bee275d403cc1f80fefb8a982a578cc918e 29c6e8310e54fccd9036d764c30bfd931d5f7aa2 M	coverage/logger/banner.service.ts.html
+:100644 100644 2e9532317f97015a0d6623891a7f9e638786529b 37cce6021db2b40af9b3b42e559722a9d4092304 M	coverage/logger/index.html
+:100644 100644 28be41c5be6a62fa69f398ba8d38b52c63913778 d2904f7bd8fa0803192c873c1b4a72bf8e2f13de M	coverage/logger/logger.ts.html
+:100644 100644 b92366efbb2a702f074941572eec358a8b4f56a2 73224184bc2a594fa237e90d3f9bb0ecb21ac0b5 M	coverage/logger/request-logger.middleware.ts.html
+:100644 100644 6f2baecad350234b76345150b8941f59491d62ef cd60402e49ab025fa66749c9fc5e5a11cc8540ff M	coverage/logger/response-time.interceptor.ts.html
+:100644 100644 670f281b8c7a7df6878f0b893e4bf2c7da715c1e 8580827c34b0ce384fea1b02e44a857b73bd777e M	coverage/mail/index.html
+:100644 100644 1fb357ce1a5a403383a3f1e343aa6f123441450a db1cd2eb4d3e4b178822011ca80cc38c7c77b1db M	coverage/mail/mail.service.ts.html
+:100644 100644 07f968e3f8353b11ad6aa3ed35fe05de9ab27c5e e005c3c151688dac9e9b370fa652ec3995bdd8ca M	coverage/security/http/helmet.handler.ts.html
+:100644 100644 e89338ebe9a77f68620711e93c8472c45dba4e43 3723f5ea4656cc6520aecc68fe90417a1bb39761 M	coverage/security/http/index.html
+:100644 100644 0992d9f4e432f54ae7b4a23c158ed9618b3718dd 8e523da23db2489710eab3c1c1e0dc8dad54c874 M	coverage/security/keycloak/index.html
+:100644 100644 68ddfdcdc79d2346c924fd1e8de6ae721e51ea9c 6979e79c02ca6f95c89d312c881b5c92f53a9e8b M	coverage/security/keycloak/keycloak.service.ts.html
+:100644 100644 bf2287d5b6f9a50617dfcaed667c8986e80cf5c2 75b5adb590c7a0383da90336fbe3c663107a584b M	coverage/security/keycloak/login.controller.ts.html
+:100644 100644 7c026f579277756895e937b21ea3140fbd33cd2b cd8a32348850efdfb393463cf8502a49702bb525 M	coverage/security/keycloak/login.resolver.ts.html
+:100644 100644 bdd0d082fb32edb3a21c270648509fd83aecab4c 17291f72e651e180f660d83d7e83d1bc69702f80 M	log/server.log
+:100644 100644 a904d2f4a9c204564e44ea455791baa7e455913b 3dcd5af2fe9ecb713eb50324c04e9a8b743cacea M	src/config/resources/app.yml

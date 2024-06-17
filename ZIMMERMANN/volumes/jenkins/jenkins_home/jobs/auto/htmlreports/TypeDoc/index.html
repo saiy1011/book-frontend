@@ -1,0 +1,552 @@
+<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>auto-service</title><meta name="description" content="Documentation for auto-service"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script defer src="assets/main.js"></script><script async src="assets/icons.js" id="tsd-icons-script"></script><script async src="assets/search.js" id="tsd-search-script"></script><script async src="assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="assets/icons.svg#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div><div class="field"><div id="tsd-toolbar-links"></div></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">auto-service</a></div><div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="assets/icons.svg#icon-menu"></use></svg></a></div></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><h2>auto-service</h2></div><div class="tsd-panel tsd-typography"><a id="md:hinweise-zum-programmierbeispiel" class="tsd-anchor"></a><h1><a href="#md:hinweise-zum-programmierbeispiel">Hinweise zum Programmierbeispiel</a></h1><!--
+  Copyright (C) 2020 - present Juergen Zimmermann, Hochschule Karlsruhe
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<p><a href="mailto:Juergen.Zimmermann@h-ka.de">Juergen Zimmermann</a></p>
+<blockquote>
+<p>Diese Datei ist in Markdown geschrieben und kann mit <code>&lt;Strg&gt;&lt;Shift&gt;v</code> in
+Visual Studio Code leicht gelesen werden. Dazu wird die Extension
+<em>Markdown Preview Mermaid Support</em> empfohlen, um UML-Diagramme in der Syntax
+von <em>Mermaid</em> (wie bei PlantUML) visualisieren zu können. Durch den Aufruf
+<code>npm run readme2html</code> wird diese Markdown-Datei in eine HTML-Datei im
+Verzeichnis <code>.extras\doc</code> konvertiert.</p>
+<p>Näheres zu Markdown gibt es z.B. bei <a href="https://www.markdownguide.org/">Markdown Guide</a></p>
+<p>Nur in den ersten beiden Vorlesungswochen kann es Unterstützung bei
+Installationsproblemen geben.</p>
+</blockquote>
+<a id="md:inhalt" class="tsd-anchor"></a><h2><a href="#md:inhalt">Inhalt</a></h2><ul>
+<li><a href="#md:hinweise-zum-programmierbeispiel">Hinweise zum Programmierbeispiel</a><ul>
+<li><a href="#md:inhalt">Inhalt</a></li>
+<li><a href="#md:download--und-ggf-upload-geschwindigkeit">Download- und ggf. Upload Geschwindigkeit</a></li>
+<li><a href="#md:vorbereitung-der-installation">Vorbereitung der Installation</a></li>
+<li><a href="#md:es-modules--esm">ES Modules (= ESM)</a></li>
+<li><a href="#md:db-server-und-db-browser">DB-Server und DB-Browser</a><ul>
+<li><a href="#md:db-server">DB-Server</a></li>
+<li><a href="#md:pgadmin">pgAdmin</a></li>
+<li><a href="#md:phpmyadmin">phpMyAdmin</a></li>
+</ul>
+</li>
+<li><a href="#md:node-best-practices">Node Best Practices</a></li>
+<li><a href="#md:lokaler-appserver-mit-nest-und-dem-watch-modus">Lokaler Appserver mit Nest und dem Watch-Modus</a></li>
+<li><a href="#md:openapi">OpenAPI</a></li>
+<li><a href="#md:postman-desktop-anwendung-und-extension-für-vs-code">Postman: Desktop-Anwendung und Extension für VS Code</a><ul>
+<li><a href="#md:registrieren-und-installieren">Registrieren und Installieren</a></li>
+<li><a href="#md:workspace-anlegen">Workspace anlegen</a></li>
+<li><a href="#md:environments">Environments</a></li>
+<li><a href="#md:collections-und-folders">Collections und Folders</a></li>
+<li><a href="#md:requests">Requests</a></li>
+<li><a href="#md:variable">Variable</a></li>
+<li><a href="#md:tokens-durch-pre-request-scripts-und-authorization-header">Tokens durch Pre-request Scripts und Authorization-Header</a></li>
+<li><a href="#md:tests-in-postman">Tests in Postman</a></li>
+<li><a href="#md:erweiterung-für-vs-code">Erweiterung für VS Code</a></li>
+<li><a href="#md:rest-client-als-extension">REST Client als Extension</a></li>
+</ul>
+</li>
+<li><a href="#md:tests-aufrufen">Tests aufrufen</a></li>
+<li><a href="#md:docker-image-und-docker-compose">Docker-Image und Docker Compose</a><ul>
+<li><a href="#md:minimales-basis-image">Minimales Basis-Image</a></li>
+<li><a href="#md:image-erstellen">Image erstellen</a></li>
+<li><a href="#md:image-inspizieren">Image inspizieren</a><ul>
+<li><a href="#md:docker-inspect">docker inspect</a></li>
+<li><a href="#md:docker-sbom">docker sbom</a></li>
+<li><a href="#md:dive">dive</a></li>
+</ul>
+</li>
+<li><a href="#md:docker-compose">Docker Compose</a></li>
+</ul>
+</li>
+<li><a href="#md:statische-codeanalyse-und-formattierer">Statische Codeanalyse und Formattierer</a><ul>
+<li><a href="#md:prettier">Prettier</a></li>
+<li><a href="#md:eslint">ESLint</a></li>
+<li><a href="#md:sonarqube">SonarQube</a></li>
+<li><a href="#md:madge">Madge</a></li>
+<li><a href="#md:type-coverage">type-coverage</a></li>
+</ul>
+</li>
+<li><a href="#md:sicherheitslücken">Sicherheitslücken</a><ul>
+<li><a href="#md:npm-audit">npm audit</a></li>
+<li><a href="#md:docker-scout">Docker Scout</a></li>
+<li><a href="#md:trivy-von-aquasec">Trivy von Aquasec</a></li>
+<li><a href="#md:owasp-dependency-check">OWASP Dependency Check</a></li>
+<li><a href="#md:snyk">Snyk</a></li>
+</ul>
+</li>
+<li><a href="#md:asciidoctor-und-plantuml">AsciiDoctor und PlantUML</a><ul>
+<li><a href="#md:preview-von-plantuml-dateien">Preview von PlantUML-Dateien</a></li>
+<li><a href="#md:einstellungen-für-preview-von-asciidoctor-dateien">Einstellungen für Preview von AsciiDoctor-Dateien</a></li>
+<li><a href="#md:preview-von-asciidoctor-dateien">Preview von AsciiDoctor-Dateien</a></li>
+<li><a href="#md:dokumentation-im-format-html">Dokumentation im Format HTML</a></li>
+</ul>
+</li>
+<li><a href="#md:continuous-integration-mit-jenkins">Continuous Integration mit Jenkins</a><ul>
+<li><a href="#md:aufruf-mit-webbrowser">Aufruf mit Webbrowser</a></li>
+<li><a href="#md:bash-zur-evtl-fehlersuche-im-laufenden-jenkins-container">Bash zur evtl. Fehlersuche im laufenden Jenkins-Container</a></li>
+</ul>
+</li>
+<li><a href="#md:visual-studio-code">Visual Studio Code</a></li>
+<li><a href="#md:empfohlene-code-konventionen">Empfohlene Code-Konventionen</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<a id="md:download--und-ggf-upload-geschwindigkeit" class="tsd-anchor"></a><h2><a href="#md:download--und-ggf-upload-geschwindigkeit">Download- und ggf. Upload Geschwindigkeit</a></h2><p>In einem Webbrowser kann man z.B. mit der URL <code>https://speed.cloudflare.com</code> die
+Download- und die Upload-Geschwindigkeit testen.</p>
+<p>Alternativ kann man durch das Kommando <code>fast</code> in einer Powershell die aktuelle
+Download-Geschwindigkeit ermitteln. Mit der zusätzlichen Option <code>--upload</code> kann
+zusätzlich die aktuelle Upload-Geschwindigkeit ermittelt werden.</p>
+<hr>
+<a id="md:vorbereitung-der-installation" class="tsd-anchor"></a><h2><a href="#md:vorbereitung-der-installation">Vorbereitung der Installation</a></h2><ul>
+<li><p>Das Beispiel <em>nicht</em> in einem Pfad mit <em>Leerzeichen</em> installieren.
+Viele Javascript-Bibliotheken werden unter Linux entwickelt und dort benutzt
+man <strong>keine</strong> Leerzeichen in Pfaden. Ebenso würde ich das Beispiel nicht auf
+dem  <em>Desktop</em> auspacken bzw. installieren.</p>
+</li>
+<li><p>Bei <a href="https://github.com">GitHub</a> oder <a href="https://gitlab.com">GitLab</a>
+registrieren, falls man dort noch nicht registriert ist.</p>
+</li>
+</ul>
+<hr>
+<a id="md:es-modules--esm" class="tsd-anchor"></a><h2><a href="#md:es-modules--esm">ES Modules (= ESM)</a></h2><p>ESM ist die gängige Abkürzung für <em>ES Modules</em>, so dass man <code>import</code> und
+<code>export</code> statt <code>require()</code> aus <em>CommonJS</em> verwenden kann. Die Unterstützung von
+ESM wurde in Node ab Version 12 begonnen. Außerdem ist es wichtig, das man beim
+Umstieg auf ESM auch die Unterstützung in <em>ts-node</em> und <em>ts-jest</em> beachtet.</p>
+<p>Wenn man ESM verwendet, muss man die eigenen Module z.B. folgendermaßen
+importieren:</p>
+<pre><code class="language-JavaScript"><span class="hl-0">    </span><span class="hl-1">import</span><span class="hl-0"> { </span><span class="hl-2">myFunc</span><span class="hl-0"> } </span><span class="hl-1">from</span><span class="hl-0"> </span><span class="hl-3">&#39;./foo.js&#39;</span><span class="hl-0">;</span><br/><span class="hl-0">    </span><span class="hl-1">import</span><span class="hl-0"> { </span><span class="hl-2">myClass</span><span class="hl-0"> } </span><span class="hl-1">from</span><span class="hl-0"> </span><span class="hl-3">&#39;./bar/index.js&#39;</span><span class="hl-0">;</span>
+</code><button>Copy</button></pre>
+<p>Außerdem gibt es ab Node 17.1 das <em>Node Protocol</em> für den Import von
+<em>Builtin Modules</em>, z.B.:</p>
+<pre><code class="language-JavaScript"><span class="hl-0">    </span><span class="hl-1">import</span><span class="hl-0"> { </span><span class="hl-2">resolve</span><span class="hl-0"> } </span><span class="hl-1">from</span><span class="hl-0"> </span><span class="hl-3">&#39;node:path&#39;</span><span class="hl-0">;</span>
+</code><button>Copy</button></pre>
+<p>Gute Literatur zu ESM gibt es bei:</p>
+<ul>
+<li><a href="https://nodejs.org/api/esm.html#esm_node_imports">https://nodejs.org/api/esm.html#esm_node_imports</a></li>
+<li><a href="https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c">https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c</a></li>
+<li><a href="https://docs.joshuatz.com/cheatsheets/node-and-npm/node-esm">https://docs.joshuatz.com/cheatsheets/node-and-npm/node-esm</a></li>
+<li><a href="https://www.typescriptlang.org/docs/handbook/esm-node.html">https://www.typescriptlang.org/docs/handbook/esm-node.html</a></li>
+<li><a href="https://github.com/TypeStrong/ts-node/issues/1007">https://github.com/TypeStrong/ts-node/issues/1007</a></li>
+</ul>
+<p>Unterstützung für ESM ist notwendig in:</p>
+<ul>
+<li>Node</li>
+<li>TypeScript</li>
+<li>ts-node</li>
+<li>ts-jest: versteht noch nicht die Datei-Endung <code>.mts</code> und beim Import <code>.mjs</code></li>
+<li>VS Code</li>
+<li>Node innerhalb von Jenkins</li>
+</ul>
+<hr>
+<a id="md:db-server-und-db-browser" class="tsd-anchor"></a><h2><a href="#md:db-server-und-db-browser">DB-Server und DB-Browser</a></h2><a id="md:db-server" class="tsd-anchor"></a><h3><a href="#md:db-server">DB-Server</a></h3><blockquote>
+<p>❗ Vor dem 1. Start von PostgreSQL muss man die Skripte <code>create-db-auto.sql</code>
+und <code>create-schema-auto.sql</code> aus dem Verzeichnis <code>.extras\db\postgres\sql</code>
+nach <code>C:\Zimmermann\volumes\postgres\sql</code> kopieren und die Anleitung ausführen.
+Danach kopiert man die CSV-Dateien aus dem Verzeichnis <code>.extras\postgres\csv</code>
+nach <code>C:\Zimmermann\volumes\postgres\csv\auto</code>.</p>
+</blockquote>
+<blockquote>
+<p>❗ Vor dem 1. Start von MySQL muss man das Skript <code>create-db-auto.sql</code> aus
+dem Projektverzeichnis <code>.extras\db\mysql\sql</code> nach<code>C:\Zimmermann\volumes\mysql\sql</code>
+kopieren und die Anleitung ausführen. Danach kopiert man die CSV-Dateien aus
+dem Verzeichnis <code>.extras\db\mysql\csv</code> nach <code>C:\Zimmermann\volumes\mysql\csv\auto</code>.</p>
+</blockquote>
+<p>Vor dem Start des Appservers muss man den DB-Server und ggf. den DB-Browser starten.
+Falls man <em>PostgreSQL</em> oder <em>MySQL</em> und nicht <em>SQLite</em> als &quot;Embedded Database&quot; nutzt:</p>
+<pre><code class="language-powershell"><span class="hl-0">    </span><span class="hl-4"># PostgreSQL mit pgAdmin</span><br/><span class="hl-0">    cd .\extras\compose\db\postgres</span><br/><span class="hl-0">    docker compose up</span><br/><br/><span class="hl-0">    </span><span class="hl-4"># alternativ: MySQL mit phpMyAdmin:</span><br/><span class="hl-0">    cd .\extras\compose\db\mysql</span><br/><span class="hl-0">    docker compose up</span>
+</code><button>Copy</button></pre>
+<p>Der DB-Server wird zusammen mit dem DB-Browser als <em>Container</em> gestartet.
+Sie sind als <em>Service</em> in der jeweiligen Datei <code>compose.yml</code> unter Verwendung der
+Docker-Images konfiguriert:</p>
+<ul>
+<li>Image <code>postgres</code> für PostgreSQL</li>
+<li>Image <code>dpage/pgadmin4</code> für pgAdmin</li>
+<li>Image <code>mysql</code> für MySQL</li>
+<li>Image <code>phpmyadmin/phpmyadmin</code> für phpMyAdmin</li>
+</ul>
+<p>Jetzt läuft der DB-Server mit folgender Konfiguration:</p>
+<ul>
+<li>Rechnername <code>localhost</code> aus Windows-Sicht</li>
+<li>Default-Port <code>5432</code> bei <em>PostgreSQL</em> bzw. <code>3306</code> bei <em>MySQL</em></li>
+<li>Datenbankname <code>auto</code></li>
+<li>Administrations-User <code>postgres</code> bei <em>PostgreSQL</em> bzw. <code>root</code> bei <em>MySQL</em></li>
+<li>Passwort <code>p</code> für den jeweiligen Administrations-User</li>
+</ul>
+<a id="md:pgadmin" class="tsd-anchor"></a><h3><a href="#md:pgadmin">pgAdmin</a></h3><p><em>pgadmin</em> kann zur Administration von <em>PostgreSQL</em> verwendet werden und ist
+durch Docker Compose über ein virtuelles Netzwerk mit dem Docker-Container des
+DB-Servers verbunden. Deshalb muss beim Verbinden mit dem DB-Server der
+virtuelle Rechnername <code>postgres</code> statt <code>localhost</code> verwendet werden. pgadmin
+kann man mit einem Webbrowser und der URL <code>http://localhost:8888</code> aufrufen.
+Die Emailadresse <code>pgadmin@acme.com</code> und das Passwort <code>p</code> sind voreingestellt.
+pgadmin ist übrigens mit Chromium implementiert.</p>
+<p>Beim 1. Einloggen konfiguriert man einen Server-Eintrag mit z.B. dem Namen
+<code>localhost</code> und verwendet folgende Werte:</p>
+<ul>
+<li>Host: <code>postgres</code> (virtueller Rechnername des DB-Servers im Docker-Netzwerk.
+<strong>BEACHTE</strong>: <code>localhost</code> ist im virtuellen Netzwerk der Name des
+pgadmin-Containers selbst !!!)</li>
+<li>Port: <code>5432</code> (Defaultwert)</li>
+<li>Username: <code>postgres</code> (Superuser beim DB-Server)</li>
+<li>Password: <code>p</code></li>
+</ul>
+<p>Es empfiehlt sich, das Passwort abzuspeichern, damit man es künftig nicht jedes
+Mal beim Einloggen eingeben muss.</p>
+<a id="md:phpmyadmin" class="tsd-anchor"></a><h3><a href="#md:phpmyadmin">phpMyAdmin</a></h3><p><em>phpMyAdmin</em> kann zur Administration von <em>MySQL</em> verwendet werden. phpMyAdmin
+ist durch Docker Compose über ein virtuelles Netzwerk mit dem Docker-Container
+des DB-Servers verbunden. Deshalb muss beim Verbinden mit dem DB-Server auch der
+virtuelle Rechnername <code>mysql</code> statt <code>localhost</code> verwendet werden. Man ruft
+phpMyAdmin mit einem Webbrowser und der URL <code>http://localhost:8889</code> auf.
+Zum Einloggen verwendet folgende Werte:</p>
+<ul>
+<li>Server: <code>mysql</code> (virtueller Rechnername des DB-Servers im Docker-Netzwerk.
+<strong>BEACHTE</strong>: <code>localhost</code> ist im virtuellen Netzwerk der Name des
+phpMyAdmin-Containers selbst !!!)</li>
+<li>Benutzername: <code>root</code> (Superuser beim DB-Server)</li>
+<li>Password: <code>p</code></li>
+</ul>
+<hr>
+<a id="md:node-best-practices" class="tsd-anchor"></a><h2><a href="#md:node-best-practices">Node Best Practices</a></h2><p>Sehr empfehlenswert ist <a href="https://github.com/goldbergyoni/nodebestpractices">https://github.com/goldbergyoni/nodebestpractices</a></p>
+<hr>
+<a id="md:lokaler-appserver-mit-nest-und-dem-watch-modus" class="tsd-anchor"></a><h2><a href="#md:lokaler-appserver-mit-nest-und-dem-watch-modus">Lokaler Appserver mit Nest und dem Watch-Modus</a></h2><p>Durch <code>npm run dev</code> wird der Appserver im <em>Watch</em>-Modus für die
+Entwicklung gestartet, d.h. bei Code-Änderungen wird der Server automatisch
+neu gestartet. Durch die Option <code>--builder swc</code> beim Node-Skript <code>swc</code>
+in der Datei <code>package.json</code> wird <em>swc</em> (= speedy web compiler) anstatt des
+TypeScript-Compilers <em>tsc</em> verwendet. swc ist in Rust implementiert und bis zu
+20x schneller als tsc. Defaultmäßig arbeitet swc allerdings ohne Typprüfungen.
+Beim Node-Skript <code>swc:check</code> wird zusätzlich die Option <code>--type-check</code>
+verwendet.</p>
+<p>Beim Starten des Appservers wird außerdem mit <em>TypeORM</em> auf die Datenbank
+zugegriffen. Der Benutzername und das Passwort sind in der Datei
+<code>src\config\db.ts</code> auf <code>admin</code> und <code>p</code> voreingestellt. Durch die Property
+<code>db.populate</code> in <code>src\config\resources\auto.yml</code> wird festgelegt, ob die
+(Test-) DB <code>auto</code> neu geladen wird.</p>
+<a id="md:openapi" class="tsd-anchor"></a><h2><a href="#md:openapi">OpenAPI</a></h2><p>Durch die Decorators <code>@Api...()</code> kann man <em>OpenAPI</em> (früher: Swagger) in den
+Controller-Klassen und -Methoden konfigurieren und dann in einem Webbrowser mit
+<code>https://localhost:3000/swagger</code> aufrufen. Die <em>Swagger JSON Datei</em> kann man mit
+<code>https://localhost:3000/swagger-json</code> abrufen.</p>
+<a id="md:postman-desktop-anwendung-und-extension-für-vs-code" class="tsd-anchor"></a><h2><a href="#md:postman-desktop-anwendung-und-extension-für-vs-code">Postman: Desktop-Anwendung und Extension für VS Code</a></h2><p>Mit der Desktop-Applikation <em>Postman</em> wie auch mit der Erweiterung <em>Postman</em> für
+VS Code kann man u.a. REST-, GraphQL und gRPC-Schnittstellen interaktiv testen.</p>
+<a id="md:registrieren-und-installieren" class="tsd-anchor"></a><h3><a href="#md:registrieren-und-installieren">Registrieren und Installieren</a></h3><p>Zunächst muss man sich bei <a href="https://www.postman.com">https://www.postman.com</a> registrieren und kann danach
+die Desktop-Application <em>Postman</em> von <a href="https://www.postman.com/downloads">https://www.postman.com/downloads</a>
+herunterladen und installieren. Die Installation erfolgt dabei im Verzeichnis
+<code>${LOCALAPPDATA}\Postman\app-VERSION</code>, z.B. <code>C:\Users\MeineKennung\AppData\Local\Postman\app-VERSION</code>.</p>
+<a id="md:workspace-anlegen" class="tsd-anchor"></a><h3><a href="#md:workspace-anlegen">Workspace anlegen</a></h3><p>Über die Desktop-Applikation legt man sich folgendermaßen einen <em>Workspace</em> an:</p>
+<ul>
+<li>Den Menüpunkt <em>Workspaces</em> anklicken</li>
+<li>Im Drop-Down Menü den Button <em>Create Workspace</em> anklicken</li>
+<li>Danach den Button <em>Next</em> anklicken</li>
+<li>Im Eingabefeld <em>Name</em> <code>auto</code> und im Eingabefeld <em>Summary</em> z.B.
+<code>REST- und GraphQL-Requests für den Appserver.</code></li>
+<li>Abschließend den Button <em>Create</em> anklicken.</li>
+</ul>
+<a id="md:environments" class="tsd-anchor"></a><h3><a href="#md:environments">Environments</a></h3><p>Zunächst legt man ein <em>Environment</em> mit Variablen an. Dazu wählt man am
+linken Rand den Menüpunkt <em>Environments</em>, klickt auf den Button <code>Import</code>
+und wählt aus dem Verzeichnis <code>.extras\postman</code> die Datei <code>auto.postman_environment.json</code>
+aus. Jetzt hat man die Umgebung <code>auto</code> mit der Variablen <code>base_url</code> und dem
+Wert <code>https://localhost:3000</code> angelegt.</p>
+<a id="md:collections-und-folders" class="tsd-anchor"></a><h3><a href="#md:collections-und-folders">Collections und Folders</a></h3><p>Als nächstes wählt man den Menüpunkt <em>Collections</em> aus und importiert der Reihe
+nach <em>Collections</em> aus dem Verzeichnis <code>.extras\postman</code>, indem man den Button
+<code>Import</code> anklickt. Collections sind zusammengehörige Gruppierungen von Requests
+und können zur besseren Strukturierung in <em>Folder</em> unterteilt werden.
+Beispielsweise gibt es die Collection <em>REST</em> mit untergeordneten Folder, wie
+z.B. <em>Suche mit ID</em> und <em>Neuanlegen</em>. Im Folder <em>Suche mit ID</em> gibt es dann z.B.
+den Eintrag <em>GET vorhandene ID 1</em>, um einen GET-Request mit dem Pfadparameter
+<code>:id</code> und dem Wert <code>1</code> abzusetzen.</p>
+<p>Eine neue Collection legt man mit dem Button <em>+</em> an und einen untergeordneten
+Folder mit dem Overflow-Menü sowie dem Menüpunkt <em>Add folder</em>.</p>
+<a id="md:requests" class="tsd-anchor"></a><h3><a href="#md:requests">Requests</a></h3><p>Im Overflow-Menü eines Folders oder einer Collection kann man durch den Menüpunkt
+<em>Add request</em> einen neuen Eintrag für Requests erstellen, wobei man dann z.B.
+folgendes festlegt:</p>
+<ul>
+<li>Bezeichnung des Eintrags</li>
+<li>GET, POST, PUT, PATCH, DELETE</li>
+<li>URL mit ggf. Pfadparameter, z.B. :id</li>
+<li>Im Karteireiter <em>Params</em> sieht man dann die Pfadparameter und kann auch
+Query-Parameter spezifizieren.</li>
+<li>Im Karteireiter <em>Headers</em> sieht man voreingestellte Request-Header und kann
+auch zusätzliche eintragen, z.B. den Header <code>Content-Type</code> und als zugehörigen
+Wert <code>application/hal+json</code>.</li>
+<li>Im Karteireiter <em>Body</em> kann man z.B. JSON-Daten für einen POST-Request oder
+Daten für GraphQL-Queries oder -Mutations eintragen. Dazu wählt man dann
+unterhalb von <em>Body</em> den Radiobutton <em>raw</em> mit <em>JSON</em> aus, wenn man einen
+POST- oder PUT-Request spezifiziert bzw. den Radiobutton <em>GraphQL</em> für
+Queries oder Mutations aus.</li>
+<li>Wenn man GraphQL-Requests spezifiziert, d.h. im Request-Body <em>GraphQL</em>
+festlegt, dann lädt Postman aufgrund der Request-URL das zugehörige GraphQL-Schema
+herunter, falls man die Vorbelegung <em>Auto-fetch</em> beibehält. Dadurch hat man
+Autovervollständigen beim Formulieren von Queries und Mutations.</li>
+</ul>
+<blockquote>
+<p>Beachte: Wenn man gebündelte Requests von Collections oder Folders abschickt,
+hat man bis zu 50 &quot;Runs&quot; pro Monat frei.</p>
+</blockquote>
+<a id="md:variable" class="tsd-anchor"></a><h3><a href="#md:variable">Variable</a></h3><p>Um bei der URL für die diversen Requests nicht ständig wiederholen zu müssen,
+kann man in einer Collection auch <em>Variable</em> definieren, indem man die Collection
+auswählt und dann den Karteireiter <em>Variables</em>, z.B. <code>rest_url</code> als Variablenname
+und <code>https://localhost:3000/rest</code> als zugehöriger Wert.</p>
+<a id="md:tokens-durch-pre-request-scripts-und-authorization-header" class="tsd-anchor"></a><h3><a href="#md:tokens-durch-pre-request-scripts-und-authorization-header">Tokens durch Pre-request Scripts und Authorization-Header</a></h3><p>Wenn ein Request eine URL adressiert, für die man einen Token benötigt, so muss
+ein solcher Token vor dem Abschicken des Requests ermittelt werden. Dazu trägt
+man bei der Collection, beim Folder oder beim konkreten Request im Karteireiter
+<em>Pre-request Script</em> ein JavaScript ein, mit dem man vorab einen (Hilfs-) Request
+senden kann, dessen Response dann einen Token liefert. Der Request wird mit
+<code>pm.sendRequest({...}, myCallback)</code> abgeschickt.</p>
+<p>Falls der Token im Response-Body in einem JSON-Datensatz z.B. in der Property
+<code>token</code> empfangen wird, kann man den Token in z.B. einer Variablen in der
+Collection puffern. Dazu liest man im Callback den Token durch <code>res.json().token</code>
+aus dem Response-Body aus und puffert ihn z.B. in einer Collection-Variablen <code>TOKEN</code>.
+Das ergibt insgesamt die Anweisung: <code>pm.collectionVariables.set(&#39;TOKEN&#39;, res.json().token)</code>.</p>
+<p>Unter dieser Voraussetzung kann man dann im Karteireiter <em>Authorization</em> bei der
+Collection, beim Folder oder beim Request als <em>Type</em> die Option <em>Bearer Token</em>
+auswählen und als Wert <code>{{TOKEN}}</code> eintragen. Dadurch wird der Request-Header
+<code>Authorization</code> mit dem Wert <code>Bearer &lt;Aktueller_Token&gt;</code> generiert.</p>
+<a id="md:tests-in-postman" class="tsd-anchor"></a><h3><a href="#md:tests-in-postman">Tests in Postman</a></h3><p>Wenn man Requests einzeln oder komplett für einen Folder oder eine Collection
+abschickt, dann kann man in Postman den zugehörigen Response zu jedem Request
+überprüfen. Dazu implementiert man ein JavaScript-Skript im Karteireiter <em>Tests</em>.
+Zur Überprüfung von z.B. Statuscode, Response-Header oder Response-Body stellt
+Postman die <em>Chai Assertion Library</em> mit <em>expect</em> bereit. Details zu Chai
+findet man bei <a href="https://www.chaijs.com/api/bdd">https://www.chaijs.com/api/bdd</a>.</p>
+<a id="md:erweiterung-für-vs-code" class="tsd-anchor"></a><h3><a href="#md:erweiterung-für-vs-code">Erweiterung für VS Code</a></h3><p>Seit Mai 2023 gibt es Postman auch als Erweiterung für VS Code. Damit kann man
+zwar (noch) nicht Workspaces, Collections, Folders und Requests anlegen, aber
+Requests abschicken, ohne dass man VS Code als Arbeitsumgebung verlassen muss.</p>
+<a id="md:rest-client-als-extension" class="tsd-anchor"></a><h3><a href="#md:rest-client-als-extension">REST Client als Extension</a></h3><p>Als Alternative zu <em>Postman</em> kann man auch die Extension <em>REST Client</em> nutzen.</p>
+<hr>
+<a id="md:tests-aufrufen" class="tsd-anchor"></a><h2><a href="#md:tests-aufrufen">Tests aufrufen</a></h2><p>Folgende Voraussetzungen müssen oder sollten erfüllt sein:</p>
+<ul>
+<li>Der DB-Server muss gestartet sein.</li>
+<li>Der Appserver muss <em>nicht gestartet</em> sein.</li>
+</ul>
+<p>Nun kann man die Tests folgendermaßen in einer Powershell aufrufen. Dabei wird
+beim Skript <code>test</code> in <code>package.json</code> die Property <code>log.default</code> auf <code>true</code>
+gesetzt, um nicht zu detailliert zu protokollieren bzw. damit die Log-Ausgabe
+übersichtlich bleibt.</p>
+<pre><code class="language-powershell"><span class="hl-0">    npm t</span>
+</code><button>Copy</button></pre>
+<p>Bei der Fehlersuche ist es ratsam, nur eine einzelnen Testdatei aufzurufen,
+z.B.:</p>
+<pre><code class="language-powershell"><span class="hl-0">    npm exec jest --detectOpenHandles --errorOnDeprecated `</span><br/><span class="hl-0">      --forceExit --runTestsByPath </span><span class="hl-3">&#39;__tests__\auto\auto-GET.controller.test.ts&#39;</span>
+</code><button>Copy</button></pre>
+<hr>
+<a id="md:docker-image-und-docker-compose" class="tsd-anchor"></a><h2><a href="#md:docker-image-und-docker-compose">Docker-Image und Docker Compose</a></h2><a id="md:minimales-basis-image" class="tsd-anchor"></a><h3><a href="#md:minimales-basis-image">Minimales Basis-Image</a></h3><p>Für ein minimales Basis-Image gibt es folgende Alternativen:</p>
+<ul>
+<li><em>Debian Bookworm slim</em><ul>
+<li>ca. 250 MB</li>
+<li>Bookworm ist der Codename für Debian 12</li>
+<li>mit Node 20</li>
+</ul>
+</li>
+<li><em>Distroless</em><ul>
+<li>ca. 170 MB</li>
+<li>auf Basis von Debian 11 (Codename Bullseye)</li>
+<li>ohne Shell, Package Manager, GUI, grep, sed, awk, ...</li>
+<li>nur 2% der Größe vom vollständigen Debian und 50 % von Alpine</li>
+<li>mit Node 20</li>
+<li>von Google</li>
+</ul>
+</li>
+<li><em>Wolfi</em><ul>
+<li>ca. 110 MB</li>
+<li>minimales Community Linux von Chainguard</li>
+<li><em>undistro</em>: keine volle Linux-Distribution</li>
+<li>nutzt den Linux-Kernel der Laufzeitumgebung, z.B. Container Runtime</li>
+<li><em>glibc</em> als C-Bibliothek und <strong>nicht</strong> <em>musl</em> wie bei <em>Alpine</em></li>
+<li><em>ash</em> als Shell</li>
+<li><em>apk</em> als Package-Format wie bei <em>Alpine</em></li>
+<li>mit Node LTS: 18.x</li>
+<li><a href="https://github.com/wolfi-dev">https://github.com/wolfi-dev</a></li>
+<li><a href="https://chainguard.dev">https://chainguard.dev</a></li>
+</ul>
+</li>
+</ul>
+<a id="md:image-erstellen" class="tsd-anchor"></a><h3><a href="#md:image-erstellen">Image erstellen</a></h3><p>Durch eine Default-Datei <code>Dockerfile</code> kann man ein Docker-Image erstellen und
+durch ein <em>Multi-stage Build</em> optimieren. Eine weitverbreitete Namenskonvention
+für ein Docker-Image ist <code>&lt;registry-name&gt;/&lt;username&gt;/&lt;image-name&gt;:&lt;image-tag&gt;</code>.
+Ob das Dockerfile gemäß <em>Best Practices</em> (<a href="https://docs.docker.com/develop/develop-images/dockerfile_best-practices">https://docs.docker.com/develop/develop-images/dockerfile_best-practices</a>)
+erstellt wurde, kann man mit <em>Hadolint</em> überprüfen.</p>
+<p>Je nach Basis-Image kann man ein Image folgendermaßen erstellen und mit Hadolint
+validieren:</p>
+<pre><code class="language-powershell"><span class="hl-0">    </span><span class="hl-4"># Distroless (Debian Bullseye bzw. 11)</span><br/><span class="hl-0">    </span><span class="hl-5">Get-Content</span><span class="hl-0"> Dockerfile | docker run --rm --interactive hadolint/hadolint:</span><span class="hl-6">2.12</span><span class="hl-0">.</span><span class="hl-6">1</span><span class="hl-0">-beta-debian</span><br/><span class="hl-0">    docker build --tag team2/auto:</span><span class="hl-6">2024.04</span><span class="hl-0">.</span><span class="hl-6">0</span><span class="hl-0">-distroless .</span><br/><br/><span class="hl-0">    </span><span class="hl-4"># Debian Bookworm (12) slim</span><br/><span class="hl-0">    </span><span class="hl-5">Get-Content</span><span class="hl-0"> Dockerfile.debian | docker run --rm --interactive hadolint/hadolint:</span><span class="hl-6">2.12</span><span class="hl-0">.</span><span class="hl-6">1</span><span class="hl-0">-beta-debian</span><br/><span class="hl-0">    docker build --tag team2/auto:</span><span class="hl-6">2024.04</span><span class="hl-0">.</span><span class="hl-6">0</span><span class="hl-0">-bookworm --file Dockerfile.bookworm .</span><br/><br/><span class="hl-0">    </span><span class="hl-4"># Wolfi</span><br/><span class="hl-0">    </span><span class="hl-5">Get-Content</span><span class="hl-0"> Dockerfile.wolfi | docker run --rm --interactive hadolint/hadolint:</span><span class="hl-6">2.12</span><span class="hl-0">.</span><span class="hl-6">1</span><span class="hl-0">-beta-debian</span><br/><span class="hl-0">    docker build --tag team2/auto:</span><span class="hl-6">2024.04</span><span class="hl-0">.</span><span class="hl-6">0</span><span class="hl-0">-wolfi --file Dockerfile.wolfi .</span>
+</code><button>Copy</button></pre>
+<a id="md:image-inspizieren" class="tsd-anchor"></a><h3><a href="#md:image-inspizieren">Image inspizieren</a></h3><a id="md:docker-inspect" class="tsd-anchor"></a><h4><a href="#md:docker-inspect">docker inspect</a></h4><p>Mit dem Unterkommando <code>inspect</code> kann man die Metadaten, z.B. Labels, zu einem
+Image inspizieren:</p>
+<pre><code class="language-powershell"><span class="hl-0">    docker inspect team2/auto:</span><span class="hl-6">2024.04</span><span class="hl-0">.</span><span class="hl-6">0</span><span class="hl-0">-distroless</span><br/><span class="hl-0">    docker inspect team2/auto:</span><span class="hl-6">2024.04</span><span class="hl-0">.</span><span class="hl-6">0</span><span class="hl-0">-bookworm</span><br/><span class="hl-0">    docker inspect team2/auto:</span><span class="hl-6">2024.04</span><span class="hl-0">.</span><span class="hl-6">0</span><span class="hl-0">-wolfi</span>
+</code><button>Copy</button></pre>
+<a id="md:docker-sbom" class="tsd-anchor"></a><h4><a href="#md:docker-sbom">docker sbom</a></h4><p>Mit dem Unterkommando <code>sbom</code> (Software Bill of Materials) von <code>docker</code> kann man
+inspizieren, welche Bestandteilen in einem Docker-Images enthalten sind, z.B.
+npm-Packages oder Debian-Packages.</p>
+<pre><code class="language-powershell"><span class="hl-0">    docker sbom team2/auto:</span><span class="hl-6">2024.04</span><span class="hl-0">.</span><span class="hl-6">0</span><span class="hl-0">-distroless</span><br/><span class="hl-0">    docker sbom team2/auto:</span><span class="hl-6">2024.04</span><span class="hl-0">.</span><span class="hl-6">0</span><span class="hl-0">-bookworm</span><br/><span class="hl-0">    docker sbom team2/auto:</span><span class="hl-6">2024.04</span><span class="hl-0">.</span><span class="hl-6">0</span><span class="hl-0">-wolfi</span>
+</code><button>Copy</button></pre>
+<a id="md:dive" class="tsd-anchor"></a><h4><a href="#md:dive">dive</a></h4><p>Mit <em>dive</em> kann man ein Docker-Image und die einzelnen Layer inspizieren, z.B.:</p>
+<pre><code class="language-powershell"><span class="hl-0">    cd .extras</span><br/><span class="hl-0">    </span><span class="hl-4"># Distroless Image als Basis-Image</span><br/><span class="hl-0">    .\dive.ps1</span><br/><span class="hl-0">    </span><span class="hl-4"># Debian Bookworm als Basis-Image</span><br/><span class="hl-0">    .\dive.ps1 bookworm</span><br/><span class="hl-0">    </span><span class="hl-4"># Wolfi als Basis-Image</span><br/><span class="hl-0">    .\dive.ps1 wolfi</span>
+</code><button>Copy</button></pre>
+<a id="md:docker-compose" class="tsd-anchor"></a><h3><a href="#md:docker-compose">Docker Compose</a></h3><p>Mit <em>Docker Compose</em> und der Konfigurationsdatei <code>compose.yml</code> im Verzeichnis
+<code>.extras\compose</code> lässt sich der Container mit dem Basis-Image <code>distroless</code>
+(Debian Bullseye bzw. 11) folgendermaßen starten und später in einer weiteren
+PowerShell herunterfahren.</p>
+<pre><code class="language-powershell"><span class="hl-0">    cd .extras/compose</span><br/><br/><span class="hl-0">    </span><span class="hl-4"># PowerShell fuer auto-Server mit distroless-Image zzgl. DB-Server und Mailserver</span><br/><span class="hl-0">    docker compose up</span><br/><br/><span class="hl-0">    </span><span class="hl-4"># alternativ: auto-Image mit Debian Bookworm</span><br/><span class="hl-0">    docker compose </span><span class="hl-0">-f</span><span class="hl-0"> compose.yml </span><span class="hl-0">-f</span><span class="hl-0"> compose.bookworm.yml up</span><br/><br/><span class="hl-0">    </span><span class="hl-4"># alternativ: auto-Image mit Wolfi</span><br/><span class="hl-0">    docker compose </span><span class="hl-0">-f</span><span class="hl-0"> compose.yml </span><span class="hl-0">-f</span><span class="hl-0"> compose.wolfi.yml up</span><br/><br/><span class="hl-0">    </span><span class="hl-4"># Nur zur Fehlersuche: weitere PowerShell für bash (NICHT bei distroless!)</span><br/><span class="hl-0">    cd .extras\compose</span><br/><span class="hl-0">    docker compose exec auto bash</span><br/><span class="hl-0">        id</span><br/><span class="hl-0">        env</span><br/><span class="hl-0">        </span><span class="hl-1">exit</span><br/><br/><span class="hl-0">    </span><span class="hl-4"># Fehlersuche im Netzwerk:</span><br/><span class="hl-0">    docker compose </span><span class="hl-0">-f</span><span class="hl-0"> compose.busybox.yml up</span><br/><span class="hl-0">    docker compose exec busybox sh</span><br/><span class="hl-0">        nslookup postgres</span><br/><span class="hl-0">        </span><span class="hl-1">exit</span><br/><br/><span class="hl-0">    </span><span class="hl-4"># 2. Powershell: auto-Server einschl. DB-Server und Mailserver herunterfahren</span><br/><span class="hl-0">    cd .extras/compose</span><br/><span class="hl-0">    docker compose down</span>
+</code><button>Copy</button></pre>
+<hr>
+<a id="md:statische-codeanalyse-und-formattierer" class="tsd-anchor"></a><h2><a href="#md:statische-codeanalyse-und-formattierer">Statische Codeanalyse und Formattierer</a></h2><a id="md:prettier" class="tsd-anchor"></a><h3><a href="#md:prettier">Prettier</a></h3><p><code>Prettier</code> ist ein Formatierer, der durch <code>.prettierrc.yml</code> (rc = run command)
+konfiguriert und durch folgendes npm-Skript ausgeführt wird:</p>
+<pre><code class="language-powershell"><span class="hl-0">    npm run prettier</span>
+</code><button>Copy</button></pre>
+<a id="md:eslint" class="tsd-anchor"></a><h3><a href="#md:eslint">ESLint</a></h3><p><em>ESLint</em> wird durch <code>.eslintrc.yml</code> (rc = run command) konfiguriert und durch
+folgendes npm-Skript ausgeführt:</p>
+<pre><code class="language-powershell"><span class="hl-0">    npm run eslint</span>
+</code><button>Copy</button></pre>
+<a id="md:sonarqube" class="tsd-anchor"></a><h3><a href="#md:sonarqube">SonarQube</a></h3><p>Für eine statische Codeanalyse durch <em>SonarQube</em> muss zunächst der
+SonarQube-Server mit <em>Docker Compose</em> als Docker-Container gestartet werden:</p>
+<pre><code class="language-powershell"><span class="hl-0">    cd .extras\compose\sonarqube</span><br/><span class="hl-0">    docker compose up</span>
+</code><button>Copy</button></pre>
+<p>Wenn der Server zum ersten Mal gestartet wird, ruft man in einem Webbrowser die
+URL <code>http://localhost:9000</code> auf. In der Startseite muss man sich einloggen und
+verwendet dazu als Loginname <code>admin</code> und ebenso als Password <code>admin</code>. Danach
+wird man weitergeleitet, um das initiale Passwort zu ändern.</p>
+<p>Nun wählt man in der Webseite rechts oben das Profil über <em>MyAccount</em> aus und
+klickt auf den Karteireiter <em>Security</em>. Im Abschnitt <em>Generate Tokens</em> macht man
+nun die folgende Eingaben:</p>
+<ul>
+<li><em>Name</em>: z.B. Software Engineering</li>
+<li><em>Type</em>: <em>Global Analysis Token</em> auswählen</li>
+<li><em>Expires in</em>: z.B. <em>90 days</em> auswählen</li>
+</ul>
+<p>Abschließend klickt man auf den Button <em>Generate</em> und trägt den generierten
+Token in der Datei <code>.env</code> für die Umgebungsvariable <code>SONAR_TOKEN</code> ein, damit
+der Token im Skript <code>scripts\sonar-scanner.js</code> verwendet werden kann.</p>
+<p>Nachdem der Server gestartet ist, wird der SonarQube-Scanner in einer zweiten
+PowerShell mit <code>npm run sonar</code> gestartet. Das Resultat kann dann in der
+Webseite des zuvor gestarteten Servers über die URL <code>http://localhost:9000</code>
+inspiziert werden.</p>
+<p>Abschließend wird der oben gestartete Server heruntergefahren.</p>
+<pre><code class="language-powershell"><span class="hl-0">    cd .extras\compose\sonarqube</span><br/><span class="hl-0">    docker compose down</span>
+</code><button>Copy</button></pre>
+<a id="md:madge" class="tsd-anchor"></a><h3><a href="#md:madge">Madge</a></h3><p>Mit <em>Madge</em> kann man zyklische Abhängigkeiten auflisten lassen: <code>npm run madge</code>.
+Mit <code>npm run madge:dep</code> kann man sämtliche Abhängigkeiten in einer SVG-Datei
+<code>dependencies.svg</code> visualisieren.</p>
+<a id="md:type-coverage" class="tsd-anchor"></a><h3><a href="#md:type-coverage">type-coverage</a></h3><p>Mit <code>type-coverage</code> kann man ermitteln, wo im TypeScript-Code <code>any</code> verwendet
+wurde:</p>
+<pre><code class="language-powershell"><span class="hl-0">    npm run type-coverage</span>
+</code><button>Copy</button></pre>
+<hr>
+<a id="md:sicherheitslücken" class="tsd-anchor"></a><h2><a href="#md:sicherheitslücken">Sicherheitslücken</a></h2><a id="md:npm-audit" class="tsd-anchor"></a><h3><a href="#md:npm-audit">npm audit</a></h3><p>Mit dem Unterkommando <code>audit</code> von <em>npm</em> kann man <code>npm_modules</code> auf Sicherheitslücken
+analysieren. Dabei lässt man sinnvollerweise die <code>devDependencies</code> aus <code>package.json</code>
+weg:</p>
+<pre><code class="language-powershell"><span class="hl-0">    npm audit --omit dev</span>
+</code><button>Copy</button></pre>
+<a id="md:docker-scout" class="tsd-anchor"></a><h3><a href="#md:docker-scout">Docker Scout</a></h3><p>Mit dem Unterkommando <code>quickview</code> von <em>Scout</em> kann man sich zunächst einen
+groben Überblick verschaffen, wieviele Sicherheitslücken in den Bibliotheken im
+Image enthalten sind:</p>
+<pre><code class="language-powershell"><span class="hl-0">    docker scout quickview team2/auto:</span><span class="hl-6">2024.04</span><span class="hl-0">.</span><span class="hl-6">0</span><span class="hl-0">-distroless</span><br/><span class="hl-0">    docker scout quickview team2/auto:</span><span class="hl-6">2024.04</span><span class="hl-0">.</span><span class="hl-6">0</span><span class="hl-0">-bookworm</span><br/><span class="hl-0">    docker scout quickview team2/auto:</span><span class="hl-6">2024.04</span><span class="hl-0">.</span><span class="hl-6">0</span><span class="hl-0">-wolfi</span>
+</code><button>Copy</button></pre>
+<p>Dabei bedeutet:</p>
+<ul>
+<li>C ritical</li>
+<li>H igh</li>
+<li>M edium</li>
+<li>L ow</li>
+</ul>
+<p>Sicherheitslücken sind als <em>CVE-Records</em> (CVE = Common Vulnerabilities and Exposures)
+katalogisiert: <a href="https://www.cve.org">https://www.cve.org</a> (ursprünglich: <a href="https://cve.mitre.org/cve">https://cve.mitre.org/cve</a>).
+Übrigens bedeutet <em>CPE</em> in diesem Zusammenhang <em>Common Platform Enumeration</em>.
+Die Details zu den CVE-Records im Image kann man durch das Unterkommando <code>cves</code>
+von <em>Scout</em> auflisten:</p>
+<pre><code class="language-powershell"><span class="hl-0">    docker scout cves team2/auto:</span><span class="hl-6">2024.04</span><span class="hl-0">.</span><span class="hl-6">0</span><span class="hl-0">-bookworm</span><br/><span class="hl-0">    docker scout cves --format only-packages team2/auto:</span><span class="hl-6">2024.04</span><span class="hl-0">.</span><span class="hl-6">0</span><span class="hl-0">-bookworm</span>
+</code><button>Copy</button></pre>
+<p>Statt der Kommandozeile kann man auch den Menüpunkt &quot;Docker Scout&quot; im
+<em>Docker Dashboard</em> verwenden.</p>
+<a id="md:trivy-von-aquasec" class="tsd-anchor"></a><h3><a href="#md:trivy-von-aquasec">Trivy von Aquasec</a></h3><p>Von Aquasec gibt es <em>Trivy</em>, um Docker-Images auf Sicherheitslücken zu analysieren.
+Trivy gibt es auch als Docker-Image. In <code>compose.trivy.yml</code> ist ein
+Service für Trivy so konfiguriert, dass das Image <code>auto</code> analysiert wird.</p>
+<pre><code class="language-powershell"><span class="hl-0">    cd .extras\compose\trivy</span><br/><span class="hl-0">    </span><span class="hl-4"># Analyse des Images mit distroless</span><br/><span class="hl-0">    docker compose up</span><br/><br/><span class="hl-0">    </span><span class="hl-4"># Analyse des Images mit Debian Bookworm</span><br/><span class="hl-0">    docker compose </span><span class="hl-0">-f</span><span class="hl-0"> compose.yml </span><span class="hl-0">-f</span><span class="hl-0"> compose.bookworm.yml up</span><br/><br/><span class="hl-0">    </span><span class="hl-4"># Analyse des Images mit Wolfi</span><br/><span class="hl-0">    docker compose </span><span class="hl-0">-f</span><span class="hl-0"> compose.yml </span><span class="hl-0">-f</span><span class="hl-0"> compose.wolfi.yml up</span><br/>
+</code><button>Copy</button></pre>
+<a id="md:owasp-dependency-check" class="tsd-anchor"></a><h3><a href="#md:owasp-dependency-check">OWASP Dependency Check</a></h3><p>Mit <em>OWASP Dependency Check</em> werden alle in <code>node_modules</code> installierten
+npm-Packages mit den <em>CVE</em>-Nummern der NIST-Datenbank abgeglichen, d.h. auch
+die Packages, die nur als <code>devDependencies</code> installiert wurden. Da es insgesamt
+zwischen 25.000 und 30.000 Packages sind, dauert dieser Abgleich 30 bis 45
+Minuten.</p>
+<p>Von <a href="https://nvd.nist.gov/developers/request-an-api-key">https://nvd.nist.gov/developers/request-an-api-key</a> fordert man einen &quot;API Key&quot;
+an, um im Laufe des Semesters mit <em>OWASP Dependency Check</em> die benutzte Software
+(&quot;3rd Party Libraries&quot;) auf Sicherheitslücken zu prüfen. Diesen API Key trägt
+man im Skript <code>.extras\dependency-check\dependency-check.ps1</code> als Wert der
+Variablen <code>$nvdApiKey</code> ein.</p>
+<pre><code class="language-powershell"><span class="hl-0">    cd .extras\compose\dependency-check</span><br/><span class="hl-0">    docker compose up</span>
+</code><button>Copy</button></pre>
+<a id="md:snyk" class="tsd-anchor"></a><h3><a href="#md:snyk">Snyk</a></h3><p>Zunächst muss man sich bei <a href="https://app.snyk.io/account">https://app.snyk.io/account</a> registrieren und dort
+auch einen Token besorgen. Danach kann man sich folgendermaßen authentifizieren
+und das Projekt auf Sicherheitslücken überprüfen</p>
+<pre><code class="language-powershell"><span class="hl-0">    synk auth &lt;MEIN_TOKEN&gt;</span><br/><span class="hl-0">    snyk test</span>
+</code><button>Copy</button></pre>
+<a id="md:asciidoctor-und-plantuml" class="tsd-anchor"></a><h2><a href="#md:asciidoctor-und-plantuml">AsciiDoctor und PlantUML</a></h2><p>Mit AsciiDoctor und PlantUML ist die Dokumentation geschrieben.</p>
+<a id="md:preview-von-plantuml-dateien" class="tsd-anchor"></a><h3><a href="#md:preview-von-plantuml-dateien">Preview von PlantUML-Dateien</a></h3><p>Durch das Tastaturkürzel <code>&lt;Alt&gt;d</code>. Dazu ist eine Internet-Verbindung notwendig.
+Beispiele für PlantUML und AsciiDoctor sind im Unterverzeichnis <code>.extras\doc</code>.</p>
+<a id="md:einstellungen-für-preview-von-asciidoctor-dateien" class="tsd-anchor"></a><h3><a href="#md:einstellungen-für-preview-von-asciidoctor-dateien">Einstellungen für Preview von AsciiDoctor-Dateien</a></h3><p>Zunächst müssen einmalig die Einstellungen (<em>Settings</em>) von VS Code geändert
+werden. Dazu klickt man in der linken unteren Ecke das Icon (&quot;Rädchen&quot;) für die
+Einstellungen an und wählt den Menüpunkt <em>Einstellungen</em> bzw. <em>Settings</em> aus.
+Dann gibt man im Suchfeld <code>asciidoc.use_kroki</code> ein und setzt den Haken bei
+<em>Enable kroki integration to generate diagrams</em>.</p>
+<p>Wenn man zum ersten Mal eine <code>.adoc</code>-Datei im Editor öffnet, muss man noch
+die Verbindung zum PlantUML-Server zulassen, damit die eingebundenen
+<code>.puml</code>-Dateien in <code>.svg</code>-Dateien konvertiert werden. Dazu gibt man zunächst
+das <code>&lt;F1&gt;</code> ein und schickt im Eingabefeld das Kommando
+<em>AsciiDoc: Change Preview Security Settings</em> durch <code>&lt;Enter&gt;</code> ab.
+Danach wählt man den Unterpunkt <em>Allow insecure content</em> aus.</p>
+<a id="md:preview-von-asciidoctor-dateien" class="tsd-anchor"></a><h3><a href="#md:preview-von-asciidoctor-dateien">Preview von AsciiDoctor-Dateien</a></h3><p>Durch das Tastaturkürzel <code>&lt;Strg&gt;&lt;Shift&gt;v</code>. Dazu ist eine Internet-Verbindung
+notwendig.</p>
+<a id="md:dokumentation-im-format-html" class="tsd-anchor"></a><h3><a href="#md:dokumentation-im-format-html">Dokumentation im Format HTML</a></h3><p>Die Dokumentation im Format HTML wird in einer Powershell folgendermaßen
+im Verzeichnis <code>.extras\doc\html</code> erstellt:</p>
+<pre><code class="language-powershell"><span class="hl-0">    npm run asciidoc</span>
+</code><button>Copy</button></pre>
+<a id="md:continuous-integration-mit-jenkins" class="tsd-anchor"></a><h2><a href="#md:continuous-integration-mit-jenkins">Continuous Integration mit Jenkins</a></h2><p>Jenkins wird direkt mit <em>Docker Compose</em> genutzt. Dadurch muss Jenkins nicht
+immer laufen und kann bei Bedarf gestartet und wieder heruntergefahren werden.
+Dazu muss zunächst das Jenkins-Image um eine Docker-Installation ergänzt werden,
+wozu es die Datei <code>Dockerfile.jenkins</code> gibt, um ein solches Image zu erstellen:</p>
+<pre><code class="language-powershell"><span class="hl-0">    cd .extras\compose\jenkins</span><br/><span class="hl-0">    </span><span class="hl-5">Get-Content</span><span class="hl-0"> Dockerfile | docker run --rm --interactive hadolint/hadolint:</span><span class="hl-6">2.10</span><span class="hl-0">.</span><span class="hl-6">0</span><span class="hl-0">-beta-debian</span><br/><span class="hl-0">    docker build --tag team2/jenkins:</span><span class="hl-6">2024.04</span><span class="hl-0">.</span><span class="hl-6">0</span><span class="hl-0"> .</span>
+</code><button>Copy</button></pre>
+<p>Das neu gebaute Image <code>team2/jenkins:2024.04.0</code> wird in
+<code>compose.yml</code> beim Service <code>jenkins</code> verwendet:</p>
+<pre><code class="language-powershell"><span class="hl-0">    cd .extras\compose\jenkins</span><br/><span class="hl-0">    docker compose up</span><br/><br/><span class="hl-0">    </span><span class="hl-4"># In einer 2. PowerShell: Herunterfahren</span><br/><span class="hl-0">    docker compose down</span>
+</code><button>Copy</button></pre>
+<a id="md:aufruf-mit-webbrowser" class="tsd-anchor"></a><h3><a href="#md:aufruf-mit-webbrowser">Aufruf mit Webbrowser</a></h3><p>Mit der URL <a href="https://localhost:7070">https://localhost:7070</a> kann man von einem Webbrowser auf den
+Jenkins-Container zugreifen. Der Benutzername ist <code>admin</code> und das Passwort
+<code>Inf und WI.</code>.</p>
+<a id="md:bash-zur-evtl-fehlersuche-im-laufenden-jenkins-container" class="tsd-anchor"></a><h3><a href="#md:bash-zur-evtl-fehlersuche-im-laufenden-jenkins-container">Bash zur evtl. Fehlersuche im laufenden Jenkins-Container</a></h3><pre><code class="language-powershell"><span class="hl-0">    docker compose exec jenkins bash</span>
+</code><button>Copy</button></pre>
+<a id="md:visual-studio-code" class="tsd-anchor"></a><h2><a href="#md:visual-studio-code">Visual Studio Code</a></h2><p><a href="https://code.visualstudio.com/Download">Visual Studio Code</a> kann man
+kostenfrei herunterladen.</p>
+<p>Tipps:</p>
+<ul>
+<li><code>&lt;Strg&gt;#</code> : Kommentare setzen und entfernen</li>
+<li><code>&lt;F1&gt;</code>: Die Kommandopalette erscheint</li>
+<li><code>&lt;Strg&gt;&lt;Shift&gt;v</code>: Vorschau für MarkDown und AsciiDoctor</li>
+<li><code>&lt;Alt&gt;d</code>: Vorschau für PlantUml</li>
+<li><em><a href="https://vscodecandothat.com">https://vscodecandothat.com</a></em>: Kurze Videos zu VS Code</li>
+<li><em><a href="https://www.youtube.com/watch?v=beNIDKgdzwQ">https://www.youtube.com/watch?v=beNIDKgdzwQ</a></em>: Video für Debugging</li>
+</ul>
+<a id="md:empfohlene-code-konventionen" class="tsd-anchor"></a><h2><a href="#md:empfohlene-code-konventionen">Empfohlene Code-Konventionen</a></h2><p>In Anlehnung an die
+<a href="https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines">Guidelines von TypeScript</a></p>
+<ul>
+<li>&quot;Feature Filenames&quot;, z.B. auto.service.ts</li>
+<li>Klassennamen mit PascalCase</li>
+<li>Union-Types (mit Strings) statt Enums</li>
+<li>Attribute und Funktionen mit camelCase</li>
+<li><code>#</code> für private Properties</li>
+<li>private Properties <em>nicht</em> mit vorangestelltem <strong>_</strong></li>
+<li>Interfaces <em>nicht</em> mit vorangestelltem <strong>I</strong></li>
+<li>Higher-Order Functions: [...].<code>forEach</code>(), [...].<code>filter</code>() und [...].<code>map</code>()</li>
+<li>Arrow-Functions statt function()</li>
+<li><code>undefined</code> verwenden und nicht <code>null</code></li>
+<li>Geschweifte Klammern bei if-Anweisungen</li>
+<li>Maximale Dateigröße: 400 Zeilen</li>
+<li>Maximale Funktionsgröße: 75 Zeilen</li>
+</ul>
+</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-index-accordion"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="assets/icons.svg#icon-chevronDown"></use></svg>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><h4 class="uppercase">Member Visibility</h4><form><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></form></div><div class="tsd-theme-toggle"><h4 class="uppercase">Theme</h4><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-index-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="assets/icons.svg#icon-chevronDown"></use></svg>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#md:hinweise-zum-programmierbeispiel"><span>Hinweise zum <wbr/>Programmierbeispiel</span></a><ul><li><a href="#md:inhalt"><span>Inhalt</span></a></li><li><a href="#md:download--und-ggf-upload-geschwindigkeit"><span>Download-<wbr/> und ggf. <wbr/>Upload <wbr/>Geschwindigkeit</span></a></li><li><a href="#md:vorbereitung-der-installation"><span>Vorbereitung der <wbr/>Installation</span></a></li><li><a href="#md:es-modules--esm"><span>ES <wbr/>Modules (= ESM)</span></a></li><li><a href="#md:db-server-und-db-browser"><span>DB-<wbr/>Server und DB-<wbr/>Browser</span></a></li><li><ul><li><a href="#md:db-server"><span>DB-<wbr/>Server</span></a></li><li><a href="#md:pgadmin"><span>pg<wbr/>Admin</span></a></li><li><a href="#md:phpmyadmin"><span>php<wbr/>My<wbr/>Admin</span></a></li></ul></li><li><a href="#md:node-best-practices"><span>Node <wbr/>Best <wbr/>Practices</span></a></li><li><a href="#md:lokaler-appserver-mit-nest-und-dem-watch-modus"><span>Lokaler <wbr/>Appserver mit <wbr/>Nest und dem <wbr/>Watch-<wbr/>Modus</span></a></li><li><a href="#md:openapi"><span>OpenAPI</span></a></li><li><a href="#md:postman-desktop-anwendung-und-extension-für-vs-code"><span>Postman: <wbr/>Desktop-<wbr/>Anwendung und <wbr/>Extension für VS <wbr/>Code</span></a></li><li><ul><li><a href="#md:registrieren-und-installieren"><span>Registrieren und <wbr/>Installieren</span></a></li><li><a href="#md:workspace-anlegen"><span>Workspace anlegen</span></a></li><li><a href="#md:environments"><span>Environments</span></a></li><li><a href="#md:collections-und-folders"><span>Collections und <wbr/>Folders</span></a></li><li><a href="#md:requests"><span>Requests</span></a></li><li><a href="#md:variable"><span>Variable</span></a></li><li><a href="#md:tokens-durch-pre-request-scripts-und-authorization-header"><span>Tokens durch <wbr/>Pre-<wbr/>request <wbr/>Scripts und <wbr/>Authorization-<wbr/>Header</span></a></li><li><a href="#md:tests-in-postman"><span>Tests in <wbr/>Postman</span></a></li><li><a href="#md:erweiterung-für-vs-code"><span>Erweiterung für VS <wbr/>Code</span></a></li><li><a href="#md:rest-client-als-extension"><span>REST <wbr/>Client als <wbr/>Extension</span></a></li></ul></li><li><a href="#md:tests-aufrufen"><span>Tests aufrufen</span></a></li><li><a href="#md:docker-image-und-docker-compose"><span>Docker-<wbr/>Image und <wbr/>Docker <wbr/>Compose</span></a></li><li><ul><li><a href="#md:minimales-basis-image"><span>Minimales <wbr/>Basis-<wbr/>Image</span></a></li><li><a href="#md:image-erstellen"><span>Image erstellen</span></a></li><li><a href="#md:image-inspizieren"><span>Image inspizieren</span></a></li><li><ul><li><a href="#md:docker-inspect"><span>docker inspect</span></a></li><li><a href="#md:docker-sbom"><span>docker sbom</span></a></li><li><a href="#md:dive"><span>dive</span></a></li></ul></li><li><a href="#md:docker-compose"><span>Docker <wbr/>Compose</span></a></li></ul></li><li><a href="#md:statische-codeanalyse-und-formattierer"><span>Statische <wbr/>Codeanalyse und <wbr/>Formattierer</span></a></li><li><ul><li><a href="#md:prettier"><span>Prettier</span></a></li><li><a href="#md:eslint"><span>ESLint</span></a></li><li><a href="#md:sonarqube"><span>Sonar<wbr/>Qube</span></a></li><li><a href="#md:madge"><span>Madge</span></a></li><li><a href="#md:type-coverage"><span>type-<wbr/>coverage</span></a></li></ul></li><li><a href="#md:sicherheitslücken"><span>Sicherheitslücken</span></a></li><li><ul><li><a href="#md:npm-audit"><span>npm audit</span></a></li><li><a href="#md:docker-scout"><span>Docker <wbr/>Scout</span></a></li><li><a href="#md:trivy-von-aquasec"><span>Trivy von <wbr/>Aquasec</span></a></li><li><a href="#md:owasp-dependency-check"><span>OWASP <wbr/>Dependency <wbr/>Check</span></a></li><li><a href="#md:snyk"><span>Snyk</span></a></li></ul></li><li><a href="#md:asciidoctor-und-plantuml"><span>Ascii<wbr/>Doctor und <wbr/>PlantUML</span></a></li><li><ul><li><a href="#md:preview-von-plantuml-dateien"><span>Preview von <wbr/>PlantUML-<wbr/>Dateien</span></a></li><li><a href="#md:einstellungen-für-preview-von-asciidoctor-dateien"><span>Einstellungen für <wbr/>Preview von <wbr/>Ascii<wbr/>Doctor-<wbr/>Dateien</span></a></li><li><a href="#md:preview-von-asciidoctor-dateien"><span>Preview von <wbr/>Ascii<wbr/>Doctor-<wbr/>Dateien</span></a></li><li><a href="#md:dokumentation-im-format-html"><span>Dokumentation im <wbr/>Format HTML</span></a></li></ul></li><li><a href="#md:continuous-integration-mit-jenkins"><span>Continuous <wbr/>Integration mit <wbr/>Jenkins</span></a></li><li><ul><li><a href="#md:aufruf-mit-webbrowser"><span>Aufruf mit <wbr/>Webbrowser</span></a></li><li><a href="#md:bash-zur-evtl-fehlersuche-im-laufenden-jenkins-container"><span>Bash zur evtl. <wbr/>Fehlersuche im laufenden <wbr/>Jenkins-<wbr/>Container</span></a></li></ul></li><li><a href="#md:visual-studio-code"><span>Visual <wbr/>Studio <wbr/>Code</span></a></li><li><a href="#md:empfohlene-code-konventionen"><span>Empfohlene <wbr/>Code-<wbr/>Konventionen</span></a></li></ul></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="index.html" class="current"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="assets/icons.svg#icon-1"></use></svg><span>auto-service</span></a><ul class="tsd-small-nested-navigation" id="tsd-nav-container" data-base="."><li>Loading...</li></ul></nav></div></div></div><footer><p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer><div class="overlay"></div></body></html>

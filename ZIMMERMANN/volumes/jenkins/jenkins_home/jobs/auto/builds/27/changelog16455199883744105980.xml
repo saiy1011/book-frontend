@@ -1,0 +1,14 @@
+commit faceba42d9c5621628bc052b5ada88a62e7c8ad5
+tree 8695585c606f8a6ce3fc5c7aafcdacbe960272f5
+parent 80ffc44ec132eade47c5788ee4b5178e2ccb3c44
+author Dodekagamer <147612354+Dodekagamer@users.noreply.github.com> 2024-05-01 13:07:57 +0200
+committer Dodekagamer <147612354+Dodekagamer@users.noreply.github.com> 2024-05-01 13:07:57 +0200
+
+    LF statt CRLF
+
+
+:100644 100644 052cdc2f67abd05270fe11e1b6dda969e5c1ff4a fc16477f02ebbe19b95486d541902db33e6e1043 M	.extras/compose/app.yml
+:100644 100644 57c712518b831caef349c0c27bcd90ff1c3375a2 3ba42f0189085deaa320503b396b3b518d05619c M	.extras/compose/jenkins/compose.yml
+:100644 100644 23791f51e30ee0c621a454c7d06bbfd87ee9ac0b e9f62d5869e1e5c3d4f982424aa2253f9e1c4597 M	dist/tsconfig.build.tsbuildinfo
+:100644 100644 4cd0fb73ad949d0e6f190c237b8fbe0917f6883c ed63bf24fd0ca5a82786bb72cecb32ba5bc1e681 M	log/server.log
+:100644 100644 3dcd5af2fe9ecb713eb50324c04e9a8b743cacea a904d2f4a9c204564e44ea455791baa7e455913b M	src/config/resources/app.yml

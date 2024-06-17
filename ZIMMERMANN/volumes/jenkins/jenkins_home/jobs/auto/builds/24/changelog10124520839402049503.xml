@@ -1,0 +1,10 @@
+commit 0c2e0a4d6407f890d60db2f28f6e25029b2c384c
+tree a5b8c47eac1b45ad28c54c01e0b09983eb876261
+parent 74c471c70b3a03d4076d73d81676c00f75642d8e
+author Dodekagamer <147612354+Dodekagamer@users.noreply.github.com> 2024-05-01 11:59:33 +0200
+committer Dodekagamer <147612354+Dodekagamer@users.noreply.github.com> 2024-05-01 11:59:33 +0200
+
+    Update .gitignore
+
+
+:100644 100644 fac42420a914565f878ad6191f25fea43c61fcef 95ad5f03aa323e6274da8bf93750f0d3ec85a1a5 M	.gitignore
